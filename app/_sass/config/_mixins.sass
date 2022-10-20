@@ -1,0 +1,137 @@
+// Font face
+=font_face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+    @font-face
+        font-family: $font-family
+        font-weight: $weight
+        font-style: $style
+        font-display: swap
+        src: url('#{$file-path}.ttf') format('truetype')
+        
+@function em($pixels, $context: $browser-context)
+    @return #{$pixels/$context}em
+
+// Media queries
+// max-width
+=xxxl
+    @media only screen and (max-width: $xxxl)
+        @content
+
+=xxl
+    @media only screen and (max-width: $xxl)
+        @content
+
+=xl
+    @media only screen and (max-width: $xl)
+        @content
+
+=lg
+    @media only screen and (max-width: $lg)
+        @content
+
+=md
+    @media only screen and (max-width: $md)
+        @content
+
+=sm
+    @media only screen and (max-width: $sm)
+        @content
+
+
+// min-width
+=min_xxxl
+    @media only screen and (min-width: $xxxl)
+        @content
+
+=min_xxl
+    @media only screen and (min-width: $xxl)
+        @content
+
+=min_xl
+    @media only screen and (min-width: $xl)
+        @content
+
+=min_lg
+    @media only screen and (min-width: $lg)
+        @content
+
+=min_md
+    @media only screen and (min-width: $md)
+        @content
+
+=min_sm
+    @media only screen and (min-width: $sm)
+        @content
+
+// max-height
+=h800
+    @media only screen and (max-height: $h800)
+        @content
+
+=h1125
+    @media only screen and (max-height: 1125px)
+        @content
+
+=h930
+    @media only screen and (max-height: 930px)
+        @content
+
+=h830
+    @media only screen and (max-height: 830px)
+        @content
+
+=min_h700
+    @media only screen and (min-height: 700px)
+        @content
+
+
+
+// max-height
+=h_xxxl
+    @media only screen and (max-height: $xxxl)
+        @content
+
+=h_xxl
+    @media only screen and (max-height: $xxl)
+        @content
+
+=h_xl
+    @media only screen and (max-height: $xl)
+        @content
+
+=h_lg
+    @media only screen and (max-height: $lg)
+        @content
+
+=h_md
+    @media only screen and (max-height: $md)
+        @content
+
+=h_sm
+    @media only screen and (max-height: $sm)
+        @content
+
+
+// min-height
+=min_h_xxxl
+    @media only screen and (min-height: $xxxl)
+        @content
+
+=min_h_xxl
+    @media only screen and (min-height: $xxl)
+        @content
+
+=min_h_xl
+    @media only screen and (min-height: $xl)
+        @content
+
+=min_h_lg
+    @media only screen and (min-height: $lg)
+        @content
+
+=min_h_md
+    @media only screen and (min-height: $md)
+        @content
+
+=min_h_sm
+    @media only screen and (min-height: $sm)
+        @content

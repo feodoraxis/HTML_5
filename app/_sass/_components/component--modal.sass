@@ -1,0 +1,66 @@
+.close
+    width: 18px
+    height: 18px
+    cursor: pointer
+    position: relative
+    background-image: url(../img/icons/close.svg)
+    background-size: 18px
+    background-position: center
+    transition: all .2s ease
+    display: block
+    opacity: .6
+    &:hover
+        opacity: 1
+
+.modal
+    opacity: 0
+    pointer-events: none
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 2000
+    background-color: rgba(#000, .8)
+    width: 100%
+    height: 100%
+    transition: all .2s ease
+    overflow-y: auto
+    overflow-x: hidden
+    padding-top: 5%
+    &.open
+        opacity: 1
+        pointer-events: all
+    &-close
+        position: absolute
+        top: 50px
+        right: 50px
+    &-flex
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        left: 0
+        right: 0
+        width: 100%
+        padding-bottom: 5%
+
+    &-window
+        background-color: #fff
+        border-radius: 40px
+        padding: 85px 100px
+        position: relative
+        max-width: 1010px
+        box-shadow: 0 10px 30px rgba(#000, .3)
+
+    &-header
+        margin-bottom: 40px
+        h1
+            font-size: 36px
+            line-height: 1.4
+            margin-bottom: 0
+            text-align: center
+
+    &-button
+        display: flex
+        justify-content: center

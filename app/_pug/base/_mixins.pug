@@ -1,0 +1,95 @@
+mixin icon(name, mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="img/sprite.svg#" + name)
+
+mixin bg(src)
+    .bg
+        picture
+            img(src= src, alt="")
+
+mixin menu( nav ) 
+    nav
+        ul 
+            each item in nav
+                li 
+                    a(href="#")= item.title
+
+                    if item.child
+
+                        ul 
+
+                            each val in item.child
+
+                                li 
+                                    a(href="#")= val.title
+
+mixin faq( questions ) 
+    .faq
+
+        each item in questions
+
+            .faq-item(class= item.class)
+                .faq-question
+                    p= item.question
+
+                .faq-answer
+                    p= item.answer
+
+mixin breadcrumps( nav )
+
+    ol.breadcrumps(itemscope, itemtype="http://schema.org/BreadcrumbList")
+
+        each item in nav
+
+            li(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+                
+                if item.href
+                
+                    a(itemprop="item" href= item.href) 
+                        span(itemprop="name")= item.name
+                        meta(itemprop="position" content="1")
+                else
+
+                    span(itemprop="name")= item.name
+
+mixin select( name, items )
+    .select
+        input(type="hidden" name= name)
+        ul
+            each item in items 
+                li(data-value= item.slug)= item.name
+
+mixin checkbox( name )
+    .checkbox
+        label(for= name)= name
+        input(type="checkbox" name= name, id= name, value= name)
+
+mixin radio( name, slug, namespace, checked )
+    - checked = checked || false;
+    .radio
+        if ! checked
+            input(type="radio" name= namespace, id= slug, value= slug)
+        else
+            input(type="radio" name= namespace, id= slug, value= slug, checked="checked")
+
+        label(for= slug)= name
+
+mixin pagination() 
+    .pagination
+        ul 
+            li
+                span 1
+
+            li
+                a(href="#") 
+                    span 2
+            li
+                a(href="#") 
+                    span 3
+
+            li.dots
+
+            li
+                a(href="#") 
+                    span 5
