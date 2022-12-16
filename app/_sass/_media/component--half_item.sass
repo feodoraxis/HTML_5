@@ -1,0 +1,29 @@
+.half_item
+    +min_md
+        &-team_logo
+            display: none
+    +md
+        &-empty
+            display: none
+
+        &-num
+            order: 10
+
+        &-left,
+        &-right
+            order: 20
+            justify-content: flex-start
+
+        &-team_logo
+            width: 30px
+            img
+                max-width: 100%
+
+        &-title
+            max-width: 125px
+
+        &-content
+            ul
+                &::before
+                    right: auto
+                    left: 60px

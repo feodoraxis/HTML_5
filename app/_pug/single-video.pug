@@ -1,0 +1,73 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-news 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.news_single-header
+
+                    .news_single-date
+                        time 12 июля
+                    .page-title.page-title--medium.news_single-title
+                        h1 «Енисей-СТМ» – «Химик» | Хайлайты матча PARI Чемпионата России
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Видео"
+                            },
+                            {
+                                "name": "«Енисей-СТМ» – «Химик» | Хайлайты матча PARI Чемпионата России"
+                            }
+                        ])
+
+                    .page-return_back.news_single-return_back
+
+                        a(href="news.html").button.button-back
+                            +icon('arrow-left')
+                            span Все видео
+
+                .page-body
+                    .news_single
+
+                        article.news_single-content
+                            .content    
+                                figure.wp-block-embed.is-type-video.is-provider-youtube.wp-block-embed-youtube
+                                    .wp-block-embed__wrapper
+                                        iframe(title="The Best of Mozart" src="https://www.youtube.com/embed/Rb0UmrCXxVA?start=2&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="")
+
+                                
+                                p Оба соперника провели два матча в текущем розыгрыше PARI Чемпионата России по регби. «ВВА-Подмосковье» победило «Металлург» со счётом 15:10, а в своей следующей игре проиграли своей следующей игре проиграли «Красному Яру» со счётом 17:38. Московское «Динамо» в первом своем матче Московское «Динамо» в первом своем матче уступило «Енисею-СТМ» со счётом 21:52, а затем реабилитировалось в матче против «Химика».
+                                
+                                .news_single-social_networks
+                                    +social_networks()
+
+                        .news_single-aside
+                            aside.sidebar
+                                .widget
+                                    .widget-body
+                                        .news_single-news_list 
+                                            .news_single-news_item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                                            .news_single-news_item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                                            .news_single-news_item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                                            .news_single-news_item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                    
+                
+
+        include base/footer.pug 

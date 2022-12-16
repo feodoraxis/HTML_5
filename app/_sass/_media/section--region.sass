@@ -1,0 +1,43 @@
+.region
+    +min_md
+        &-mobile
+            display: none
+    +md
+        &-desctop
+            display: none
+        &-contacts,
+        &-positions
+            flex-direction: column
+            // flex-wrap: wrap
+            li
+                padding-left: 0
+                padding-right: 0
+    
+        &-contacts
+            &>li
+                margin-bottom: 40px
+                &:last-child
+                    margin-bottom: 0
+
+        &-positions
+            li
+                margin-bottom: 32px
+
+        &-card
+            margin-bottom: 40px
+
+        &-list
+            margin-bottom: 4px
+
+        &-news
+            margin-top: 60px
+            padding-top: 32px
+            padding-bottom: 60px
+
+            &-title
+                margin-bottom: 32px
+
+            &-item
+                margin-bottom: 16px
+                padding-bottom: 16px
+                border-bottom: 1px solid #E9E6EF

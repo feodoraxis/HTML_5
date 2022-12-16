@@ -1,0 +1,66 @@
+-
+    nav = [
+        {
+            "href": 'index.html',
+            "name": "Главная"
+        },
+        {
+            "href": 'news.html',
+            "name": "Новости"
+        }
+    ]
+
+-
+    items = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page 
+            .wrapper
+
+                .page-header.page-header--alt
+                    .row
+                        .col-lg-3.search_result-head_item
+                            .page-title
+                                h1 Поиск
+                        .col-xl-6.col-lg-5.search_result-head_item.search_result-form
+                            .search_block.search_block-big.search_block-static
+                                form(action="")
+                                    .search_block-input
+                                        input(type="text", placeholder="Поиск документа", value="Регби")
+                                    button.button.button-askew.button-askew-red
+                                        div
+                                        span 
+                                            +icon('lupe')
+                        .col-xl-2.col-lg-3.offset-lg-1.search_result-head_item
+
+                            select
+                                option По релеватности 
+                                option По заголовку 
+
+                .page-body
+                    .row
+                        .col-lg-6.offset-lg-3
+
+                            .search_result
+                                .search_result-empty
+                                    .search_result-empty-img
+                                        img(src="img/not-found.png", alt="")
+
+                                    .search_result-empty-text
+                                        p Попробуйте перефразировать запрос
+
+
+        include base/footer.pug 

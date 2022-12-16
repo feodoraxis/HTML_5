@@ -1,0 +1,117 @@
+-
+    nav = [
+        {
+            "href": 'index.html',
+            "name": "Главная"
+        },
+        {
+            "href": 'news.html',
+            "name": "Новости"
+        }
+    ]
+
+-
+    items = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page 
+            .wrapper
+
+                .page-header.page-header--alt
+                    .row
+                        .col-lg-3.search_result-head_item
+                            .page-title
+                                h1 Поиск
+                        .col-xl-6.col-lg-5.search_result-head_item.search_result-form
+                            .search_block.search_block-big.search_block-static
+                                form(action="")
+                                    .search_block-input
+                                        input(type="text", placeholder="Поиск документа", value="Регби")
+                                    button.button.button-askew.button-askew-red
+                                        div
+                                        span 
+                                            +icon('lupe')
+                        .col-xl-2.col-lg-3.offset-lg-1.search_result-head_item
+
+                            select
+                                option По релеватности 
+                                option По заголовку 
+
+                .page-body
+                    .row
+                        .col-lg-6.offset-lg-3
+
+                            .search_result
+
+                                each i in items 
+
+                                    .search_result-item
+                                        .search_result-title
+                                            a(href="#")
+                                                p Что? Где? Когда? Анонс регбийных событий на 19-23 августа 
+
+                                        .search_result-text
+                                            p ... зори» по регби-7 (девушки 2006-2007 г.р.) Первый день. Каменка. Стадион «Труд». 15.00-17.00* (трансляция не запланирована) 20 августа Первенство России по регби до 18 лет Групповой этап. Красноярск. Стадион СФУ. Сборная Московской области – СШОР №111. 06.00 (Трансляция на официальном ютуб-канале ...
+
+                                        .search_result-footer
+                                            .search_result-date
+                                                time Изменен: 18.08.2021
+
+                                            .search_result-bc
+                                                ol.breadcrumps.breadcrumps-lite(itemscope, itemtype="http://schema.org/BreadcrumbList")
+
+                                                    each item in nav
+
+                                                        li(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+                                                            
+                                                            if item.href
+                                                            
+                                                                a(itemprop="item" href= item.href) 
+                                                                    span(itemprop="name")= item.name
+                                                                    meta(itemprop="position" content="1")
+                                                            else
+
+                                                                span(itemprop="name")= item.name
+
+                .page-footer    
+
+                    .page_footer
+                        .page_footer-flexbox.page_footer-jcsb
+                            .page_footer-col
+                            .page_footer-col
+                                .pagination
+                                    ul
+                                        li 
+                                            span 1
+                                        li 
+                                            a(href="#") 
+                                                span 2
+                                        li 
+                                            a(href="#") 
+                                                span 3
+                                        li 
+                                            span.pagination-dots= "..."
+                                        li 
+                                            a(href="#") 
+                                                span 45
+                                        li 
+                                            a(href="#") 
+                                                span 46
+                                        li 
+                                            a(href="#").pagination-right
+                                                +icon('angle-bottom')
+
+        include base/footer.pug 

@@ -1,0 +1,135 @@
+-
+    persons = [
+        "",
+        "",
+        "",
+    ]
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-national_team 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.national_team-header
+
+                    .page-title.page-title--medium
+                        h1 Женская сборная Регби-7
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Женская сборная Регби-7"
+                            }
+                        ])
+
+                .page-body
+                    
+                    
+                    .national_team
+                        .national_team-aside 
+                            aside 
+                                .widget.widget-content
+                                    .widget-body
+                                        .widget-content--description
+                                            p Высший совет – это ключевой орган в стратегической деятельности федерации. Его члены избираются представителями региональных федераций раз в четыре года.<br><br> Ключевые задачи Высшего совета - определять курс развития Федерации регби России, контролировать деятельность всех направлений работы, включая спортивную и финансовую составляющие на собраниях, которые происходят не реже чем раз в шесть месяцев.<br><br> Также Высший совет избирает <a href="#">Правление</a>, которое занимается оперативным управлением деятельностью Федерации.<br><br> Подробнее о целях, задачах и функциях Высшего совета читайте в Уставе. <br><br>
+                                            button.widget-content--open#wc_open_description ещё
+                                        
+
+                                        .widget-content-links
+
+                                            ul
+                                                li 
+                                                    a(href="#") Официальные документы
+
+                                                li 
+                                                    a(href="#") Документы Высшего совета
+
+                            
+                        .national_team-content
+                            article
+
+                                .national_team-list
+                                    .row
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Артемьев Игорь Юрьевич
+                                                        .person_preview-position
+                                                            p Председатель Высшего совета Федерации регби России
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Зарицкий Михаил Маркович 
+                                                        .person_preview-position
+                                                            p Заместитель председателя Высшего Совета Федерации регби России
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Копьев Вячеслав Всеволодович
+                                                        .person_preview-position
+                                                            p Заместитель председателя Высшего Совета Федерации регби России
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Артемьев Игорь Юрьевич
+                                                        .person_preview-position
+                                                            p Председатель Высшего совета Федерации регби России
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Зарицкий Михаил Маркович 
+                                                        .person_preview-position
+                                                            p Заместитель председателя Высшего Совета Федерации регби России
+
+                                        .col-md-4.col-sm-6.national_team-item
+                                            .person_preview
+                                                a(href="#") 
+                                                    .person_preview-thumbnail
+                                                        img(src="img/top-manager.jpg", alt="")
+
+                                                    .person_preview-content
+                                                        .person_preview-title
+                                                            h3 Копьев Вячеслав Всеволодович
+                                                        .person_preview-position
+                                                            p Заместитель председателя Высшего Совета Федерации регби России
+
+
+        include base/footer.pug 

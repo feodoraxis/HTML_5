@@ -1,0 +1,53 @@
+.person
+    display: flex
+    &-content
+        flex: 0 0 calc(100% - 568px)
+        max-width: calc(100% - 568px)
+        padding-right: 50px
+    &-meta
+        flex: 0 0 568px
+        max-width: 568px
+
+    &-subtitle
+        margin-bottom: 32px
+        p
+            margin-bottom: 0
+            font-size: rem(17)
+            font-weight: 500
+            text-transform: uppercase
+
+    &-thumbnail
+        margin-bottom: 32px
+        &--gold
+            width: 480px
+            height: 346px
+            background-image: url(../img/person-thumbnail-gold.jpg)
+            background-size: cover
+            display: flex
+            align-items: center
+            justify-content: center
+            box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+            img
+                border: 6px solid #FFF
+                border-radius: 2px
+
+    &-contacts
+        display: flex
+        justify-content: space-between
+        margin-bottom: 40px
+
+        // &--site
+            
+
+        // &--social_networks
+            
+            
+
+    &-table
+        margin-bottom: 40px
+
+    p
+        margin-bottom: 32px
+
+        b
+            font-weight: 600

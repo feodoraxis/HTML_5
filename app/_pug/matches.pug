@@ -1,0 +1,481 @@
+include base/_mixins.pug
+
+-
+    dates = [
+        {
+            "num":"01",
+            "day":"сб"
+        },
+        {
+            "num":"02",
+            "day":"вс"
+        },
+        {
+            "num":"03",
+            "day":"пн"
+        },
+        {
+            "num":"04",
+            "day":"вт"
+        },
+        {
+            "num":"05",
+            "day":"ср"
+        },
+        {
+            "num":"06",
+            "day":"чт"
+        },
+        {
+            "num":"07",
+            "day":"пт"
+        },
+        {
+            "num":"08",
+            "day":"сб"
+        },
+        {
+            "num":"09",
+            "day":"вс"
+        },
+        {
+            "num":"10",
+            "day":"пн"
+        },
+        {
+            "num":"11",
+            "day":"вт"
+        },
+        {
+            "num":"12",
+            "day":"ср"
+        },
+        {
+            "num":"13",
+            "day":"чт"
+        },
+        {
+            "num":"14",
+            "day":"пт"
+        },
+        {
+            "num":"15",
+            "day":"сб"
+        },
+        {
+            "num":"16",
+            "day":"вс"
+        },
+        {
+            "num":"17",
+            "day":"пн"
+        },
+        {
+            "num":"18",
+            "day":"вт"
+        },
+        {
+            "num":"19",
+            "day":"ср"
+        },
+        {
+            "num":"20",
+            "day":"чт"
+        },
+        {
+            "num":"21",
+            "day":"пт"
+        },
+    ];
+
+-
+    weeks = [
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+    ];
+    
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page
+            .wrapper
+                .page-header
+                    .page-title
+                        h1 Матчи
+                    .page-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Матчи"
+                            }
+                        ])
+
+                .page-body
+                    article.matches
+                        .matches-filter
+                            //- form(action="")
+                            .matches-filter-flexbox
+                                .matches-tournaments
+                                    select(name="tournament") 
+                                        option Все турниры
+                                        option(value='1') PARI Чемпионат России
+                                        option(value='2') Высшая лига
+                                        option(value='3') Чемпионат молодежных команд
+                                        option(value='4') Чемпионат России по регби-7
+                                        option(value='5') Чемпионат России по регби-7 жен.
+
+                                .matches-calendar
+                                    button.button.button-calendar#button_show_calendar
+                                        +icon('calendar')
+
+                                    input(type="hidden" value="" id="chosesDate")
+
+                                    //- input.calendar-container#button_calendar(data-date="25.11.2022")
+
+                                .matches-dates
+                                    .matches-days.js-matches-days.active#matches_days
+                                        ul 
+                                            each date in dates
+                                                li 
+                                                    div.day
+                                                        b= date.num
+                                                        span= date.day
+                                                        input(type="hidden" value="" name="day")
+
+                                    .matches-days.js-matches-days#matches_weeks
+                                        ul 
+                                            each week in weeks
+                                                li 
+                                                    div.week
+                                                        div.week-start
+                                                            b= week.start_num
+                                                            span= week.start_month
+                                                        div.week-end
+                                                            b= week.end_num
+                                                            span= week.end_month
+
+                                                        input(type="hidden" value="" name="week_num")
+
+                                .matches-switcher_dates
+                                    .switcher#matches_date_switcher
+                                        ul 
+                                            li(data-for="#matches_days").active Дни
+                                            li(data-for="#matches_weeks") Недели
+
+                            .calendar-container#button_calendar_container
+                                #button_calendar(data-date="2022-11-25")
+
+                        .matches-list
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match.match-today
+                                            .match-row
+                                                .match-team
+                                                    span МТЛ
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time 23 <span>-</span> 12
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span МТЛ
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+                                        a.button.button-lite_square(href="#") Купить билеты
+
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match.match-today.match-now
+                                            .match-row
+                                                .match-team
+                                                    span МТЛ
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time 23 <span>-</span> 12
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span МТЛ
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+                                        a.button.button-lite_square(href="#") Купить билеты
+
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match
+                                            .match-row
+                                                .match-team
+                                                    span ХМК
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time 16:00
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span СЛВ
+
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        span МСК
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+                                        a.button.button-lite_square(href="#") Купить билеты
+
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match.match-today
+                                            .match-row
+                                                .match-team
+                                                    span КЯР
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time 14:00
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span ВВА
+
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        span техн.
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match.match-today
+                                            .match-row
+                                                .match-team
+                                                    span КЯР
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time 14:00
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span ВВА
+
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        span техн.
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+
+                            .matches-item
+                                .match_preview
+                                    .match_preview-tournament
+                                        a(href="#").match_preview-link 
+                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                            ul.match_preview-arenas.match_preview-desctop
+                                                li Красноярск
+                                                li Арена-Север
+                                        
+                                    .match_preview-match
+                                        .match.match-transfered
+                                            .match-row
+                                                .match-team
+                                                    span КЯР
+                                                    img(src="img/team.png", alt="")
+
+                                                .match-time
+                                                    time Перенос
+
+                                                .match-team
+                                                    img(src="img/team.png", alt="")
+                                                    span ВВА
+
+                                            .match-row
+                                                .match-platform
+                                                    a(href="#")
+                                                        //- span техн.
+
+                                    ul.match_preview-arenas.match_preview-mobile
+                                        li Красноярск
+                                        li Арена-Север
+                                    .match_preview-button
+        
+                .page-footer
+                    .page_footer
+                        .page_footer-flexbox.page_footer-jcsb
+                            .page_footer-col
+                                +social_networks()
+                            .page_footer-col
+                                .matches-add
+                                    button.button.button-add_to_calendar 
+                                        +icon('calendar')
+                                        span Добавить матчи в календарь
+                        
+                            
+        include base/footer.pug 

@@ -1,0 +1,30 @@
+
+// Секция с .active указана специально. Он превращает элементы систему блоков и табов тогда, когда к нему добавляют .active. 
+// Так класс-надстройка становится более универсальным.
+// .mobile_block_switcher.active
+//     .mobile_block_switcher
+//         &-tabs
+//             margin-bottom: 40px
+//             background-color: #DDD9E1
+//             padding: 3px
+//             border: 1px
+//         &-tab
+//             background-color: transparent
+//             margin-right: 2px
+//             &:last-child
+//                 margin-right: 0
+//             img
+//                 display: none
+
+//             p, a, span
+//                 display: block
+//                 padding: 7px 11px
+
+//             &.active
+//                 background-color: #fff
+
+//         &-block
+//             display: none
+
+//             &.active
+//                 display: block

@@ -1,0 +1,163 @@
+-
+    players_statistic = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ];
+
+.statistics_players
+    .statistics_players-head
+        .statistics_players-flexbox.statistics_players-desctop
+            .statistics_players-left 
+                .team_card
+                    img(src="img/team.png", alt="")
+                    p ВВА-Подмосковье
+            .statistics_players-right
+                .team_card
+                    img(src="img/team.png", alt="")
+                    p Красный Яр
+
+        .statistics_players-mobile
+            .switcher.js-switcher
+                ul
+                    li.active(data-for="#statistics_left") ВВА-Подмосковье
+                    li(data-for="#statistics_right") Красный Яр
+
+    .statistics_players-body
+        .statistics_players-flexbox
+            .statistics_players-left#statistics_left
+                .table-header_fix
+                    table.table
+                        thead
+                            tr
+                                th 
+                                th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                    span П
+                                th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                    span Р
+                                th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                    span Ш
+                                th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                    span ДГ
+                                th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                    span О
+                table.table
+                    thead
+                        tr
+                            th 
+                            th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                span П
+                            th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                span Р
+                            th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                span Ш
+                            th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                span ДГ
+                            th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                span О
+
+                    tbody
+                        tr 
+                            td Ислам Абдулкадиров
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+
+                        each item in players_statistic
+                            tr 
+                                td.js-column_data-source(data-content='[{"content":"Вингер"}]') Ислам Абдулкадиров
+                                td.js-column_data-source(data-content='[{"content":"Попытки"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Реализации"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Штрафные"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Очки"}]') 1
+            .statistics_players-right#statistics_right
+                .table-header_fix
+                    table.table
+                        thead
+                            tr
+                                th 
+                                th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                    span П
+                                th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                    span Р
+                                th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                    span Ш
+                                th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                    span ДГ
+                                th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                    span О
+                table.table
+                    thead
+                        tr
+                            th 
+                            th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                span П
+                            th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                span Р
+                            th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                span Ш
+                            th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                span ДГ
+                            th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                span О
+
+                    tbody
+                        tr 
+                            td Григорий Цнобиладзе
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+                            td.table-lite 0
+
+                        each item in players_statistic
+                            tr 
+                                td.js-column_data-source(data-content='[{"content":"Вингер"}]') Григорий Цнобиладзе
+                                td.js-column_data-source(data-content='[{"content":"Попытки"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Реализации"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Штрафные"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 1
+                                td.js-column_data-source(data-content='[{"content":"Очки"}]') 1
+
+    .statistics_players-footer
+        .statistics_players-reference
+            p П - попытки, Р - реализации, Ш - штрафные, ДГ- дроп-голы, О - очки
+
+    .switcher-footer_container#statistics_players_footer_switcher 
+        .switcher.switcher-blue.js-switcher
+            ul
+                li.active(data-for="#statistics_left") ВВА-Подмосковье
+                li(data-for="#statistics_right") Красный Яр

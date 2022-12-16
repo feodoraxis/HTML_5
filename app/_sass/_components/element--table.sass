@@ -1,0 +1,65 @@
+.table
+    width: 100%
+    border-collapse: separate
+    border-spacing: 0 8px
+    thead
+        tr
+            background-color: #EDEAF3
+            th
+                span
+                    color: #655E70
+                    position: relative
+                    
+                &.dashed
+                    span
+                        border-bottom: 1px dashed #655E70
+                    
+
+    td, th
+        padding: 7px 12px 9px
+        font-weight: 400
+        a
+            text-decoration: none
+            color: #1946B9
+
+        .sn
+            margin-right: 32px
+            .icon
+                color: #655E70
+
+        .tel
+            color: var(--color-default)
+    tbody
+        tr
+            background-color: #F8F7FA
+            border-radius: 1px
+            td
+                
+                span
+                    color: #655E70
+
+    &-end
+        display: flex
+        align-items: center
+        justify-content: flex-end
+
+    &-lite
+        color: #B1ABBC
+
+    &-header_fix
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 100
+        opacity: 0
+        pointer-events: none
+        transition: all .3s ease
+        &.active
+            top: 62px
+            opacity: 1
+            pointer-events: all
+
+    &-th
+        font-weight: 500 !important
+        vertical-align: top

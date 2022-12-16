@@ -1,0 +1,31 @@
+.person_preview
+    transition: all .3s ease
+    box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+    height: 100%
+    a
+        text-decoration: none
+        color: var(--color-default)
+
+    &-thumbnail
+        display: flex
+        justify-content: center
+
+    &-content
+        padding: 16px 20px
+
+    &-title
+        margin-bottom: 8px
+        h3
+            font-size: rem(18)
+            font-weight: 600
+            margin-bottom: 0
+        &:last-child
+            margin-bottom: 0
+
+    &-position
+        p
+            color: #655E70
+            margin-bottom: 0
+
+    &:hover
+        box-shadow: 0 2px 20px rgba(#002A54, .15)

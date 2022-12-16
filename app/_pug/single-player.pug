@@ -1,0 +1,119 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-person 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.news_single-header
+
+                    .page-title.page-title--medium.news_single-title.person-title
+                        h1 Бабаев Михаил
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Зал славы"
+                            },
+                            {
+                                "name": "Бабаев Михаил"
+                            }
+                        ])
+
+                    .page-return_back.news_single-return_back
+
+                        a(href="news.html").button.button-back
+                            +icon('arrow-left')
+                            span Зал славы
+
+                .page-body
+                    
+                    article
+                        .person
+                            .person-content 
+                                .person-desctop
+                                    table.table
+                                        tr
+                                            td.table-th Должность
+                                            td спортсмен-инструктор
+
+                                        tr
+                                            td.table-th Дата рождения
+                                            td 19 января 1986 г.
+                                        
+                                        tr
+                                            td.table-th Место рождения
+                                            td п.Краснознаменский, Московская область
+
+                                        tr
+                                            td.table-th Спортивное звание
+                                            td Мастер спорта России международного класса
+
+                                        tr
+                                            td.table-th Амплуа
+                                            td Защитник
+                                        
+                                        tr
+                                            td.table-th Рост (см)
+                                            td 180
+
+                                        tr
+                                            td.table-th История
+                                            td 
+                                                p Первый тренер - Дмитрий Владимирович Сафонов. В команде "ВВА-Подмосковье" с 2006 года. 
+                                                p Дебютировал в сборной 28 октября 2006 в матче против Португалии. Провёл 54 игры, набрал 20 очков. Участник чемпионата мира 2011 года: сыграл матчи против Ирландии и Австралии. 
+                                                p В сборной по регби-7 стал чемпионом Европы в 2009 году.
+
+                                .person-mobile
+                                    .table_person
+                                        
+                                        .table_person-item
+                                            b Должность
+                                            .table_person-content
+                                                p спортсмен-инструктор
+
+                                        .table_person-item
+                                            b Дата рождения
+                                            .table_person-content
+                                                p 19 января 1986 г.
+                                            
+                                        .table_person-item
+                                            b Место рождения
+                                            .table_person-content
+                                                p п.Краснознаменский, Московская область
+
+                                        .table_person-item
+                                            b Спортивное звание
+                                            .table_person-content
+                                                p Мастер спорта России международного класса
+
+                                        .table_person-item
+                                            b Амплуа
+                                            .table_person-content
+                                                p Защитник
+                                            
+                                        .table_person-item
+                                            b Рост (см)
+                                            .table_person-content
+                                                p 180
+
+                                        .table_person-item
+                                            b История
+                                            .table_person-content
+                                                p Первый тренер - Дмитрий Владимирович Сафонов. В команде "ВВА-Подмосковье" с 2006 года. 
+                                                p Дебютировал в сборной 28 октября 2006 в матче против Португалии. Провёл 54 игры, набрал 20 очков. Участник чемпионата мира 2011 года: сыграл матчи против Ирландии и Австралии. 
+                                                p В сборной по регби-7 стал чемпионом Европы в 2009 году.
+
+                            .person-meta
+
+                                .person-thumbnail.person-thumbnail--player
+                                    img(src="img/player-single.jpg", alt="")
+
+        include base/footer.pug 

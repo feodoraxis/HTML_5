@@ -1,0 +1,50 @@
+.breadcrumps
+    display: flex
+    list-style: none
+    align-items: center
+    padding-left: 0
+    margin-bottom: 0
+    overflow: hidden
+    position: relative
+    &-overflow
+        &::after
+            content: ''
+            right: 0
+            bottom: 0
+            top: 0
+            width: 100px
+            height: 100%
+            background: linear-gradient(to left, rgba(#FFF, 1), rgba(#FFF, 0))
+    li
+        position: relative
+        margin-right: 32px
+        &::before
+            content: '/'
+            width: 8px
+            height: 19px
+            font-size: 1rem
+            color: #BBB9C1
+            top: 0
+            bottom: 0
+            right: -20px
+            margin: auto
+
+        &:last-child
+            margin-right: 0
+            &::before
+                display: none
+        span
+            color: #8C8A93
+            font-size: 1rem
+            white-space: nowrap
+
+        a 
+            text-decoration: none
+            span
+                color: var(--color-default)
+                // text-decoration: none
+
+            &:hover
+                text-decoration: underline
+        
+    &-lite

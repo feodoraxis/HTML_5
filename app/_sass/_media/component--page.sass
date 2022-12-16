@@ -1,0 +1,68 @@
+.page
+    +xxl
+        &-header
+            &--breadcrumps_mobile_top_left
+
+                flex-direction: column
+                align-items: flex-start
+                .page
+                    &-title,
+                    &-breadcrumps
+                        flex: 0 0 100%
+                        max-width: 100%
+                        width: 100%
+                    &-title
+                        order: 20
+
+                    &-breadcrumps
+                        order: 10
+                        margin-bottom: 20px
+                        justify-content: flex-start
+
+    
+                    &-tabs_header
+                        order: 30
+
+    +min_md
+        &-return_back
+            display: none
+
+    +md
+        &-header
+            &--has_back_link
+                margin-bottom: 28px
+                .page
+                    &-title,
+                    &-breadcrumps
+                        display: none
+
+            &--mmobile_hide
+                display: none
+
+            &--mbreadcrumps_hide
+                .page-breadcrumps
+                    display: none
+
+        &-title
+            &--sm
+                &-medium
+                    height: 37px
+                    width: 24px
+                    &::before
+                        min-height: 37px
+                        width: 24px
+                    h1
+                        font-size: rem(23)
+
+        &-tournament
+            margin-top: 0
+
+    +sm
+        &-tournament
+            margin-top: 70px
+
+        &-tabs_header
+            width: 100%
+            margin-top: 28px
+            &>div
+                width: 100%

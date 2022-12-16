@@ -1,0 +1,35 @@
+.chronicle
+    padding-left: 0
+    list-style-type: none
+    li
+        padding-left: 32px
+        position: relative
+        margin-bottom: 32px 
+        b
+            display: block
+            font-size: rem(17)
+            margin-bottom: 12px
+        p
+            margin-bottom: 0
+
+        &::before
+            content: ''
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            background-color: var(--color-red)
+            left: 0
+            top: 0
+            z-index: 10
+
+        &::after
+            content: ''
+            left: 5px
+            top: 0
+            width: 2px
+            height: calc(100% + 32px)
+            background-color: #E9E6EF
+
+        &:last-child
+            &::after
+                display: none

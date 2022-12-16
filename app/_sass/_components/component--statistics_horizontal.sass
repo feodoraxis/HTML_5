@@ -1,0 +1,55 @@
+.statistics_horizontal
+    ul
+        list-style: none
+        padding-left: 0
+
+    &-item
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 16px
+
+    &-param_name
+        flex: 0 0 100%
+        max-width: 100%
+        margin-bottom: 4px
+        text-align: center
+        p
+            margin-bottom: 0
+
+    &-param_left,
+    &-param_right
+        flex: 0 0 45px
+        max-width: 45px
+        p
+            margin-bottom: 0
+            font-size: rem(21)
+            font-weight: 600
+            color: #655E70
+
+    &-param_left
+        margin-right: 24px
+        text-align: right
+
+    &-param_right
+        margin-left: 24px
+
+    &-lines
+        flex: 0 0 calc( 100% - 24px - 24px - 45px - 45px )
+        max-width: calc( 100% - 24px - 24px - 45px - 45px )
+        display: flex
+        align-items: center
+
+    &-line
+        border-radius: 1px
+        height: 4px
+        &:first-child
+            margin-right: 3px
+
+        &:last-child
+            margin-left: 3px
+
+        &-gray
+            background-color: #D9D9D9
+
+        &-blue
+            background-color: var(--color-blue)

@@ -1,0 +1,80 @@
+-
+    persons = [
+        "",
+        "",
+        "",
+        "",
+    ]
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-national_team 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.national_team-header
+
+                    .page-title.page-title--medium
+                        h1 Женская сборная Регби-7
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Женская сборная Регби-7"
+                            }
+                        ])
+
+                .page-body
+                    
+                    article
+                        .national_team-category
+                            .section_title
+                                h2 Чемпионат России по регби (мужчины) 
+
+                        .national_team-list
+                            .row
+
+                                each item in persons
+
+                                    .col-lg-3.col-md-4.col-sm-6.national_team-item
+                                        .person_preview
+                                            a(href="#") 
+                                                .person_preview-thumbnail
+                                                    img(src="img/club-preview.jpg", alt="")
+
+                                                .person_preview-content
+                                                    .person_preview-title
+                                                        h3 ВВА-Подмосковье
+                                                    .person_preview-position
+                                                        p Монино
+
+                        .national_team-category
+                            .section_title
+                                h2 Чемпионат России по регби (женщины) 
+
+                        .national_team-list
+                            .row
+
+                                each item in persons
+
+                                    .col-lg-3.col-md-4.col-sm-6.national_team-item
+                                        .person_preview
+                                            a(href="#") 
+                                                .person_preview-thumbnail
+                                                    img(src="img/club-preview2.jpg", alt="")
+
+                                                .person_preview-content
+                                                    .person_preview-title
+                                                        h3 Енисей-СТМ
+                                                    .person_preview-position
+                                                        p Красноярк
+
+
+        include base/footer.pug 

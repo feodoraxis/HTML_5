@@ -1,0 +1,78 @@
+.calendar
+    &-container
+        box-shadow: 0 2px 30px rgba(#1F3E5E, .2)
+        border-radius: 6px
+        z-index: 200
+
+        .datepicker
+            &-header
+                padding-bottom: 30px
+                border-bottom: 1px solid #ECECEC
+                margin-bottom: 24px
+                .datepicker
+                    &-controls 
+                        .button
+                            &.next-btn
+                                transform: rotate(-90deg)
+
+                            &.prev-btn
+                                transform: rotate(90deg)
+
+                            &.view-switch
+                                font-weight: 400
+            &-picker
+                min-width: 364px
+                padding: 30px 32px
+
+            &-view
+                width: 100%
+                .dow
+                    font-weight: 400
+                    color: #908A9A
+                .days
+                    flex: 1
+
+                .days-of-week
+                    margin-bottom: 8px
+
+            &-grid
+                width: 308px
+            
+            &-cell
+                font-size: 1rem
+                width: 44px
+                height: 40px
+                border-radius: 0
+                line-height: 36px
+                border: 2px solid transparent
+                border-radius: 2px
+
+                &.today
+                    background: transparent
+                    border-color: var(--color-red)
+                    color: var(--color-default) !important
+                    font-weight: 400
+                    
+                &.selected
+                    background: transparent
+                    border-color: var(--color-blue)
+                    color: var(--color-default) !important
+                    font-weight: 400
+
+            &-footer
+                background-color: transparent
+                box-shadow: none
+                padding-top: 32px
+
+            &-controls-custom
+                display: flex
+                align-items: center
+                justify-content: center
+                button
+                    margin-left: 8px
+                    margin-right: 8px
+                    &:first-child
+                        margin-left: 0
+
+                    &:last-child
+                        margin-right: 0

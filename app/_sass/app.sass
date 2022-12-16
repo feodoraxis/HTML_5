@@ -1,4 +1,4 @@
-$carousel-indicator-width: 30px
+$carousel-indicator-width: 28px
 // $utilities-border-colors: #CCC
 
 /**
@@ -12,6 +12,12 @@ $carousel-indicator-width: 30px
 @import 'node_modules/bootstrap/scss/reboot.scss'
 @import 'node_modules/bootstrap/scss/containers.scss'
 @import 'node_modules/bootstrap/scss/grid.scss'
+
+@import 'node_modules/@selectize/selectize/dist/scss/selectize.scss'
+@import 'node_modules/tiny-slider/src/tiny-slider.scss'
+@import 'node_modules/vanillajs-datepicker/sass/datepicker.scss'
+@import 'node_modules/vanillajs-datepicker/sass/datepicker-bulma.scss'
+@import 'node_modules/photoswipe/dist/photoswipe.scss'
 
 // @import 'node_modules/photoswipe/dist/photoswipe.scss'
 // @import 'node_modules/tiny-slider/src/tiny-slider.scss' 
@@ -34,7 +40,9 @@ $carousel-indicator-width: 30px
 // Common (Main constum styles)
 @import "_components/base/icon.sass"
 @import "_components/base/header.sass"
+@import "_components/base/header_fixed.sass"
 @import "_components/base/footer.sass"
+@import "_components/base/main.sass"
 @import "_components/*.sass"
 /**
  * Main (end)
@@ -49,6 +57,7 @@ $carousel-indicator-width: 30px
 // Common (Main custum styles)
 @import "_media/base/header.sass"
 @import "_media/base/footer.sass"
+@import "_media/base/main.sass"
 @import "_media/*.sass"
 /**
  * End

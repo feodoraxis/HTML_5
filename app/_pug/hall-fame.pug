@@ -1,0 +1,67 @@
+-
+    persons = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-hall_fame 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left
+
+                    .page-title.hall_fame-title
+                        h1 Зал славы
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Зал славы"
+                            }
+                        ])
+
+                .page-body
+                    .hall_fame
+
+                        article 
+                            .row
+
+                                each item in persons
+
+                                    .col-lg-4.col-sm-6.hall_fame-item
+                                        
+                                        .person_vertical
+                                            a(href="#") 
+                                                .person_vertical-desctop
+                                                    +bg('img/person.jpg')
+
+                                                .person_vertical-mobile
+                                                    .person_vertical-thumbnail
+                                                        img(src="img/person.jpg", alt="")
+
+                                                .person_vertical-content
+                                                    h3 Вадим Кондратьевич Петренчук
+                                                    p Первый государственный тренер СССР по регби и активный деятель
+
+
+                .page-footer
+                    .page_footer
+                        .page_footer-flexbox.page_footer-center
+                            .page_footer-col
+                                +social_networks()
+                        
+                    
+
+        include base/footer.pug 

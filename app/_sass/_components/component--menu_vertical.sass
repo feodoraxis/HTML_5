@@ -1,0 +1,30 @@
+.menu_vertical
+    ul
+        list-style: none
+        padding-left: 0
+        li
+            display: flex
+            align-items: center
+            padding: 6px
+            border-radius: 2px
+            border: 1px solid transparent
+            width: 100%
+            margin-bottom: 11px
+            cursor: pointer
+            &.active,
+            &:hover
+                border-color: var(--color-red)
+
+            img
+                margin-right: 4px
+
+            p
+                margin-bottom: 0
+
+            a
+                text-decoration: none
+
+    &-big
+        ul li
+            padding: 12px
+    

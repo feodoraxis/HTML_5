@@ -1,0 +1,63 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-person 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.news_single-header
+
+                    .page-title.page-title--medium.news_single-title.person-title
+                        h1 Зарицкий Михаил Маркович
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Высший совет Федерации регби России"
+                            },
+                            {
+                                "name": "Зарицкий Михаил Маркович"
+                            }
+                        ])
+
+                    .page-return_back.news_single-return_back
+
+                        a(href="news.html").button.button-back
+                            +icon('arrow-left')
+                            span Высший совет Федерации регби России
+
+                .page-body
+                    
+                    article
+                        .person
+                            .person-content 
+                                .person-subtitle
+                                    p ЗАМЕСТИТЕЛЬ ПРЕДСЕДАТЕЛЯ ВЫСШЕГО СОВЕТА ФЕДЕРАЦИИ РЕГБИ РОССИИ
+
+                                p <b>Дата рождения:</b> 18.05.1961
+
+                                p <b>Образование:</b> В 1983 году окончил Ленинградский Инженерно-строительный институт. Инженер-строитель. Работал мастером-прорабом, начальником участка 18 треста Главленинградстроя.
+
+                                .person-chronicle
+                                    ul.chronicle
+                                        li
+                                            b 1990 - 2001
+                                            p Директор ООО “Содействие”
+
+                                        li
+                                            b 2001 - н.в.
+                                            p Генеральный директор холдинговой компании “Энергостроймонтажсоюз”
+
+                            .person-meta
+
+                                .person-thumbnail.person-thumbnail--player
+                                    img(src="img/top-manager-single.jpg", alt="")
+
+        include base/footer.pug 

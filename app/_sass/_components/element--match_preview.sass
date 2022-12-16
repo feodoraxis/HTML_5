@@ -1,0 +1,52 @@
+.match_preview
+    display: flex
+    justify-content: space-between
+    padding: 23px 30px
+    background-color: #fff
+    box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+    transition: all .3s ease
+
+    &>div
+        display: flex
+        align-items: center
+
+    &-arenas
+        display: flex
+        align-items: center
+        li
+            color: #655E70
+            position: relative
+            margin-right: 20px
+            &::before
+                content: ''
+                width: 4px
+                height: 4px
+                border-radius: 50%
+                background-color: #B1ABBC
+                top: 0
+                bottom: 0
+                right: -12px
+                margin: auto
+
+            &:last-child
+                margin-right: 0
+                &::before
+                    display: none
+
+    &-tournament
+        p 
+            font-weight: 500
+            margin-bottom: 6px
+            span
+                font-weight: 400
+                color: #B1ABBC
+
+
+    &-link
+        text-decoration: none
+
+    &-button
+        min-width: 141px    
+
+    &:hover
+        box-shadow: 0 2px 20px rgba(#002A54, .15)

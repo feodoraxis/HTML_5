@@ -1,0 +1,54 @@
+.faq
+    
+    &-question
+        padding: 16px 50px 16px 20px
+        position: relative
+        cursor: pointer
+        p
+            margin-bottom: 0
+        &::before,
+        &::after
+            content: ''
+            width: 16px
+            height: 16px
+            top: 0
+            bottom: 0
+            right: 18px
+            margin: auto
+            pointer-events: none
+            transition: all .3s ease
+
+        &::before
+            background-image: url(../img/icons/plus.svg)
+
+        &::after
+            background-image: url(../img/icons/minus.svg)
+            opacity: 0
+
+    &-answer
+        display: none
+        padding: 16px 20px
+        &.open
+            display: block
+
+    &-item
+        margin-bottom: 8px
+        background-color: #fff
+        box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+        &.open
+            .faq
+                &-question
+                    &::before,
+                    &::after
+                        transform: rotate(360deg)
+
+                    &::before
+                        opacity: 0
+
+                    &::after
+                        opacity: 1
+                        
+                    p
+                        color: var(--color-red)
+
+                

@@ -1,0 +1,355 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left
+
+                    .page-title.page-title--medium.news_single-title
+                        h1 Структура
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Структура"
+                            }
+                        ])
+
+                .page-body
+                    .structure
+                        .structure-desctop
+                            .structure-section
+                                .row
+                                    .col-xxl-4.offset-xxl-2.col-xl-5.offset-xl-1.col-md-6
+                                        .structure-title
+                                            .section_title
+                                                h2 Высший совет
+
+                                        .structure-list
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/1.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Артемьев Игорь Юрьевич
+
+                                                    .structure_person-position
+                                                        p Председатель высшего совета
+
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/2.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Фёдоров Павел Алексеевич
+
+                                                    .structure_person-position
+                                                        p Председатель Правления Федерации регби России - Генеральный директор
+
+                                            .structure-item
+
+                                                .structure_position
+                                                    p Правление
+
+                                    .col-xxl-4.col-xl-5.col-md-6
+                                        .structure-title
+                                            .section_title
+                                                h2 Попечительский совет
+
+                                        .structure-list
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/3.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Морозов Дмитрий Валентинович
+
+                                                    .structure_person-position
+                                                        p Председатель попечительского совета
+
+                            .structure-section
+                                .row
+                                    .col-xxl-8.offset-xxl-2.col-xl-10.offset-xl-1
+
+                                        .structure-title
+                                            .section_title
+                                                h2 Правление
+
+                                        .structure-list.structure-list--horizontal
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/4.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Марков Сергей Сергеевич
+
+                                                    .structure_person-position
+                                                        p Спортивный директор
+
+                                            .structure-item
+                                                .structure_position
+                                                    p Спортивный департамент
+                                                    p Центр проведения соревнований
+
+                                        .structure-list.structure-list--horizontal
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/5.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Бабкин Глеб Всеволодович
+
+                                                    .structure_person-position
+                                                        p Директор по региональному развитию
+
+                                            .structure-item
+                                                .structure_position
+                                                    p Департамент регионального развития
+                                                    p Академия регби Центр  /  Академия регби Сибирь  /  Академия Юг
+                                                    p Методический центр развития детско-юношеского регби
+                                                    p Фонд развития регби в вооруженных силах и силовых структурах
+                                                    p Фонд поддержки ветеранов регби
+
+                                        .structure-list.structure-list--horizontal
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/6.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Сикачёв Андрей Евгеньевич
+
+                                                    .structure_person-position
+                                                        p Финансовый директор
+
+                                            .structure-item
+                                                .structure_position
+                                                    p Финансовый департамент
+
+                                        .structure-list.structure-list--horizontal
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/7.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Белявский Дмитрий Григорьевич
+
+                                                    .structure_person-position
+                                                        p Коммерческий директор
+
+                                            .structure-item
+                                                .structure_position
+                                                    p Коммерческий департамент
+
+                                        .structure-list.structure-list--horizontal
+                                            .structure-item
+
+                                                .structure_person
+                                                    .structure_person-avatar
+                                                        img(src="img/structure/8.jpg", alt="")
+
+                                                    .structure_person-name
+                                                        p 
+                                                            a(href="#") Игошев Михаил Борисович
+
+                                                    .structure_person-position
+                                                        p Директор по организационной работе
+
+                                            .structure-item
+                                                .structure_position
+                                                    p Организационно-правовой департамент
+                                                    p ООО “Регби Эксплуатация”
+
+                        .structure-mobile
+                            .switcher.switcher-blue.js-switcher
+                                ul
+                                    li.active(data-for="#high_council") Высший совет
+                                    li(data-for="#board_of_trustees") Попечительский совет
+
+                            .switcher-block.js-switcher-block.structure-block.active#high_council
+                                .structure-mobile_title
+                                    h3 Высший совет
+
+                                .structure-list
+
+                                    .structure-item
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/1.jpg", alt="")
+
+                                            .structure_person-name
+                                                p Артемьев Игорь Юрьевич
+
+                                            .structure_person-position
+                                                p Председатель высшего совета
+
+                                    .structure-item
+
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/2.jpg", alt="")
+
+                                            .structure_person-name
+                                                p Фёдоров Павел Алексеевич
+
+                                            .structure_person-position
+                                                p Председатель Правления Федерации регби России - Генеральный директор
+
+                                .structure-mobile_title
+                                    h3 Правление
+
+                                .structure-list
+                                    .structure-item
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/4.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Марков Сергей Сергеевич
+
+                                            .structure_person-position
+                                                p Спортивный директор
+
+                                    .structure-item
+                                        .structure_position
+                                            p Спортивный департамент
+                                    .structure-item
+                                        .structure_position
+                                            p Центр проведения соревнований
+
+                                .structure-list
+                                    .structure-item
+
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/5.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Бабкин Глеб Всеволодович
+
+                                            .structure_person-position
+                                                p Директор по региональному развитию
+
+                                    .structure-item
+                                        .structure_position
+                                            p Департамент регионального развития
+                                    .structure-item
+                                        .structure_position
+                                            p Академия регби Центр  /  Академия регби Сибирь  /  Академия Юг
+                                    .structure-item
+                                        .structure_position
+                                            p Методический центр развития детско-юношеского регби
+                                    .structure-item
+                                        .structure_position
+                                            p Фонд развития регби в вооруженных силах и силовых структурах
+                                    .structure-item
+                                        .structure_position
+                                            p Фонд поддержки ветеранов регби
+
+                                .structure-list
+                                    .structure-item
+
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/6.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Сикачёв Андрей Евгеньевич
+
+                                            .structure_person-position
+                                                p Финансовый директор
+
+                                    .structure-item
+                                        .structure_position
+                                            p Финансовый департамент
+
+                                .structure-list
+                                    .structure-item
+
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/7.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Белявский Дмитрий Григорьевич
+
+                                            .structure_person-position
+                                                p Коммерческий директор
+
+                                    .structure-item
+                                        .structure_position
+                                            p Коммерческий департамент
+
+                                .structure-list
+                                    .structure-item
+
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/8.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Игошев Михаил Борисович
+
+                                            .structure_person-position
+                                                p Директор по организационной работе
+
+                                    .structure-item
+                                        .structure_position
+                                            p Организационно-правовой департамент
+                                    .structure-item
+                                        .structure_position
+                                            p ООО “Регби Эксплуатация”
+
+                            .switcher-block.js-switcher-block.structure-block#board_of_trustees
+                                .structure-mobile_title
+                                    h3 Попечительский совет
+
+                                .structure-list
+
+                                    .structure-item
+                                        .structure_person
+                                            .structure_person-avatar
+                                                img(src="img/structure/3.jpg", alt="")
+
+                                            .structure_person-name
+                                                p 
+                                                    a(href="#") Морозов Дмитрий Валентинович
+
+                                            .structure_person-position
+                                                p Председатель попечительского совета
+
+
+        include base/footer.pug 

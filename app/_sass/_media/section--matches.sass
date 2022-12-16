@@ -1,0 +1,58 @@
+.matches
+    +xl
+        &-dates
+            flex: 0 0 40%
+            max-width: 40%
+
+    +lg
+        &-filter
+            padding: 0
+            background-color: transparent
+            &-flexbox
+                flex-wrap: wrap
+                justify-content: space-between
+
+        &-tournaments
+            order: 10
+            flex: 0 0 calc(100% - 200px - 62px - 20px)
+            max-width: calc(100% - 200px - 62px - 20px)
+
+
+        &-calendar
+            order: 20
+            margin-right: 20px
+
+        &-switcher_dates
+            order: 30
+            flex: 0 0 200px
+            max-width: 200px
+            display: flex
+            align-items: center
+
+        &-dates
+            order: 40
+            flex: 0 0 100%
+            max-width: 100%
+            margin-right: 0
+            margin-top: 28px
+            background-color: #F6F5F7
+            padding: 16px 12px
+
+    +sm
+        &-tournaments
+            margin-right: 0
+            flex: 0 0 100%
+            max-width: 100%
+            margin-bottom: 28px
+
+        &-dates
+            flex: 0 0 calc(100% + 12px + 12px)
+            width: calc(100% + 12px + 12px)
+            max-width: calc(100% + 12px + 12px)
+            margin-left: -12px
+            padding-left: 12px
+            padding-right: 12px
+
+        // &-switcher_dates
+        //     flex: 0 0 200px
+        //     max-width: 200px

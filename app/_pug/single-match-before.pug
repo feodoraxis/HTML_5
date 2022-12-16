@@ -1,0 +1,117 @@
+include base/_mixins.pug
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-gray_title.page-match_single
+            .wrapper
+
+                include match_single/header.pug
+
+            .page-body
+                article.match_single.match_single-has_information
+                    .wrapper
+                        section.match_single-teams 
+                            .teams_single
+                                ul.teams_single-strokes
+                                    li.teams_single-stroke_second Красноярск
+                                    li.teams_single-stroke_primary 16.08.2022  <span>|</span>  PARI Чемпионат России  <span>|</span>  1 тур
+                                    li.teams_single-stroke_second Арена-Север
+
+                                .teams_single-info
+                                    .teams_single-team
+                                        p ВВА-Подмосковье
+                                        img(src="img/team.png", alt="")
+
+                                    .teams_single-middle
+                                        .teams_single-date
+                                            p 16:00 <span>мск</span>
+
+                                        .teams_single-platform
+                                            a(href="#")
+                                                img(src="img/youtube-icon.svg", alt="") 
+
+                                    .teams_single-team
+                                        img(src="img/team.png", alt="")
+                                        p Красный Яр
+
+                    section.match_single-actions
+                        .wrapper
+
+                            include match_single/match_single_actions.pug
+                    
+                    section.match_single-information
+                        .match_single-information-pseudo
+                        .wrapper
+                            .information-container
+                                .information#information
+
+                                    +information_tabs([
+                                        {
+                                            "for": "#translation",
+                                            "classes": "active",
+                                            "name": "Трансляция",
+                                        },
+                                        {
+                                            "for": "#consists",
+                                            "classes": "",
+                                            "name": "Составы",
+                                        },
+                                        {
+                                            "for": "#progress",
+                                            "classes": "",
+                                            "name": "Ход матча",
+                                        },
+                                        {
+                                            "for": "#statistics-players",
+                                            "classes": "",
+                                            "name": "Статистика игроков",
+                                        },
+                                        {
+                                            "for": "#statistics-teams",
+                                            "classes": "",
+                                            "name": "Статистика команд",
+                                        },
+                                        {
+                                            "for": "#referees",
+                                            "classes": "",
+                                            "name": "Судьи",
+                                        }
+                                    ])
+
+                                    .information-blocks
+                                        .information-block.js-information-block.information-translation.active#translation
+                                            
+                                            include match_single/translation.pug
+
+                                        .information-block.js-information-block#consists
+
+                                            include match_single/consists.pug
+                                            
+                                        .information-block.js-information-block#progress
+
+                                            include match_single/progress.pug
+                                            
+                                        .information-block.js-information-block#statistics-players
+
+                                            include match_single/statistics_players.pug
+
+                                        .information-block.js-information-block#statistics-teams
+
+                                            include match_single/statistics_teams.pug
+
+                                        .information-block.js-information-block#referees
+
+                                            include match_single/referees.pug
+    
+            .page-footer
+                .page_footer
+                    .page_footer-flexbox.page_footer-center
+                        .page_footer-col
+                            +social_networks()
+                        
+        .column_data-container#column_data_container
+        include base/footer.pug 

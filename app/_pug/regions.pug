@@ -1,0 +1,144 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page 
+            
+
+            .wrapper
+                .page-header.page-header--breadcrumps_mobile_top_left
+                    .page-title.page-title--medium.news_single-title
+                        h1 Регионы
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Регионы"
+                            }
+                        ])
+
+            .page-body
+
+                .wrapper.wrapper-small
+                    .content_tabs
+                        .content_tabs-head 
+                            .content_tabs-desctop
+                                .content_tabs-flexbox
+                                    .content_tabs-tabs
+                                        .tabs.js-tabs
+                                            ul
+                                                li(data-for="all").active Карта
+                                                li(data-for="all") Департамент
+                                                li(data-for="all") Комитет
+                                                li(data-for="all") Документы
+                                                li(data-for="all") Вопросы
+                                    .content_tabs-search
+                                        .search_block.search_block-static
+                                            form(action="")
+                                                .search_block-input
+                                                    input(type="text", placeholder="Поиск города")
+                                                button.button.button-askew.button-askew-lite
+                                                    div
+                                                    span 
+                                                        +icon('lupe')
+
+                            .content_tabs-mobile
+                                .content_tabs-tabs
+                                    select
+                                        option(selected="selected") Карта
+                                        option Департамент
+                                        option Комитет
+                                        option Документы
+                                        option Вопросы
+
+
+                        .content_tabs-body
+
+                            .regions
+                                .regions-map#regions_map(data-regions='[{"id":"AstrakhanOblast","name":"Астраханская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/astrakhan-regional-sports-public-organization-federation-of-rugby/"},{"id":"BelgorodOblast","name":"Белгородская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/belgorod-regional-sports-public-organization-federation-of-rugby-of-belgorod-region/"},{"id":"VladimirOblast","name":"Владимирская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/vladimir-regional-physical-training-and-sport-public-organization-rugby/"},{"id":"VologdaOblast","name":"Вологодская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-vologda-regional-public-organization-federation-of-rugby/"},{"id":"IvanovoOblast","name":"Ивановская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/ivanovo-regional-sports-public-organization-federation-of-rugby/"},{"id":"KaliningradOblast","name":"Калининградская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-kaliningrad-regional-public-organization-kaliningrad-regional-rugby-federation/"},{"id":"KarachayCherkessia","name":"Карачаево-Черкесская Республика","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/karachay-cherkess-regional-public-organization-sports-federation-of-rugby/"},{"id":"KemerovoOblast","name":"Кемеровская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/kemerovo-regional-sports-public-organization-federation-of-rugby-victory/"},{"id":"LipetskOblast","name":"Липецкая область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/lipetsk-regional-public-organization-federation-of-rugby/"},{"id":"NizhnyNovgorodOblast","name":"Нижегородская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/nizhny-novgorod-regional-public-organization-federation-of-rugby-nn/"},{"id":"IrkutskOblast","name":"Иркутская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-federation-of-football-of-the-irkutsk-region/"},{"id":"Rostov_Oblast","name":"Ростовская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-the-federation-of-rugby-of-the-rostov-region/"},{"id":"SverdlovskOblast","name":"Свердловская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-federation-of-football-of-sverdlovsk-region/"},{"id":"Udmurtia","name":"Удмуртская Республика","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-the-federation-of-rugby-of-the-udmurt-republic/"},{"id":"TambovOblast","name":"Тамбовская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-tambov-regional-federation-of-rugby/"},{"id":"OmskOblast","name":"Омская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/omsk-regional-public-organization-omsk-rugby-federation/"},{"id":"VoronezhOblast","name":"Воронежская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-voronezh-regional-federation-of-rugby/"},{"id":"KrasnodarKrai","name":"Краснодарский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-sports-federation-of-krasnodar-rugby/"},{"id":"KrasnoyarskKrai","name":"Красноярский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-krasnoyarsk-regional-federation-of-rugby/"},{"id":"KirovOblast","name":"Кировская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-sports-federation-of-rugby-of-the-kirov-region/"},{"id":"Bashkortostan","name":"Республика Башкортостан","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-sports-federation-of-rugby-of-the-republic-of-bashkortostan/"},{"id":"Tuva","name":"Тыва","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-tuvan-rugby-federation-/"},{"id":"Dagestan","name":"Республика Дагестан","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-rugby-2010-of-the-republic-of-dagestan/"},{"id":"ArkhangelskOblast","name":"Архангельская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-arkhangelsk-region/"},{"id":"Moscow","name":"Москва","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-in-the-city-of-moscow/"},{"id":"VolgogradOblast","name":"Волгоградская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-volgograd-region/"},{"id":"ZabKray","name":"Забайкальский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-in-zabaykalsky-krai/"},{"id":"KalugaOblast","name":"Калужская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-kaluga-region/"},{"id":"KostromaOblast","name":"Костромская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-kostroma-region-/"},{"id":"MoscowOblast","name":"Московская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-moscow-region/"},{"id":"MurmanskOblast","name":"Мурманская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-murmansk-region/"},{"id":"NovgorodOblast","name":"Новгородская область ","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-novgorod-region/"},{"id":"NovosibirskOblast","name":"Новосибирская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-novosibirsk-region/"},{"id":"OryolOblast","name":"Орловская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-in-orel-region/"},{"id":"PenzaOblast","name":"Пензенская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-penza-region/"},{"id":"Khakassia","name":"Республика Хакасия","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-in-the-republic-of-khakassia/"},{"id":"PrimorskyKrai","name":"Приморский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-primorsky-krai/"},{"id":"Ingushetia","name":"Республика Ингушетия","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-republic-of-ingushetia/"},{"id":"SamaraOblast","name":"Самарская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-samara-region/"},{"id":"SaintPetersburg","name":"Санкт-Петербург","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-st-petersburg/"},{"id":"TyumenOblast","name":"Тюменская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-tyumen-region/"},{"id":"UlyanovskOblast","name":"Ульяновская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-ulyanovsk-region/"},{"id":"KhantiaMansia","name":"Ханты-Мансийский автономный округ","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-khanty-mansiysk-autonomous-okrug-ugra/"},{"id":"Chechnya","name":"Чеченская Республика","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-chechen-republic/"},{"id":"Chuvashia","name":"Чувашская Республика","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-chuvash-republic/"},{"id":"YaroslavlOblast","name":"Ярославская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-the-yaroslavl-region/"},{"id":"MariEl","name":"Республика Марий Эл","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-of-mari-el-republic/"},{"id":"Adygeya","name":"Республика Адыгея","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-republic-of-adygea/"},{"id":"Krym","name":"Республика Крым","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-republic-of-crimea/"},{"id":"Tatarstan","name":"Республика Татарстан","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-football-of-the-republic-of-tatarstan/"},{"id":"ChelyabinskOblast","name":"Челябинская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-federation-of-rugby-of-the-chelyabinsk-region/"},{"id":"KurskOblast","name":"Курская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-federation-of-rugby-of-the-city-of-kursk-and-kursk-region/"},{"id":"PermKrai","name":"Пермский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-rugby-in-perm-krai/"},{"id":"TulaOblast","name":"Тульская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-tula-federation-of-rugby/"},{"id":"OrenburgOblast","name":"Оренбургская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-orenburg-regional-rugby-federation/"},{"id":"SmolenskOblast","name":"Смоленская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-smolensk-regional-federation-of-rugby/"},{"id":"StavropolKrai","name":"Ставропольский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-stavropol-regional-federation-of-rugby/"},{"id":"AmurOblast","name":"Амурская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-federation-of-rugby-of-the-amur-region/"},{"id":"Karelia","name":"Республика Карелия","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-karelian-rugby-federation/"},{"id":"NorthOssetia","name":"Республика Северная Осетия — Алания","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-the-rugby-federation-of-the-republic-of-nor/"},{"id":"KabardinoBalkaria","name":"Кабардино-Балкарская Республика","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/republican-public-organization-kabardino-balkar-union-of-rugby-players/"},{"id":"SaratovOblast","name":"Саратовская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/saratov-regional-public-organization-federation-of-rugby/"},{"id":"TverOblast","name":"Тверская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/tver-regional-sports-public-organization-federation-of-football-of-the-tver-region/"},{"id":"RyazanOblast","name":"Рязанская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/public-organization-ryazan-regional-federation-of-rugby/"},{"id":"PskovOblast","name":"Псковская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-sports-federation-of-rugby-of-the-pskov-region/"},{"id":"KomiRep","name":"Республика Коми","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-union-of-rugby-of-the-komi-republic/"},{"id":"BryanskOblast","name":"Брянская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-bryansk-regional-rugby-federation/"},{"id":"LeningradOblast","name":"Ленинградская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-the-leningrad-regional-federation-of-rugby/"},{"id":"Mordovia","name":"Республика Мордовия","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-physical-training-and-sport-public-organization-mordovia-republican-federation-of-rugby/"},{"id":"TomskOblast","name":"Томская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/regional-public-organization-federation-of-rugby-tomsk-region/"},{"id":"KhabarovskKrai","name":"Хабаровский край","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-federation-of-rugby-of-the-khabarovsky-krai/"},{"id":"SakhalinOblast","name":"Сахалинская область","link":"/federation/regional-organizations-members-of-the-rugby-federation-of-russia/the-regional-sports-public-organization-federation-of-rugby-sakhalin-region/"}]')
+
+                                    include ../img/map.svg
+
+                                .regions-body
+                                    .regions-menu
+                                        .regions-desctop
+                                            .menu_vertical.menu_vertical-big
+                                                ul
+                                                    
+                                                    li
+                                                        p Центральный федеральный округ (18)
+                                                    li
+                                                        p Северо-Западный федеральный округ (10)
+                                                    li
+                                                        p Южный федеральный округ (8)
+                                                    li
+                                                        p Северо-Кавказский федеральный округ (7)
+                                                    li
+                                                        p Приволжский федеральный округ (14)
+                                                    li
+                                                        p Уральский федеральный округ (5)
+                                                    li
+                                                        p Сибирский федеральный округ (9)
+                                                    li.active
+                                                        p Дальневосточный федеральный округ (5)
+
+                                        .regions-mobile
+                                            select
+                                                option Центральный федеральный округ (18)
+                                                option Северо-Западный федеральный округ (10)
+                                                option Южный федеральный округ (8)
+                                                option Северо-Кавказский федеральный округ (7)
+                                                option Приволжский федеральный округ (14)
+                                                option Уральский федеральный округ (5)
+                                                option Сибирский федеральный округ (9)
+                                                option(selected="selected") Дальневосточный федеральный округ (5)
+                                                    
+                                    .regions-links
+
+                                        table.table
+                                            tbody
+                                                tr
+                                                    td  Региональная общественная организация <a href="#">"Федерация регби Забайкальского края"</a>
+
+                                                    td region75@rugby.ru
+                                                tr
+                                                    td  Региональная общественная организация <a href="#">"Федерация регби Забайкальского края"</a>
+
+                                                    td region75@rugby.ru
+
+                                                tr
+                                                    td  Региональная общественная организация <a href="#">"Федерация регби Забайкальского края"</a>
+
+                                                    td region75@rugby.ru
+                                                tr
+                                                    td  Региональная общественная организация <a href="#">"Федерация регби Забайкальского края"</a>
+
+                                                    td region75@rugby.ru
+
+                                                tr
+                                                    td  Региональная общественная организация <a href="#">"Федерация регби Забайкальского края"</a>
+
+                                                    td region75@rugby.ru
+
+            .page-footer
+                .wrapper.wrapper-small
+                    .page_footer
+                        .page_footer-flexbox.page_footer-jcsb
+                            .page_footer-col
+                                +social_networks()
+
+                            .page_footer-col
+                                button(class='button button-lite_square', data-modal-selector="#modal_recall")
+                                    div
+                                    span Написать нам
+                                                            
+
+                    
+        .column_data-container#column_data_container
+        include base/footer.pug 

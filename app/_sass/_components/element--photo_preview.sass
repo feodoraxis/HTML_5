@@ -1,0 +1,32 @@
+.photo_preview
+    position: relative
+    &::before,
+    &::after
+        content: ''
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 10
+        pointer-events: none
+        opacity: 0
+        margin: auto
+        transition: all .3s ease
+
+    &::before
+        background-color: rgba(#1E0E47, .2)
+
+    &::after
+        z-index: 20
+        background-image: url(../img/icons/lupe.svg)
+        background-size: 60px
+        background-position: center
+
+    &:hover
+        &::before,
+        &::after
+            opacity: 1
+            
+        
+    &-container
+        margin-bottom: 27px

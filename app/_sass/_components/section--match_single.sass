@@ -1,0 +1,33 @@
+.match_single
+    &-teams
+        padding-bottom: 40px
+
+    &-actions
+        padding-top: 40px
+        padding-bottom: 70px
+        background: linear-gradient(to bottom, #FAF9FB, #F2EDF6)
+        position: relative
+        &::before,
+        &::after
+            content: ''
+            background: url(../img/icons/lightninigs-bg.svg)
+            width: 429px
+            height: 193px
+            bottom: 0
+            z-index: 10
+
+        &::before
+            left: -279px
+            transform: scale(-1, 1)
+
+        &::after
+            right: -279px
+
+        &-before
+            padding-bottom: 40px
+
+    &-has_information
+
+        .match_single
+            &-deadline_actions
+                padding-bottom: 60px

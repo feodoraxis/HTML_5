@@ -1,2 +1,66 @@
 .footer
-    
+    margin-top: 60px
+    &-widgets
+        background-color: #13191F
+        position: relative
+        &::before
+            content: ''
+            background-image: url(../img/icons/lightning.svg)
+            background-position-x: left
+            background-position-y: bottom
+            background-size: auto
+            height: 100%
+            right: 0
+            top: 0
+            bottom: 0
+            width: 150px
+
+    &-widget
+        margin-left: 32px
+        padding-top: 32px
+        padding-bottom: 32px
+        border-bottom: 1px solid #393C40
+        &:last-child
+            border-bottom: 0
+
+    &-main
+        background: linear-gradient(to bottom, #000, var(--color-default))
+        padding-top: 52px
+        padding-bottom: 52px
+        &-flexbox
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+
+    &-left
+        display: flex
+        align-items: center
+
+    &-logo
+        margin-right: 38px
+        a:hover
+            svg, path
+                fill: #FFF
+
+    &-copyright
+        p
+            font-size: rem(14)
+            font-weight: 500
+            margin-bottom: 19px
+            color: #FFF
+
+        span
+            font-size: rem(14)
+            font-weight: 500
+            color: #697989
+
+    &-developer
+        p
+            font-size: rem(14)
+            color: #697989
+            margin: 0
+            a
+                color: #FFF
+                text-decoration: none
+                &:hover
+                    text-decoration: underline

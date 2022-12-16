@@ -1,0 +1,52 @@
+.structure
+    &-section
+        margin-bottom: 72px
+        &:last-child
+            margin-bottom: 0
+
+    &-title
+        margin-bottom: 40px
+
+    // &-list
+    &-item
+        margin-bottom: 40px
+        position: relative
+        &::before
+            content: ''
+            left: 0
+            right: 0
+            margin: auto
+            bottom: -40px
+            height: 40px
+            width: 2px
+            background-color: #C8C5CE
+
+        &:last-child
+            margin-bottom: 0
+            &::before
+                display: none
+
+    &-list
+        &--horizontal
+            display: flex
+            .structure
+                &-item
+                    flex: 0 0 calc(50% - 0.75rem)
+                    margin-right: 1.5rem
+                    &:first-child
+                        &::before
+                            display: none
+                    &:last-child
+                        margin-right: 0
+
+                        .structure_position
+
+                            &::before
+                                content: ''
+                                height: 2px
+                                width: 1.5rem
+                                left: -1.5rem
+                                bottom: 0px
+                                top: 0
+                                margin: auto
+                                background-color: #C8C5CE

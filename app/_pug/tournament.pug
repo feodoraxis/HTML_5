@@ -1,0 +1,851 @@
+include base/_mixins.pug
+-
+    table = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+
+-
+    dates = [
+        {
+            "num":"01",
+            "day":"сб"
+        },
+        {
+            "num":"02",
+            "day":"вс"
+        },
+        {
+            "num":"03",
+            "day":"пн"
+        },
+        {
+            "num":"04",
+            "day":"вт"
+        },
+        {
+            "num":"05",
+            "day":"ср"
+        },
+        {
+            "num":"06",
+            "day":"чт"
+        },
+        {
+            "num":"07",
+            "day":"пт"
+        },
+        {
+            "num":"08",
+            "day":"сб"
+        },
+        {
+            "num":"09",
+            "day":"вс"
+        },
+        {
+            "num":"10",
+            "day":"пн"
+        },
+        {
+            "num":"11",
+            "day":"вт"
+        },
+        {
+            "num":"12",
+            "day":"ср"
+        },
+        {
+            "num":"13",
+            "day":"чт"
+        },
+        {
+            "num":"14",
+            "day":"пт"
+        },
+        {
+            "num":"15",
+            "day":"сб"
+        },
+        {
+            "num":"16",
+            "day":"вс"
+        },
+        {
+            "num":"17",
+            "day":"пн"
+        },
+        {
+            "num":"18",
+            "day":"вт"
+        },
+        {
+            "num":"19",
+            "day":"ср"
+        },
+        {
+            "num":"20",
+            "day":"чт"
+        },
+        {
+            "num":"21",
+            "day":"пт"
+        },
+    ];
+
+-
+    weeks = [
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+        {
+            "start_num": "29",
+            "start_month": "авг",
+            "end_num": "04",
+            "end_month": "сен",
+        },
+    ];
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-gray_title.page-tournament
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.page-header--mmobile_hide
+                    .page-title
+                        h1 Чемпионат Европы по регби
+                    .page-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "matches.html",
+                                "name": "Матчи"
+                            },
+                            {
+                                "href": "matches.html",
+                                "name": "Чемпионат Европы по регби"
+                            }
+                        ])
+
+            .page-body
+                article.tournament
+                    .tournament-header
+                        .wrapper
+                            .tournament-title
+                                span.tournament-icon
+                                    img(src="img/tournament.png", alt="")
+
+                                .tournament-h1
+                                    h1 Чемпионат Европы по Регби
+
+                    .tournament-body
+                        .wrapper
+                            .information-container
+                                .information.information-tournament.js-information-tournament#information
+                                    +information_tabs([
+                                        {
+                                            "for": "#game_table",
+                                            "classes": "active",
+                                            "name": "Таблица",
+                                        },
+                                        {
+                                            "for": "#statistics-players",
+                                            "classes": "",
+                                            "name": "Статистика игроков",
+                                        },
+                                        {
+                                            "for": "#statistics-teams",
+                                            "classes": "",
+                                            "name": "Статистика команд",
+                                        },
+                                        {
+                                            "for": "#matches_tab",
+                                            "classes": "",
+                                            "name": "Матчи",
+                                        },                                    
+                                    ])
+
+                        .information-blocks
+
+                            .information-block.js-information-block.active#game_table
+                                .wrapper.tournament-wrapper
+                                    .game_table
+                                        .game_table-table
+                                            table.table
+                                                thead
+                                                    tr
+                                                        th 
+                                                            span Место
+                                                        th 
+                                                            span Команда
+                                                        th 
+                                                            span Игры
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                                            span В
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                                            span Н
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                                            span П
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                                            span +
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                                            span -
+                                                        th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                                            span РИО
+                                                        th 
+                                                            span Бонус
+                                                        th 
+                                                            span Очки
+                                                        th 
+                                                            span Форма
+                                                        th 
+                                                            span След
+
+                                                tbody
+
+                                                    each item in table
+
+                                                        tr 
+                                                            td
+                                                                .game_table-position.js-column_data-source(data-content='[{"content":"Ранее №2"}]') 
+                                                                    span 1
+                                                                    +icon('up')
+                                                            td
+                                                                .team_card
+                                                                    img(src="img/team.png", alt="")
+                                                                    p ВВА-Подмосковье
+                                                            td 3
+                                                            td 3
+                                                            td 0
+                                                            td 0
+                                                            td 10
+                                                            td 4
+                                                            td 6
+                                                            td 3
+                                                            td 3
+                                                            //- Форма
+                                                            td 
+                                                                ul.uniforms
+                                                                    li.uniforms-red В
+                                                                    li.uniforms-black П
+                                                                    li.uniforms-gray Н
+                                                                    li.uniforms-red В
+                                                            td 
+                                                                img(src="img/team.png", alt="")
+                                                        tr 
+                                                            td
+                                                                .game_table-position
+                                                                    span 2
+                                                                    +icon('down')
+                                                            td
+                                                                .team_card
+                                                                    img(src="img/team.png", alt="")
+                                                                    p Красный Яр
+                                                            td 3
+                                                            td 3
+                                                            td 0
+                                                            td 0
+                                                            td 10
+                                                            td 4
+                                                            td 6
+                                                            td 3
+                                                            td 3
+                                                            //- Форма
+                                                            td 
+                                                                ul.uniforms
+                                                                    li.uniforms-red В
+                                                                    li.uniforms-red В
+                                                                    li.uniforms-gray Н
+                                                            td 
+                                                                img(src="img/team.png", alt="") 
+
+                                    .game_table-reference
+                                        p В - выиграно, Н - ничья, П - проигрыш, + - заработано очков, — - потеряно очков, РИО - разница игровых очков
+
+                            .information-block.js-information-block#statistics-players
+
+                                .wrapper.wrapper-small.tournament-wrapper
+                                    .statistics_general
+                                        .statistics_general-aside.statistics_general-desctop
+                                            .statistics_general-header
+                                            .statistics_general-content
+                                                .switcher-block.js-switcher-block.active.js-statistics_table
+                                                    .menu_vertical
+                                                        ul
+                                                            
+                                                            li.active
+                                                                img(src="img/team.png", alt="")
+                                                                p Все клубы
+                                                                
+                                                            each item in table
+
+                                                                li 
+                                                                    img(src="img/team.png", alt="")
+                                                                    p Локомотив
+
+                                        .statistics_general-body.statistics_general-body--small
+                                            .statistics_general-header
+
+                                                .switcher.js-switcher
+                                                    ul
+                                                        li.active(data-for=".js-statistics_table") По клубам
+                                                        li(data-for="#statistics_best") Лучшие
+
+                                            .statistics_general-content
+                                                .switcher-block.js-switcher-block.active.js-statistics_table
+
+                                                    .statistics_general-clubs.statistics_general-mobile
+                                                        select(name="") 
+                                                            option Все клубы
+                                                            option Локомотив
+                                                            option Локомотив 2
+                                                            option Локомотив 3
+                                                            option Локомотив 4
+                                                            option Локомотив 5
+                                                                
+                                                    .game_table
+                                                        .game_table-table
+                                                            table.table
+                                                                thead
+                                                                    tr
+                                                                        th 
+                                                                        th.dashed.js-column_data-source(data-content='[{"content":"Попытки"}]') 
+                                                                            span П
+                                                                        th.dashed.js-column_data-source(data-content='[{"content":"Реализации"}]') 
+                                                                            span Р
+                                                                        th.dashed.js-column_data-source(data-content='[{"content":"Штрафные"}]') 
+                                                                            span Ш
+                                                                        th.dashed.js-column_data-source(data-content='[{"content":"Дроп-голы"}]') 
+                                                                            span ДГ
+                                                                        th.dashed.js-column_data-source(data-content='[{"content":"Очки"}]') 
+                                                                            span О
+
+                                                                tbody
+
+                                                                    each item in table
+                                                                        
+                                                                        tr 
+                                                                            td Ислам Абдулкадиров
+                                                                            td.table-lite 0
+                                                                            td.table-lite 0
+                                                                            td.table-lite 0
+                                                                            td.table-lite 0
+                                                                            td.table-lite 0
+
+                                                        .game_table-button
+                                                            +button('button button-primary', "Все игроки", 'link')
+                                                        .game_table-reference
+                                                            p В - выиграно, Н - ничья, П - проигрыш, + - заработано очков, — - потеряно очков, РИО - разница игровых очков
+
+                                                .switcher-block.js-switcher-block#statistics_best
+
+                                                    .statistics_general-clubs.statistics_general-mobile
+                                                        select(name="") 
+                                                            option Бомбардиры
+                                                            option Бомбардиры 2
+                                                            option Бомбардиры 3
+                                                            option Бомбардиры 4
+                                                            option Бомбардиры 5
+
+                                                    .players_list
+                                                        ul
+
+                                                            each item in table
+                                                                
+                                                                li 
+                                                                    .player_item 
+                                                                        .player_item-avatar
+                                                                            img(src="img/player.jpg", alt="")
+                                                                        .player_item-content
+                                                                            .player_item-title
+                                                                                p Сергей Янюшкин
+
+                                                                            .player_item-math
+                                                                                b 132
+                                                                                span очка
+
+                                                                        .player_item-team
+                                                                            img(src="img/team.png", alt="")
+
+                            .information-block.js-information-block#statistics-teams
+
+                                .wrapper.wrapper-small.tournament-wrapper
+                                    .statistics_general
+                                        .statistics_general-aside.statistics_general-desctop
+                                            .statistics_general-content 
+                                                .menu_vertical
+                                                    ul
+                                                        
+                                                        li.active
+                                                            img(src="img/team.png", alt="")
+                                                            p Все клубы
+                                                            
+                                                        each item in table
+
+                                                            li 
+                                                                img(src="img/team.png", alt="")
+                                                                p Локомотив
+
+                                        .statistics_general-body
+
+                                            .statistics_general-content
+
+                                                .statistics_general-clubs.statistics_general-mobile
+                                                    select(name="") 
+                                                        option Все клубы
+                                                        option Локомотив
+                                                        option Локомотив 2
+                                                        option Локомотив 3
+                                                        option Локомотив 4
+                                                        option Локомотив 5
+
+                                                .tournament_teams_statistics
+
+                                                    .tournament_teams_statistics-item.tournament_teams_statistics-item--text
+                                                        .tournament_teams_statistics-title
+                                                            h3 Общая статистика
+
+                                                        .tournament_teams_statistics-body
+
+                                                            .discipline.discipline-right_only
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Владение мячом
+                                                                    .discipline-right
+                                                                        b 33%
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары по воротам
+                                                                    .discipline-right
+                                                                        b 5
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары в створ
+                                                                    .discipline-right
+                                                                        b 3
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары по воротам
+                                                                    .discipline-right
+                                                                        b 5
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары в створ
+                                                                    .discipline-right
+                                                                        b 3
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары по воротам
+                                                                    .discipline-right
+                                                                        b 5
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары в створ
+                                                                    .discipline-right
+                                                                        b 3
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары по воротам
+                                                                    .discipline-right
+                                                                        b 5
+
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Удары в створ
+                                                                    .discipline-right
+                                                                        b 3
+                                            
+                                                    .tournament_teams_statistics-item
+                                                        .tournament_teams_statistics-title.tournament_teams_statistics-title--center
+                                                            h3 Захваты
+
+                                                        .tournament_teams_statistics-body
+                                                            .round_chart
+                                                                .round_chart-layer-under(style="transform: rotate(122deg)")
+                                                                
+                                                                    svg(viewBox="0 0 100 100").round_chart-shape
+                                                                        circle(cx="50", cy="50", r="40", stroke="#D9D9D9", style="stroke-dashoffset: 150px;").round_chart-layer
+
+                                                                .round_chart-layer-above
+                                                                
+                                                                    svg(viewBox="0 0 100 100").round_chart-shape
+                                                                        circle(cx="50", cy="50", r="40", stroke="#1E0E47", style="stroke-dashoffset: 105px;").round_chart-layer
+
+                                                                .round_chart-data
+                                                                    .round_chart-data-left
+                                                                        p 121/146
+                                                                    .round_chart-data-right
+                                                                        p 83%
+
+                                                    .tournament_teams_statistics-item.tournament_teams_statistics-item--text
+                                                        .tournament_teams_statistics-title
+                                                            h3 Дисциплина
+
+                                                        .tournament_teams_statistics-body
+                                                            .discipline.discipline-right_only
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Красные карточки
+
+                                                                    .discipline-right
+                                                                        b 0
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Желтые карточки
+
+                                                                    .discipline-right
+                                                                        b 1
+                                                                .discipline-item
+                                                                    .discipline-option
+                                                                        p Нарушений
+
+                                                                    .discipline-right
+                                                                        b 2
+
+                            .information-block.js-information-block#matches_tab
+
+                                .wrapper.tournament-wrapper
+                                    .matches
+                                        .matches-filter
+                                            //- form(action="")
+                                            .matches-filter-flexbox
+                                                .matches-tournaments
+                                                    select(name="tournament") 
+                                                        option Все турниры
+                                                        option(value='1') PARI Чемпионат России
+                                                        option(value='2') Высшая лига
+                                                        option(value='3') Чемпионат молодежных команд
+                                                        option(value='4') Чемпионат России по регби-7
+                                                        option(value='5') Чемпионат России по регби-7 жен.
+
+                                                .matches-calendar
+                                                    button.button.button-calendar#button_show_calendar
+                                                        +icon('calendar')
+
+                                                    input(type="hidden" value="" id="chosesDate")
+
+                                                    //- input.calendar-container#button_calendar(data-date="25.11.2022")
+
+                                                .matches-dates
+                                                    .matches-days.js-matches-days.active#matches_days
+                                                        ul 
+                                                            each date in dates
+                                                                li 
+                                                                    div.day
+                                                                        b= date.num
+                                                                        span= date.day
+                                                                        input(type="hidden" value="" name="day")
+
+                                                    .matches-days.js-matches-days#matches_weeks
+                                                        ul 
+                                                            each week in weeks
+                                                                li 
+                                                                    div.week
+                                                                        div.week-start
+                                                                            b= week.start_num
+                                                                            span= week.start_month
+                                                                        div.week-end
+                                                                            b= week.end_num
+                                                                            span= week.end_month
+
+                                                                        input(type="hidden" value="" name="week_num")
+
+                                                .matches-switcher_dates
+                                                    .switcher#matches_date_switcher
+                                                        ul 
+                                                            li(data-for="#matches_days").active Дни
+                                                            li(data-for="#matches_weeks") Недели
+
+                                            .calendar-container#button_calendar_container
+                                                #button_calendar(data-date="2022-11-25")
+
+                                        .matches-list
+
+                                            .matches-item.matches-item--title
+                                                .section_title
+                                                    h2 28 августа <span><span>|</span> 1 тур</span>
+
+                                            .matches-item
+                                                .match_preview
+                                                    .match_preview-tournament
+                                                        div
+                                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                                            ul.match_preview-arenas.match_preview-desctop
+                                                                li Красноярск
+                                                                li Арена-Север
+                                                        
+                                                    .match_preview-match
+                                                        .match.match-today
+                                                            .match-row
+                                                                .match-team
+                                                                    span МТЛ
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 23 <span>-</span> 12
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span МТЛ
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                                    ul.match_preview-arenas.match_preview-mobile
+                                                        li Красноярск
+                                                        li Арена-Север
+                                                    .match_preview-button
+                                                        a.button.button-lite_square(href="#") Купить билеты
+
+                                            .matches-item
+                                                .match_preview
+                                                    .match_preview-tournament
+                                                        div
+                                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                                            ul.match_preview-arenas.match_preview-desctop
+                                                                li Красноярск
+                                                                li Арена-Север
+                                                        
+                                                    .match_preview-match
+                                                        .match.match-today.match-now
+                                                            .match-row
+                                                                .match-team
+                                                                    span МТЛ
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 23 <span>-</span> 12
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span МТЛ
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                                    ul.match_preview-arenas.match_preview-mobile
+                                                        li Красноярск
+                                                        li Арена-Север
+                                                    .match_preview-button
+                                                        a.button.button-lite_square(href="#") Купить билеты
+
+
+                                            .matches-item.matches-item--title
+                                                .section_title
+                                                    h2 30 августа <span><span>|</span> 1 тур</span>
+
+                                            .matches-item
+                                                .match_preview
+                                                    .match_preview-tournament
+                                                        div
+                                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                                            ul.match_preview-arenas.match_preview-desctop
+                                                                li Красноярск
+                                                                li Арена-Север
+                                                        
+                                                    .match_preview-match
+                                                        .match
+                                                            .match-row
+                                                                .match-team
+                                                                    span ХМК
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 16:00
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span СЛВ
+
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        span МСК
+
+                                                    ul.match_preview-arenas.match_preview-mobile
+                                                        li Красноярск
+                                                        li Арена-Север
+                                                    .match_preview-button
+                                                        a.button.button-lite_square(href="#") Купить билеты
+
+                                            .matches-item
+                                                .match_preview
+                                                    .match_preview-tournament
+                                                        div
+                                                            p PARI Чемпионат России <span>|</span>  1 тур
+                                                            ul.match_preview-arenas.match_preview-desctop
+                                                                li Красноярск
+                                                                li Арена-Север
+                                                        
+                                                    .match_preview-match
+                                                        .match.match-today
+                                                            .match-row
+                                                                .match-team
+                                                                    span КЯР
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 14:00
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span ВВА
+
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        span техн.
+
+                                                    ul.match_preview-arenas.match_preview-mobile
+                                                        li Красноярск
+                                                        li Арена-Север
+                                                    .match_preview-button
+
+            .page-footer
+                .wrapper
+                    .page_footer
+                        .page_footer-flexbox.page_footer-center#matches_page_footer
+                            .page_footer-col
+                                +social_networks()
+                            .page_footer-col.hidden#matches_page_pagination
+                                .pagination
+                                    ul
+                                        li 
+                                            span 1
+                                        li 
+                                            a(href="#") 
+                                                span 2
+                                        li 
+                                            a(href="#") 
+                                                span 3
+                                        li 
+                                            span.pagination-dots= "..."
+                                        li 
+                                            a(href="#") 
+                                                span 45
+                                        li 
+                                            a(href="#") 
+                                                span 46
+                                        li 
+                                            a(href="#").pagination-right
+                                                +icon('angle-bottom')
+                        
+        .column_data-container#column_data_container
+        include base/footer.pug 

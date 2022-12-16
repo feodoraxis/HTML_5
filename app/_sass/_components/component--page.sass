@@ -1,0 +1,75 @@
+.page
+    &-header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 52px
+
+        &--has_tabs
+            justify-content: space-between
+            .page
+                &-title,
+                &-tabs_header,
+                &-breadcrumps
+                    flex: auto
+
+        &--alt
+            display: block
+
+    &-tabs_header
+        display: flex
+        justify-content: center
+
+
+    &-title
+        display: flex
+        align-items: center
+        padding-left: 37px
+        min-height: 42px 
+        position: relative
+        flex: 0 0 50%
+        max-width: 50%
+        &::before
+            content: ''
+            width: 27px
+            height: 42px
+            left: 0
+            top: 0
+            bottom: 0
+            background-image: url(../img/icons/page-title-before.svg)
+        h1
+            margin: 0
+            font-size: rem(33)
+            font-weight: 700
+        &--medium
+            h1
+                font-size: rem(25)
+
+    &-breadcrumps
+        flex: 0 0 50%
+        max-width: 50%
+        display: flex
+        justify-content: flex-end
+
+    &-footer
+        margin-top: 60px    
+
+    &-gray_title
+        .page
+            &-title
+                &::before
+                    background-image: url(../img/icons/page-title-gray-before.svg)
+                h1
+                    font-size: rem(20)
+                    color: #8C8A93
+                    font-weight: 400
+
+    // &-match_single
+    //     .page
+    //         &-title
+    //             &::before
+    //                 background-image: url(../img/icons/page-title-gray-before.svg)
+    //             h1
+    //                 font-size: rem(20)
+    //                 color: #8C8A93
+    //                 font-weight: 400

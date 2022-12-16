@@ -1,0 +1,96 @@
+.teams_single
+    +lg
+        &-middle
+            margin-left: 25px
+            margin-right: 25px
+
+    +md
+        &-desctop
+            display: none
+        &-platform
+            display: none
+        &-info
+            justify-content: space-between
+            position: relative
+            padding-top: 12px
+            padding-bottom: 12px
+            &::before
+                content: ''
+                top: 0
+                height: 70px
+                // bottom: 41px
+                left: -20px
+                right: -20px
+                background-color: #F6F3F9
+                z-index: -1
+        &-team
+            display: flex
+            flex-direction: column
+
+            img
+                margin: 0
+                order: 10
+                width: 48px
+                margin-bottom: 20px
+
+            p
+                order: 20
+                font-size: 1rem
+
+            &:first-child
+                align-items: flex-start
+                img
+                    margin-left: 18px
+
+            &:last-child
+                align-items: flex-end
+                img
+                    margin-right: 18px
+
+        &-middle
+            margin-top: 0
+            margin-left: 0
+            margin-right: 0
+            position: absolute
+            top: 10px
+            // bottom: 41px
+            left: 0
+            right: 0
+            margin: auto
+            height: 50px
+
+
+        &-strokes
+            flex-wrap: wrap
+
+        &-stroke
+            &_primary
+                flex: 0 0 100%
+                max-width: 100%
+                order: 10
+                margin-right: 0 !important
+                text-align: center
+                &::before
+                    display: none
+                
+
+            &_second
+                order: 20
+
+            
+        &-meta
+            width: 100%
+            ul
+                justify-content: space-between
+                flex: 0 0 100%
+                li
+                    margin: 0
+                    flex: 0 0 33.33333%
+                    &:nth-child(2)
+                        text-align: center
+
+                    &::before
+                        display: none
+
+        &-is_on
+            justify-content: flex-end

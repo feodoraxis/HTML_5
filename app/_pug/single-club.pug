@@ -1,0 +1,132 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-person 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.news_single-header
+
+                    .page-title.page-title--medium.news_single-title.person-title
+                        h1 Енисей-СТМ
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Зал славы"
+                            },
+                            {
+                                "name": "Енисей-СТМ"
+                            }
+                        ])
+
+                    .page-return_back.news_single-return_back
+
+                        a(href="news.html").button.button-back
+                            +icon('arrow-left')
+                            span Зал славы
+
+                .page-body
+                    
+                    article
+                        .person
+                            .person-content 
+                                .person-contacts
+                                    .person-contacts--site
+                                        .site
+                                            a(href="enisei-stm.ru") enisei-stm.ru 
+
+                                    .person-contacts--social_networks
+                                        .social_networks_alt
+                                            ul
+                                                li 
+                                                    a(href="#")
+                                                        +icon('vk-alt') 
+                                                li 
+                                                    a(href="#")
+                                                        +icon('ok-alt') 
+                                                li 
+                                                    a(href="#")
+                                                        include ../img/_icons/youtube-alt.svg
+
+                                .person-desctop
+                                    .person-table
+                                        table.table
+                                            tbody
+                                                tr
+                                                    td.table-td Основан
+                                                    td 1975 год
+
+                                    p 
+                                        b Достижения
+
+                                    table.table
+                                        tbody
+                                            tr
+                                                td.table-td Чемпион России
+                                                td 1999, 2002, 2005, 2011, 2012, 2014, 2016, 2017
+
+                                            tr
+                                                td.table-td Серебряный призер чемпионата России
+                                                td 2000, 2001, 2003, 2004, 2007, 2009, 2010, 2013
+
+                                            tr
+                                                td.table-td Бронзовый призер чемпионата России
+                                                td 1997, 2006, 2008
+
+                                            tr
+                                                td.table-td Обладатель Кубка России
+                                                td 2000, 2001, 2008, 2014, 2016, 2017
+
+                                .person-mobile
+                                    .table_person
+                                        
+                                        .table_person-item
+                                            b Должность
+                                            .table_person-content
+                                                p спортсмен-инструктор
+
+                                        .table_person-item
+                                            b Дата рождения
+                                            .table_person-content
+                                                p 19 января 1986 г.
+                                            
+                                        .table_person-item
+                                            b Место рождения
+                                            .table_person-content
+                                                p п.Краснознаменский, Московская область
+
+                                        .table_person-item
+                                            b Спортивное звание
+                                            .table_person-content
+                                                p Мастер спорта России международного класса
+
+                                        .table_person-item
+                                            b Амплуа
+                                            .table_person-content
+                                                p Защитник
+                                            
+                                        .table_person-item
+                                            b Рост (см)
+                                            .table_person-content
+                                                p 180
+
+                                        .table_person-item
+                                            b История
+                                            .table_person-content
+                                                p Первый тренер - Дмитрий Владимирович Сафонов. В команде "ВВА-Подмосковье" с 2006 года. 
+                                                p Дебютировал в сборной 28 октября 2006 в матче против Португалии. Провёл 54 игры, набрал 20 очков. Участник чемпионата мира 2011 года: сыграл матчи против Ирландии и Австралии. 
+                                                p В сборной по регби-7 стал чемпионом Европы в 2009 году.
+                            .person-meta
+
+                                .person-thumbnail
+                                    img(src="img/club-single.jpg", alt="")
+
+        include base/footer.pug 

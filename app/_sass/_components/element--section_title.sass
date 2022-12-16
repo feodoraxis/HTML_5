@@ -1,0 +1,37 @@
+.section_title
+    display: flex
+    align-items: center
+    padding-left: 32px
+    min-height: 37px 
+    position: relative
+    &::before
+        content: ''
+        width: 24px
+        height: 37px
+        left: 0
+        top: 0
+        bottom: 0
+        background-image: url(../img/icons/posts-title-before.svg)
+    h2
+        margin: 0
+        font-size: rem(23)
+        font-weight: 500
+        span
+            color: #B1ABBC
+            span
+                font-weight: 400
+
+    &-white
+        h2
+            color: #FFF
+
+    &-right
+        justify-content: flex-end
+        padding-right: 32px
+        padding-left: 0
+        &::before
+            left: auto
+            right: 0
+            transform: rotate(180deg)
+
+        

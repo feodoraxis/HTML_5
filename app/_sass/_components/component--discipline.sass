@@ -1,0 +1,39 @@
+.discipline
+    width: 100%
+    &-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 20px
+
+    &-left,
+    &-right
+        flex: 0 0 70px
+        max-width: 70px
+        text-align: center
+        b
+            display: block
+            font-size: rem(21)
+            font-weight: 700
+
+    &-option
+        text-align: center
+        flex: 0 0 calc(100% - 140px)
+        max-width: calc(100% - 140px)
+        p
+            margin-bottom: 0
+            
+
+    &-right_only
+        .discipline
+            &-item
+                width: 100%
+            &-option
+                text-align: left
+                flex: 0 0 calc(100% - 60px)
+                max-width: calc(100% - 60px)
+
+            &-right
+                text-align: left
+                flex: 0 0 60px
+                max-width: 60px

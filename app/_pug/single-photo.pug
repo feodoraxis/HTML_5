@@ -1,0 +1,78 @@
+-
+    photos = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-news 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left.news_single-header
+
+                    .news_single-date
+                        time 12 июля
+                    .page-title.page-title--medium.news_single-title
+                        h1 Чемпионат России по пляжному регби 2022
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Фото"
+                            },
+                            {
+                                "name": "Чемпионат России по пляжному регби 2022"
+                            }
+                        ])
+
+                    .page-return_back.news_single-return_back
+
+                        a(href="news.html").button.button-back
+                            +icon('arrow-left')
+                            span Все фото
+
+                .page-body
+                    .news_single
+
+                        article 
+                            .row#photos_gallery
+
+                                each item in photos
+
+                                    .col-lg-4.col-sm-6.photo_preview-container
+                                        .photo_preview
+                                            .photoswipe-gallery.pswp-gallery.pswp-gallery--single-column
+                                                a(href="img/news_single.jpg", data-pswp-src="img/news_single.jpg", data-pswp-width="710", data-pswp-height="473" ) 
+                                                    picture 
+                                                        img(src="img/news_single.jpg", alt="") 
+
+                .page-footer
+                    .page_footer
+                        .page_footer-flexbox.page_footer-center
+                            .page_footer-col
+                                +social_networks()
+                        
+                    
+
+        include base/footer.pug 

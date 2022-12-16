@@ -1,0 +1,19 @@
+.posts
+    +sm
+        &-title
+            width: calc(100% + 12px + 12px)
+            margin-left: -12px
+            position: relative
+            padding-bottom: 16px
+            margin-bottom: 16px
+            &::before
+                content: ''
+                bottom: 0
+                left: 12px
+                right: 12px
+                width: calc(100% - 24px)
+                border-bottom: 1px solid var(--color-gray-blue-lite-hover)
+        &-item
+            padding-bottom: 16px
+            border-bottom: 1px solid #E9E6EF
+            margin-bottom: 16px

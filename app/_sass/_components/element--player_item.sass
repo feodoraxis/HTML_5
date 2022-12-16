@@ -1,0 +1,32 @@
+.player_item
+    display: flex
+    width: 100%
+    &-avatar
+        flex: 0 0 80px
+        max-width: 80px
+    &-content
+        flex: 0 0 calc(100% - 80px - 30px)
+        max-width: calc(100% - 80px - 30px)
+        padding-left: 16px
+        padding-right: 16px
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+
+    &-title
+        p
+            margin-bottom: 0
+            font-weight: 500
+
+    &-math
+        // display: flex
+        // align-items: flex-end
+        b
+            display: inline-block
+            font-size: rem(20)
+            font-weight: 600
+            margin-right: 3px
+
+    &-team
+        flex: 0 0 30px
+        max-width: 30px

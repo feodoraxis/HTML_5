@@ -1,0 +1,40 @@
+.tournament
+    &-header
+        padding-top: 40px
+        padding-bottom: 70px
+        background-color: var(--color-blue)
+        position: relative
+        &::before,
+        &::after
+            background-image: url(../img/icons/lightninigs-purple-bg.svg)
+            bottom: 0
+            content: ""
+            height: 156px
+            width: 150px
+            z-index: 10
+
+
+        &::before
+            left: -0px
+            background-position-x: right
+            background-position-y: top
+            
+
+        &::after
+            right: -0px
+            transform: scaleX(-1)
+
+    &-title
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        z-index: 50
+
+    &-icon
+        margin-right: 16px
+
+    &-h1
+        h1
+            color: #FFF
+            font-size: rem(33)

@@ -1,0 +1,25 @@
+.statistics_players
+    +min_md
+        &-mobile
+            display: none
+
+    +md
+        &-desctop
+            display: none
+
+
+        &-left,
+        &-right
+            margin-left: -16px
+            flex: 0 0 calc(100% + 32px)
+            max-width: calc(100% + 32px)
+
+            .table
+                th, td
+                    &:first-child
+                        padding-left: 16px
+                    &:last-child
+                        padding-right: 16px
+
+        &-reference
+            text-align: left

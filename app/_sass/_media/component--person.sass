@@ -1,0 +1,63 @@
+.person
+    +xl
+        &-content
+            flex: 0 0 calc(100% - 480px)
+            max-width: calc(100% - 480px)
+        &-meta
+            flex: 0 0 480px
+            max-width: 480px
+
+    +lg
+        flex-wrap: wrap
+        &-content,
+        &-meta
+            flex: 0 0 100%
+            max-width: 100%
+            padding-right: 0
+
+        &-meta
+            order: 10
+
+        &-content
+            order: 20
+
+        &-rewards
+            display: none
+
+    +min_sm
+        &-mobile
+            display: none
+
+    +sm
+        &-desctop
+            display: none
+        &-title
+            padding-top: 20px
+        &-subtitle
+            margin-bottom: 24px
+            p
+                margin-bottom: 0
+
+        p
+            margin-bottom: 24px
+        &-thumbnail
+            &--gold
+                width: 100%
+                height: auto
+                padding: 20px
+                img
+                    width: 100%
+
+            &--player
+                background-image: url(../img/player-bg.jpg)
+                padding-left: 67px
+                padding-right: 67px
+                background-size: cover
+                img
+                    border: 5px solid #AFA5C0
+
+        &-contacts
+            flex-direction: column
+            align-items: center
+            &--site
+                margin-bottom: 40px

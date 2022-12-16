@@ -1,0 +1,59 @@
+.news_single
+    +min_lg
+        &-mobile
+            display: none
+    
+    +lg
+        flex-wrap: wrap
+        &-content
+            flex: 0 0 100%
+            max-width: 100%
+            padding-right: 0px
+            margin-bottom: 60px
+        &-aside
+            flex: 0 0 100%
+            max-width: 100%
+
+
+        &-desctop
+            display: none
+
+    +md
+        &-breadcrumps
+            display: none
+
+        &-title
+            margin-top: 15px
+            padding-left: 0
+            &::before
+                display: none
+
+    +min_sm
+        &-date
+            display: none
+
+    +sm
+        &-date
+            margin-bottom: 12px
+            order: 10
+            margin-top: 20px
+            time
+                font-size: rem(13)
+                color: #98959D
+        &-header
+            margin-bottom: 20px
+        &-title
+            margin-top: 0
+            h1
+                font-size: rem(20)
+
+        &-aside
+            margin-left: -16px
+            width: calc(100% + 16px + 16px)
+            max-width: calc(100% + 16px + 16px)
+            flex: 0 0 calc(100% + 16px + 16px)
+            .widget
+                padding: 16px
+
+        &-news_item
+            margin-bottom: 16px

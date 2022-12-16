@@ -1,0 +1,95 @@
+-
+    videos = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-news 
+            .wrapper
+
+                .page-header.page-header--has_tabs.page-header--breadcrumps_mobile_top_left.page-header--mbreadcrumps_hide
+                    .page-title.page-title--sm-medium
+                        h1 Видео
+                    .page-tabs_header
+                        .news-desctop
+                            .tabs.js-tabs
+                                ul
+                                    li(data-for="all").active Все
+                                    li(data-for="all") Матчи
+                                    li(data-for="all") Обзоры
+                                    li(data-for="all") Топовые моменты
+                                    li(data-for="all") Разное
+
+                        .news-mobile
+                            select
+                                option Все
+                                option Матчи
+                                option Обзоры
+                                option Топовые моменты
+                                option Разное
+                    .page-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Видео"
+                            }
+                        ])
+
+                .page-body
+                    .news
+                        .news-list
+                            .row 
+
+                                each item in videos
+
+                                    .col-lg-4.col-sm-6.news-item
+                                        +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big', '', 'play')
+
+                .page-footer
+                    .page_footer
+                        .page_footer-flexbox.page_footer-jcsb
+                            .page_footer-col
+                            .page_footer-col
+                                .pagination
+                                    ul
+                                        li 
+                                            span 1
+                                        li 
+                                            a(href="#") 
+                                                span 2
+                                        li 
+                                            a(href="#") 
+                                                span 3
+                                        li 
+                                            span.pagination-dots= "..."
+                                        li 
+                                            a(href="#") 
+                                                span 45
+                                        li 
+                                            a(href="#") 
+                                                span 46
+                                        li 
+                                            a(href="#").pagination-right
+                                                +icon('angle-bottom')
+
+        include base/footer.pug 

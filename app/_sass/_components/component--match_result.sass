@@ -1,0 +1,57 @@
+.match_result
+    &-item
+        display: flex
+        justify-content: center
+        padding-top: 14px
+        padding-bottom: 14px
+        &:nth-child(even)
+            background-color: #F1EEF3
+    &-action
+        flex: 0 0 90px
+        width: 90px
+        text-align: center
+        b
+            font-weight: 500
+
+
+    &-left,
+    &-right
+        flex: 0 0 calc(50% - 45px)
+        ul
+            display: flex
+            align-items: center
+        li
+            font-size: rem(13)
+            line-height: rem(20)
+            
+            
+            b
+                font-weight: 500
+
+            &.ms_fine
+                display: flex
+                align-items: center
+
+    &-left
+        padding-right: 38px
+        text-align: right
+        ul
+            justify-content: flex-end
+
+        li
+            margin-left: 13px
+            &.ms_fine
+                .fine
+                    margin-left: 12px
+
+    &-right
+        padding-left: 38px
+        li
+            margin-right: 13px
+            &.ms_fine
+                .fine
+                    margin-right: 12px
+
+    &-button
+        display: flex
+        justify-content: center

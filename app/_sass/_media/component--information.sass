@@ -1,0 +1,70 @@
+.information
+    +min_lg
+        &-mobile
+            display: none
+    +lg
+        width: 100%
+        margin-top: 13px
+        background: transparent
+        &-tournament
+            margin-top: -30px
+            background-color: #fff
+        &-desctop
+            display: none
+        &-tabs
+            flex-direction: column 
+            justify-content: flex-start
+            border: 2px solid var(--color-default)
+            background-color: #fff
+            border-radius: 1px
+            position: relative
+            height: 47px
+            width: 100%
+            z-index: 100
+            &::before
+                content: ''
+                top: 0
+                bottom: 0
+                right: 12px
+                margin: auto
+                width: 16px
+                height: 16px
+                background-image: url(../img/icons/angle-bottom.svg)
+                z-index: 10
+            li
+                display: none
+                padding: 11px 12px
+                background-color: #fff
+                font-weight: 500
+                flex: 0 0 100%
+                width: 100%
+                order: 20
+                &.active
+                    display: block
+                    color: var(--color-default)
+                    order: 10
+                    &::before
+                        display: none
+
+            &.open
+                li
+                    display: block
+                    z-index: 10
+
+        &-translation
+            &>div
+                max-width: 100%
+
+    +md
+        padding-left: 0
+        padding-right: 0
+
+        &-tournament
+            padding-left: 12px
+            padding-right: 12px
+
+    +sm
+        &-tournament
+            padding-bottom: 14px
+            .information-tabs
+                margin-bottom: 0

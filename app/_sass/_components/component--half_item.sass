@@ -1,0 +1,59 @@
+.half_item
+    &-title
+        text-align: center
+        // margin-bottom: 16px
+        height: 62px
+        display: flex
+        align-items: center
+        background-color: #fff
+        h4
+            font-size: rem(16)
+            font-weight: 600
+            margin: auto
+
+    &-content
+        ul
+            position: relative
+            padding-left: 0
+            list-style: none
+            padding-top: 43px
+            padding-bottom: 43px
+            &::before
+                content: ''
+                background: #E9E6EF
+                width: 1px
+                height: 100%
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                margin: auto
+                z-index: 10
+
+    &-item
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        z-index: 20
+        margin-bottom: 40px
+
+    &-num
+        width: 62px
+        height: 60px
+        flex: 0 0 60px
+        line-height: 60px
+        font-size: rem(23)
+        font-weight: 500
+        color: #908A9A
+        text-align: center
+        background-color: #fff
+
+    &-left,
+    &-right
+        flex: 1
+    //     // width: 
+
+    &-left
+        display: flex
+        justify-content: flex-end

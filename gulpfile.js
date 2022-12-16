@@ -49,7 +49,7 @@ function browsersync() {
 }
 
 function svg() {
-	return src(['app/img/icons/*.svg'])
+	return src(['app/img/_icons/*.svg'])
 		.pipe(svgmin({
             js2svg: {
                 pretty: true,
@@ -114,7 +114,7 @@ function scripts() {
 				minimizer: [
 					new TerserPlugin({
 						terserOptions: { format: { comments: false } },
-						extractComments: false
+						extractComments: true
 					})
 				]
 			},
@@ -165,7 +165,7 @@ function startwatch() {
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-export { scripts, styles, images }
+export { scripts, styles, images, svg }
 export let assets = series(scripts, styles, images)
 export let build = series(images, scripts, styles)
 

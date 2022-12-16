@@ -5,4 +5,492 @@ html(lang="ru")
     body
         include base/header.pug
 
+        main.front_page
+            .wrapper
+                .front_page-toggle
+                    ul.front_toggle#front_toggle
+                        li(data-for="#content").front_toggle-active Лента
+                        li(data-for="#aside") Матчи
+
+                .front_page-flexbox
+                    .front_page-aside.front_toggle-section.js-front_toggle-section#aside
+                        aside.sidebar
+                            .widget.widget-tournaments_choice
+                                .widget-content
+                                    form(action="")
+                                        select(name="tournament") 
+                                            option 
+                                            option(value='1') PARI Чемпионат России
+                                            option(value='2') Высшая лига
+                                            option(value='3') Чемпионат молодежных команд
+                                            option(value='4') Чемпионат России по регби-7
+                                            option(value='5') Чемпионат России по регби-7 жен.
+
+                            .widget.widget-matches
+                                .widget-title
+                                    h3 Матчи
+                                .widget-content
+                                    .w_matches-button_add
+                                        button.button.button-add_to_calendar 
+                                            +icon('calendar')
+                                            span Добавить матчи в календарь
+
+                                    .w_matches-list
+                                        ul
+                                            li 
+                                                span.w_matches-date 30 июля, СБ
+
+                                                ul
+                                                    li.w_matches-match
+                                                        .match.match-today.match-mini
+                                                            a(href="#").match-link 
+                                                            .match-row
+                                                                .match-team
+                                                                    span МТЛ
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 23 <span>-</span> 12
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span МТЛ
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                                    li.w_matches-match
+                                                        .match.match-today.match-now.match-mini
+                                                            a(href="#").match-link 
+                                                            .match-row
+                                                                .match-team
+                                                                    span ЛКМ
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 6 <span>-</span> 13
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span ЕНИ
+
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        img(src="img/match-icon.svg", alt="") 
+
+                                            li 
+                                                span.w_matches-date 31 июля, ВС
+
+                                                ul
+                                                    li.w_matches-match
+                                                        .match.match-mini
+                                                            a(href="#").match-link 
+                                                            .match-row
+                                                                .match-team
+                                                                    span ХМК
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 16:00
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span СЛВ
+
+                                                            .match-row
+                                                                .match-platform
+                                                                    a(href="#")
+                                                                        img(src="img/youtube-icon.svg", alt="") 
+
+                                            li 
+                                                span.w_matches-date 01 августа, ВС
+
+                                                ul
+                                                    li.w_matches-match
+                                                        .match.match-mini
+                                                            a(href="#").match-link 
+                                                            .match-row
+                                                                .match-team
+                                                                    span КЯР
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 14:00
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span ВВА
+
+                                            li 
+                                                span.w_matches-date 07 августа, ВС
+
+                                                ul
+                                                    li.w_matches-match
+                                                        .match.match-mini
+                                                            a(href="#").match-link 
+                                                            .match-row
+                                                                .match-team
+                                                                    span СТР
+                                                                    img(src="img/team.png", alt="")
+
+                                                                .match-time
+                                                                    time 13:00
+
+                                                                .match-team
+                                                                    img(src="img/team.png", alt="")
+                                                                    span ЛКМ
+
+
+                                    .widget-button
+                                        +button("button button-primary", 'Все матчи', 'link')
+
+                            .widget.widget-tournament_table
+                                .widget-title
+                                    h3 Турнирная таблица
+
+                                .widget-content
+                                    table.tournament_table
+                                        thead
+                                            tr
+                                                th
+                                                th
+                                                th И
+                                                th О
+
+                                        tbody
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                            tr
+                                                td 1
+                                                td 
+                                                    .tournament_table-team
+                                                        img(src="img/team.png", alt="")
+                                                        span Енисей-СТМ
+
+                                                td 2
+                                                td 10
+                                    
+                                    .widget-button
+                                        +button('button button-primary', "Вся таблица", 'link')
+
+                            .widget.widget-best_players
+                                .widget-title
+                                    h3 Лучшие бомбардиры
+
+                                .widget-content
+                                    .best_players
+                                        ul
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+
+                                    .widget-button
+                                        +button('button button-primary', "Больше", 'link')
+
+                            .widget.widget-best_players
+                                .widget-title
+                                    h3 Лучшие защитники
+
+                                .widget-content
+                                    .best_players
+                                        ul
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+                                            li
+                                                .best_players-item
+                                                    .best_players-avatar
+                                                        a(href="#") 
+                                                            img(src="img/player.jpg", alt="")
+
+                                                    .best_players-content
+                                                        p 
+                                                            a(href="#") Сергей Янюшкин
+
+                                                        b <span>132</span> очка
+
+                                                        .best_players-club
+                                                            a(href="#") 
+                                                                img(src="img/team.png", alt="")
+
+                                    .widget-button
+                                        +button('button button-primary', "Больше", 'link')
+                    
+                            .widget.widget-ad
+                                .widget-content
+                                    .widget-ad_item
+                                        a(href="#").ad
+                                            img(src="img/ad.jpg", alt="")
+                                    .widget-ad_item
+                                        a(href="#").ad
+                                            img(src="img/ad.jpg", alt="")
+                    
+                    .front_page-content.front_toggle-section.front_toggle-section_active.js-front_toggle-section#content
+                        article 
+                            section.posts.js-posts-equal
+                                .posts-list
+                                    .row
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.')
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'play')
+                            
+                                .posts-button
+                                    +button('button button-primary', 'Все новости', 'link')
+
+                            section.posts.js-posts-equal
+                                .posts-title
+                                    .section_title
+                                        h2 Важное
+                                .posts-list
+                                    .row
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big post-sm-default')
+
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
+
+                            section.posts.js-posts-equal
+                                .posts-title
+                                    .section_title
+                                        h2 Видео
+                                .posts-list
+                                    .row
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big post-sm-default', '', 'play')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                                        .col-xl-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
+
+                                .posts-button
+                                    +button('button button-primary', 'Все видео', 'link')
+
+                            section.posts
+                                .posts-title
+                                    .section_title
+                                        h2 Фото
+                                .posts-list
+                                    .row
+                                        .col-md-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big', '', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big', '', 'camera')
+
+                                        .col-md-6
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big', '', 'camera')
+
+                                            .posts-item
+                                                +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big', '', 'camera')
+
+                                .posts-button
+                                    +button('button button-primary', 'Все Фото', 'link')
+
+                            section.fast_access
+                                .fast_access-title
+                                    .section_title
+                                        h2 Быстрый доступ
+
+                                .fast_access-list
+                                    .fast_access-item
+                                        a(href="#")
+                                            h3 Новичку
+                                            +bg('img/new.jpg') 
+
+                                    .fast_access-item
+                                        a(href="#")
+                                            h3 Регионы
+                                            +bg('img/new.jpg') 
+
+                                    .fast_access-item
+                                        a(href="#")
+                                            h3 Детско-юношеское регби
+                                            +bg('img/new.jpg') 
+
+                                    .fast_access-item
+                                        a(href="#")
+                                            h3 Клубы
+                                            +bg('img/new.jpg') 
+
+                                .fast_access-button
+                                    button(type="button").button.button-add_to_calendar#go_to_matches 
+                                        +icon('calendar')
+                                        span Перейти к матчам
+
         include base/footer.pug 

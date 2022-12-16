@@ -44,10 +44,15 @@
 		"postcss": "^8.4.16",
 		"sass": "^1.54.9",
 		"terser-webpack-plugin": "^5.3.6",
+		"tiny-slider": "^2.9.4",
+		"vanillajs-datepicker": "^1.2.0",
 		"webpack": "^5.74.0",
 		"webpack-stream": "^7.0.0"
 	},
 	"dependencies": {
-		"jquery": "^3.6.1"
+		"@selectize/selectize": "^0.15.0",
+		"jquery": "^3.6.1",
+		"photoswipe": "^5.3.4",
+		"selectize": "^0.12.6"
 	}
 }

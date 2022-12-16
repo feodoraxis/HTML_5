@@ -1,0 +1,32 @@
+- 
+    referees_option = [
+        "Главный арбитр",
+        "Помощник",
+        "Помощник",
+        "Резервный рефери",
+        "Видео-рефери",
+        "Комиссар матча",
+    ];
+
+- 
+    referees_value = [
+        "Артур Каптюх",
+        "Алексей Лебедев",
+        "Алексей Куликов",
+        "Алексей Брызгалин",
+        "Михаил Лебедев",
+        "Сергей Марков",
+    ];
+
+.referees
+    ul.referees-options 
+
+        each item in referees_option
+            
+            li= item
+
+    ul.referees-values 
+
+        each item in referees_value
+            
+            li= item

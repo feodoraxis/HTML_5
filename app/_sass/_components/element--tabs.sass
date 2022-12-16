@@ -1,0 +1,22 @@
+.tabs
+    ul
+        list-style: none
+        padding-left: 0
+        display: flex
+    
+    li
+        padding: 14px 18px
+        border-bottom: 1px solid #E9E6EF
+        font-size: rem(16)
+        display: block
+        cursor: pointer
+        text-align: center
+        &:hover,
+        &.active
+            color: var(--color-red)
+            border-color: var(--color-red)
+
+    &-block
+        display: none
+        &.active
+            display: block

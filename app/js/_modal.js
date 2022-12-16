@@ -1,4 +1,4 @@
-import { is_mobile, is_OSX } from './_functions.js' 
+import { is_mobile, is_OSX, before_modal_open, after_modal_close } from './_functions.js' 
 
 document.addEventListener('DOMContentLoaded', () => {
     $('[data-modal-selector]').on('click', function(e) {
@@ -43,23 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
     function modal_close( selector ) {
         $(selector).removeClass('open');
         after_modal_close();
-    }
-
-    function before_modal_open() {
-        let css = {
-            'overflow': 'hidden'
-        };
-
-        $("html").css(css);
-
-        if ( !is_mobile() && !is_OSX() ) {
-            css['padding-right'] = '17px';
-        }
-
-        $('body').css(css);
-    }
-
-    function after_modal_close() {
-        $("html,body").removeAttr('style');
     }
 });

@@ -1,2 +1,74 @@
 .header 
-    
+
+    +xxl 
+        &-left
+            padding-left: 0
+            flex: 0 0 25%
+            max-width: 25%   
+
+        &-right
+            margin-left: 30px
+            flex: 0 0 calc(75% - 30px)
+            max-width: calc(75% - 30px)
+
+    +xl
+        &-left
+            flex: 0 0 20%
+            max-width: 20%
+            .logo,
+            .logo svg
+                max-width: 190px
+        
+        &-right
+            flex: 0 0 calc(80% - 30px)
+            max-width: calc(80% - 30px)
+
+    +min_lg
+        &-translations,
+        &-hamburger
+            display: none
+
+    +lg
+        &-fixed,
+        &-right
+            display: none
+
+        &-left
+            padding-top: 8px
+
+        &-default
+            align-items: center
+            justify-content: space-between
+            padding-top: 0
+            
+
+    +sm
+        box-shadow: 0 4px 10px rgba(#000, .05)
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        right: 0
+        z-index: 1010
+        background-color: #fff
+        &-left
+            flex: 0 0 120px
+            max-width: 120px
+            padding-top: 12px
+            padding-bottom: 12px
+            .logo,
+            .logo svg
+                max-width: 110px
+                height: 46px                
+
+        &-translations
+            flex: 1
+            display: flex
+            justify-content: center
+
+        &-hamburger
+            flex: 0 0 30px
+            max-width: 30px
+
+        &-menu_mobile_is_open
+            background-color: rgba(#fff, 0)

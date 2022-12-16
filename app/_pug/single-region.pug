@@ -1,0 +1,167 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left
+
+                    .page-title.page-title--medium.news_single-title.person-title
+                        h1 Региональная общественная организация <br>"Федерация регби Забайкальского края"
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "href": "news.html",
+                                "name": "Регионы"
+                            },
+                            {
+                                "name": "Региональная общественная организация \"Федерация регби Забайкальского края\""
+                            }
+                        ])
+
+            .page-body
+
+                .wrapper.wrapper-small
+                
+                    article
+                        .region-card
+
+                            .region-date
+                                p Дата окончания срока аккредитации: <b>16 декабря 2024</b>
+
+                            ul.region-contacts
+                                li
+                                    .site
+                                        a(href="#") Официальный сайт
+                                li
+                                    .phone
+                                        a(href="#") 8 (914) 437-22-25  
+                                li 
+                                    .email
+                                        a(href="#") region75@rugby.ru
+                                li 
+                                    .social_networks_alt
+                                        ul
+                                            li 
+                                                a(href="#")
+                                                    +icon('vk-alt') 
+                                            li 
+                                                a(href="#")
+                                                    +icon('ok-alt') 
+                                            li 
+                                                a(href="#")
+                                                    include ../img/_icons/youtube-alt.svg
+
+                            ul.region-positions
+                                li
+                                    p 
+                                        b Президент Федерации
+                                    p Сетов Александр Витальевич
+                                    p 8 (914) 437-22-25
+                                li
+                                    p 
+                                        b Вице-президент
+                                    p Яковлев Юрий Леонидович
+                                li
+                                    p 
+                                        b Куратор региона
+                                    p Баженов Сергей Сергеевич
+
+                        .region-tabs
+                            .region-desctop
+                                .tabs.js-tabs
+                                    ul
+                                        li(data-for="all") Детско-юношеский спорт
+                                        li(data-for="all") Студенческие регби
+                                        li(data-for="#clubs").active Клубы
+                                        li(data-for="all") Регби в армии и силовых структурах
+
+                            .region-mobile
+                                select
+                                    option Детско-юношеский спорт
+                                    option Студенческие регби
+                                    option(selected="selected") Клубы
+                                    option Регби в армии и силовых структурах
+
+                        .region-blocks
+                            .tabs-block.js-tabs-block.active#clubs
+                                .region-desctop
+
+                                    table.table
+                                        tr
+                                            td РК “Университет”
+                                            td(align='right')
+                                                a(href="#").sn 
+                                                    +icon('vk-alt') 
+                                                a(href="#").sn
+                                                    +icon('ok-alt') 
+
+                                                a(href="#").tel 8 (914) 437-22-25
+
+                                        tr
+                                            td 
+                                                a(href="#") РК “Институт”
+                                            td(align='right')
+
+                                                a(href="#").tel 8 (914) 123-55-16
+
+                                .region-mobile
+
+                                    .table_person
+                                        
+                                        .table_person-item
+                                            b РК “Университет”
+                                            .table_person-content
+                                                a(href="#").sn 
+                                                    +icon('vk-alt') 
+                                                a(href="#").sn
+                                                    +icon('ok-alt') 
+
+                                                a(href="#").tel 8 (914) 437-22-25
+
+                                        .table_person-item
+                                            b РК “Институт”
+                                            .table_person-content
+                                                a(href="#").tel 8 (914) 123-55-16
+
+                .region-news
+                    .wrapper.wrapper-small
+
+                        .region-news-title
+                            .section_title
+                                h2 Новости региона
+
+                        .region-news-list
+                            .row
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                                .col-md-6.region-news-item
+                                    +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '10 июля', '', '30-31 июля в Москве в ЦПВС «Динамо» пройдёт Чемпионат России по пляжному регби  среди мужских и женских команд.')
+
+                        .region-news-button
+                            +button('button button-primary', 'Все новости', 'link')
+                                
+
+
+        include base/footer.pug 

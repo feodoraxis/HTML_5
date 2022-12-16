@@ -1,0 +1,41 @@
+.quiz
+    &-title
+        margin-bottom: 24px
+        p
+            font-size: rem(17)
+            font-weight: 600
+            margin-bottom: 0
+
+    &-item
+        margin-bottom: 24px
+
+    &-answer_result
+        display: flex
+        align-items: flex-start
+        margin-bottom: 24px
+        &>span
+            flex: 0 0 45px
+            max-width: 45px
+            font-weight: 600
+
+        &>div
+            flex: 0 0 calc(100% - 45px)
+            max-width: calc(100% - 45px)
+            p
+                margin-bottom: 4px
+
+            span
+                display: inline-block
+                height: 6px
+                background: linear-gradient(90deg, #1E0E47 0%, #ED1B26 100%)
+                border-radius: 4px
+
+
+    &-footer
+        margin-top: 34px
+        p
+            color: #655E70
+            margin-bottom: 0
+
+    // &-button
+    //     margin-top: 30px

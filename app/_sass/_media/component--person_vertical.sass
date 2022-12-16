@@ -1,0 +1,42 @@
+.person_vertical
+    +min_sm
+        &-mobile
+            display: none
+    +sm
+        background-color: #1E0E47
+        padding-top: 28px
+        &::before
+            display: none
+
+        &::after
+            background-image: url(../img/lightning-gold-sm.png)
+            width: 59px
+            height: 264px
+            bottom: auto
+            top: 0
+
+        &-mobile
+            z-index: 20
+            position: relative
+            display: flex
+            justify-content: center
+            margin-bottom: 16px
+
+        &-desctop
+            display: none
+
+        &-thumbnail
+            
+            width: 146px
+            height: 146px
+            background-image: url(../img/bg-gold.jpg)
+            display: flex
+            align-items: center
+            justify-content: center
+            img
+                max-width: 130px
+
+        &-content
+            h3
+                font-size: rem(18)
+

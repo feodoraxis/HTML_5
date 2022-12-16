@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page
+
+            .page-body
+
+                .wrapper 
+
+                    .e404
+                        .e404-img
+                            img(src="img/404.png", alt="")    
+
+                        .e404-title
+                            p Страница, на которую Вы хотели перейти, не найдена.
+                        
+                        .e404-subtitle
+                            p Возможно, введен некорректный адрес или страница была удалена.
+
+        include base/footer.pug 

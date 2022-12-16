@@ -1,0 +1,133 @@
+-
+    persons = [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ]
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-hall_fame 
+            .wrapper
+
+                .page-header.page-header--breadcrumps_mobile_top_left
+
+                    .page-title.hall_fame-title
+                        h1 Документы
+                    .page-breadcrumps.news_single-breadcrumps
+                        +breadcrumps([
+                            {
+                                "href": 'index.html',
+                                "name": "Главная"
+                            },
+                            {
+                                "name": "Документы"
+                            }
+                        ])
+
+                    
+                    .content_tabs-header_search.content_tabs-mobile
+                        .search_block.js-search_block
+                            form(action="")
+                                .search_block-input
+                                    input(type="text", placeholder="Поиск документа")
+                                button.button.button-askew
+                                    div
+                                    span 
+                                        +icon('lupe')
+
+            .page-body
+
+                .wrapper.wrapper-small
+                    .content_tabs
+                        .content_tabs-head 
+                            .content_tabs-desctop
+                                .content_tabs-flexbox
+                                    .content_tabs-tabs
+                                        .tabs.js-tabs
+                                            ul
+                                                li(data-for="all") Карта
+                                                li(data-for="all") Департамент
+                                                li(data-for="all") Комитет
+                                                li(data-for="all").active Документы
+                                                li(data-for="all") Вопросы
+                                    .content_tabs-search
+                                        .search_block.search_block-static
+                                            form(action="")
+                                                .search_block-input
+                                                    input(type="text", placeholder="Поиск документа")
+                                                button.button.button-askew.button-askew-lite
+                                                    div
+                                                    span 
+                                                        +icon('lupe')
+
+                            .content_tabs-mobile
+                                .content_tabs-tabs
+                                    select
+                                        option Карта
+                                        option Департамент
+                                        option Комитет
+                                        option(selected="selected") Документы
+                                        option Вопросы
+
+                                .content_tabs-categories
+                                    select
+                                        option Все документы
+                                        option(selected="selected") Общие
+                                        option Протоколы
+
+                        .content_tabs-body
+                            .row
+                                .col-lg-3.content_tabs-desctop
+                                    .menu_vertical.menu_vertical-big
+                                        ul
+                                            
+                                            li
+                                                p 
+                                                    a(href="#") Все документы
+
+                                            li.active
+                                                p 
+                                                    a(href="#") Общие
+
+                                            li
+                                                p 
+                                                    a(href="#") Протоколы
+
+                                .col-lg-8.offset-lg-1
+                                    table.table
+                                        tbody
+                                            tr
+                                                td 
+                                                    a(href="#") Регламент предоставления пожертвований
+                                            tr
+                                                td 
+                                                    a(href="#") Положение о предоставлении грантов
+                                            tr
+                                                td 
+                                                    a(href="#") Кураторы региональных федераций
+                                            tr
+                                                td 
+                                                    a(href="#") Положение о Комитете по развитию регби в регионах Федерации регби России
+                
+            .page-footer
+                .wrapper.wrapper-small
+                    .page_footer
+                        .page_footer-flexbox.page_footer-jcsb
+                            .page_footer-col
+                                +social_networks()
+                            .page_footer-col
+                                button(class='button button-lite_square', data-modal-selector="#modal_subscribe")
+                                    div
+                                    span Написать нам
+                        
+                    
+
+        include base/footer.pug 

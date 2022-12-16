@@ -1,0 +1,85 @@
+include base/_mixins.pug
+doctype html
+html(lang="ru")
+    head
+        include base/head.pug
+    body
+        include base/header.pug
+
+        main.page.page-gray_title.page-match_single
+            .wrapper
+            
+                include match_single/header.pug
+
+            .page-body
+                article.match_single
+                    .wrapper
+                        section.match_single-teams 
+                            .teams_single
+                                ul.teams_single-strokes
+                                    li.teams_single-stroke_second Красноярск
+                                    li.teams_single-stroke_primary 16.08.2022  <span>|</span>  PARI Чемпионат России  <span>|</span>  1 тур
+                                    li.teams_single-stroke_second Арена-Север
+
+                                .teams_single-info
+                                    .teams_single-team
+                                        p ВВА-Подмосковье
+                                        img(src="img/team.png", alt="")
+
+                                    .teams_single-middle
+                                        .teams_single-date
+                                            p 16:00 <span>мск</span>
+
+                                        .teams_single-platform.teams_single-desctop
+                                            a(href="#")
+                                                img(src="img/youtube-icon.svg", alt="") 
+
+                                    .teams_single-team
+                                        img(src="img/team.png", alt="")
+                                        p Красный Яр
+
+
+                    section.match_single-actions.match_single-actions-before
+                        .wrapper
+                            .match_single_actions
+                                .match_single_actions-deadline
+                                    .match_deadline#match_deadline
+                                        .match_deadline-title
+                                            h3 До начала матча:
+                                        .match_deadline-body
+                                            .match_deadline-head
+                                                .match_deadline-col-b
+                                                    span дней
+                                                .match_deadline-col-s
+                                                .match_deadline-col-b
+                                                    span часов
+                                                .match_deadline-col-s
+                                                .match_deadline-col-b
+                                                    span минут
+                                            .match_deadline-time.js-timer(data-deadline="2022-12-30 1:00:00")
+                                                .match_deadline-col-b
+                                                    span.js-timer-days 15
+                                                .match_deadline-col-s
+                                                    span :
+                                                .match_deadline-col-b
+                                                    span.js-timer-hours 12
+                                                .match_deadline-col-s
+                                                    span :
+                                                .match_deadline-col-b
+                                                    span.js-timer-minutes 02
+
+                                .match_single_actions-buy
+                                    a.button.button-white(href="#") Купить билеты
+
+                                
+
+                    section.match_single-information
+    
+            .page-footer
+                .page_footer
+                    .page_footer-flexbox.page_footer-center
+                        .page_footer-col
+                            +social_networks()
+                        
+                            
+        include base/footer.pug 

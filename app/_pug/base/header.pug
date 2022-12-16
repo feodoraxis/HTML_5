@@ -1,3 +1,354 @@
 include _mixins.pug
 
-header.header
+- 
+    TopMenu = [
+        {
+            "title": "Магазин",
+        },
+        {
+            "title": "Заявки",
+        },
+        {
+            "title": "Контакты",
+        },
+    ];
+
+- 
+    MainMenu = [
+        {
+            "title": "Новости",
+        },
+        {
+            "title": "Матчи",
+        },
+        {
+            "title": "Турниры",
+            "has_child": "#menu_tournaments",
+        },
+        {
+            "title": "Трансляции",
+        },
+        {
+            "title": "Медиа",
+            "has_child": "#menu_media",
+        },
+        {
+            "title": "Федерация",
+        },
+        {
+            "title": "Регионы",
+        },
+    ];
+
+-
+    MobileMenu = [
+        ...MainMenu,
+        ...TopMenu
+    ];
+
+- 
+    FixedMenu = [
+        {
+            "title": "Новости",
+        },
+        {
+            "title": "Матчи",
+        },
+        {
+            "title": "Турниры",
+            "has_child": "#menu_tournaments",
+        },
+        {
+            "title": "Трансляции",
+        },
+        {
+            "title": "Медиа",
+            "has_child": "#menu_media",
+        },
+        {
+            "title": "Федерация",
+        },
+        {
+            "title": "Регионы",
+        },
+        {
+            "title": "Заявки",
+        },
+        {
+            "title": "Контакты",
+        },
+    ];
+
+-
+    MenuTournaments = [
+        {
+            "title": "Управление",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Регби в России",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Программы",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Официально",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        }
+    ];
+
+-
+    MenuMedia = [
+        {
+            "title": "Управление",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Регби в России",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Программы",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Официально",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        }
+    ];
+
+header.header#header
+    .wrapper.wrapper-static
+        .header-default
+            .header-left
+                .logo
+                    a(href="#") 
+                        include ../../img/logo.svg
+
+            .header-right#header_right
+                .header-top
+                    .header-menu_top
+                        .menu_top
+                            +menu( TopMenu )
+
+                    .header-search
+                        .search_block.js-search_block
+                            form(action="")
+                                .search_block-input
+                                    input(type="text")
+                                    
+                                button.button.button-askew
+                                    div
+                                    span 
+                                        +icon('lupe')
+
+                    .header-language
+                        a(href="#").button.button-askew.button-askew-last
+                            div 
+                            span EN
+
+                .header-bottom
+                    .menu_main
+                        +menu( MainMenu, true )
+
+            .header-translations
+                .translations_link
+                    a(href="#") Трансляции
+
+            .header-hamburger
+                button.hamburger#hamburger
+
+            //- .header-menu_mobile#header_menu_mobile
+                                 
+                        
+    .header-fixed#header_fixed
+        .header_fixed
+            .wrapper
+                .header_fixed-flexbox
+                    .header_fixed-left
+                        .header_fixed-logo
+                            .logo.logo-white
+                                a(href="#") 
+                                    include ../../img/logo-white.svg
+
+                        .header_fixed-menu
+                            .menu_main.menu_main-fixed
+                                +menu( FixedMenu, true )
+
+                    .header_fixed-right
+                        .header_fixed-search
+                            .search_block.search_block-fixed.js-search_block
+                                form(action="")
+                                    .search_block-input
+                                        input(type="text")
+                                    .search_block-escape
+                                        button(type="button").button.button-escape.js-button-escape
+                                            +icon('close')
+                                    button.button.button-askew.button-askew-dark
+                                        div
+                                        span 
+                                            +icon('lupe')
+
+                        .header_fixed-language
+                            a(href="#").button.button-askew.button-askew-last.button-askew-dark
+                                div 
+                                span EN
+
+.menu_mobile#menu_mobile
+    .menu_mobile-header
+        .menu_mobile-search
+            .search_mobile
+                form(action="")
+                    .search_mobile-flexbox
+                        .search_mobile-lupe
+                            +icon('lupe')
+                        .search_mobile-input
+                            input(type="text")
+
+        .menu_mobile-language 
+            a(href="#").button-language_mobile EN
+
+    .menu_mobile-body#menu_mobile_body
+        .menu_mobile-menu#menu_mobile_main
+            +menu( MobileMenu, true )
+
+        .menu_mobile-submenu(data-id="#menu_tournaments")
+            h4 
+                +icon('arrow-left')
+                span Турниры
+            +menu( MenuTournaments )
+        .menu_mobile-submenu(data-id="#menu_media")
+            h4 
+                +icon('arrow-left')
+                span Медиа
+            +menu( MenuMedia )

@@ -1,0 +1,42 @@
+.person_vertical
+    position: relative
+    padding-top: 336px
+    margin-bottom: 27px
+    &::before
+        content: ''
+        bottom: 0
+        left: 0
+        right: 0
+        top: 0
+        background: linear-gradient(180deg, rgba(30, 14, 71, 0) 50%, #1E0E47 84.11%)
+        pointer-events: none
+        z-index: 15
+    &::after
+        content: ''
+        right: 0
+        bottom: 0
+        z-index: 17
+        background-image: url(../img/icons/lightning-gold.svg)
+        width: 108px
+        height: 423px
+        pointer-events: none
+        background-position-x: right
+        
+    a
+        text-decoration: none
+    &-content
+        position: relative
+        z-index: 20
+        color: #FFF
+        padding-left: 32px
+        padding-right: 32px
+        text-align: center
+        padding-bottom: 32px
+
+        h3
+            font-size: rem(27)
+            margin-bottom: 12px
+
+        p
+            font-size: rem(18)
+            margin-bottom: 0

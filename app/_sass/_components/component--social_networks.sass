@@ -1,0 +1,78 @@
+.social_networks
+
+    &-title
+        margin-bottom: 24px
+
+    &-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+        align-items: center
+        li
+            margin-left: 24px
+            margin-bottom: 24px
+    
+    .icon
+        color: #FFF
+        width: 40px
+        height: 40px
+
+    a
+        color: transparent
+        text-decoration: none
+        &:hover .icon
+            color: var(--color-red)
+
+    &-left
+        .social_networks-list
+            justify-content: flex-start
+            li
+                margin-left: 0
+                margin-right: 24px
+
+    &-colored
+        .social_networks
+            &-list
+                justify-content: flex-start
+                li
+                    margin: 0 12px
+                    &:first-child
+                        margin-left: 0
+
+                    &:last-child
+                        margin-right: 0
+
+                    .icon
+                        &-vk
+                            color: #0B72FA
+                        &-telegram
+                            color: #37AEE2
+                        &-whatsapp
+                            color: #25D366
+                        // &-youtube
+                        //     color: #
+                        // &-tiktok
+                        //     color: #
+                        &-ok
+                            color: #F68634
+                        // &-instagram
+                        //     color: #
+                        // &-facebook
+                        //     color: #
+
+                        &-twitter
+                            color: #55ACEE
+
+    &_alt
+        ul
+            display: flex
+            li
+                margin-right: 40px
+                display: flex
+                align-items: center
+                &:last-child
+                    margin-right: 0
+                .icon
+                    color: #1E0E47
+                    &-youtube-alt
+                        fill: currentColor

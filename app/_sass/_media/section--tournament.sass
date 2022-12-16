@@ -1,0 +1,33 @@
+.tournament
+    +sm
+        &-header
+            padding-top: 28px
+            padding-bottom: 58px
+
+            &::before,
+            &::after
+                width: 80px
+                height: 120px
+                background-size: cover
+
+            &::after
+                background-position-x: -35px
+                background-position-y: top
+                
+        &-title
+            justify-content: flex-start
+        &-icon
+            max-width: 42px
+
+        &-h1
+            h1
+                font-size: rem(19)
+
+        &-wrapper
+            padding-left: 24px
+            padding-right: 24px
+            .game_table-table
+                margin-left: -24px
+                padding-left: 24px
+                padding-right: 24px
+                width: calc(100% + 48px)

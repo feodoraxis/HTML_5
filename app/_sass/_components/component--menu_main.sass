@@ -1,0 +1,96 @@
+.menu_main
+    position: relative
+    &::before
+        content: ''
+        top: 0
+        bottom: 0
+        left: 11px
+        right: 0
+        background: var(--color-blue)
+        border-radius: 1px
+        transform: skew(-24deg)
+        z-index: 3
+    &::after
+        content: ''
+        left: 90%
+        top: 0
+        bottom: 0
+        right: -90%
+        background: var(--color-blue)
+        z-index: 1
+        height: 100%
+        transform: skew(-24deg)
+        width: 500%
+
+    nav
+        position: relative
+        z-index: 10
+        padding-left: 35px
+        &>ul
+            display: flex
+            align-items: center
+            &>li
+                &>a
+                    color: #FFF
+                    text-decoration: none
+                    text-transform: uppercase
+                    display: block
+                    padding: 17px 16px  
+                    &:hover
+                        color: var(--color-red)
+                    &>div
+                        display: flex
+                        align-items: center 
+                        .icon
+                            height: 14px
+                            width: 14px
+                            margin-left: 4px
+                            margin-bottom: 3px
+
+    &-submenu
+        display: none
+        position: absolute
+        top: 119px
+        left: 0
+        right: 0
+        z-index: 100
+        background-color: #fff
+        box-shadow: 0 0 30px rgba(#222944, .25)
+        &.active
+            display: block
+
+        nav 
+            padding-top: 32px
+            padding-bottom: 32px
+            &> ul
+                display: flex
+                justify-content: space-between
+                &>li
+                    &>a
+                        text-transform: uppercase
+                        font-weight: 600
+                        
+
+                    li
+                        margin-top: 20px
+
+                a
+                    text-decoration: none
+                    &:hover
+                        color: var(--color-red)
+
+        &-fixed
+            position: fixed
+            top: 70px
+
+    &-wrapper
+        padding-left: 110px
+        padding-right: 110px
+
+    &-fixed
+        nav
+            padding-left: 0
+            &>ul
+                &>li
+                    &>a
+                        padding: 25px 16px

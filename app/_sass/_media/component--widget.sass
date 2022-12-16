@@ -1,0 +1,31 @@
+.widget
+    +min_sm
+        &-content
+            &--open
+                display: none
+    +sm
+        &-content
+            &--open
+                color: #1946B9
+                background: transparent
+                border: 0
+                padding: 0
+                bottom: 0
+                right: 0
+                position: absolute
+                &.open
+                    opacity: 0
+                    pointer-events: none
+            &--description
+                position: relative
+                p
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    text-overflow: ellipsis
+                    -webkit-line-clamp: 3
+                    overflow: hidden
+                    word-break: break-word
+
+                &.open p
+                    display: block
+                    overflow: visible

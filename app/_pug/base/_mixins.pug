@@ -1,3 +1,64 @@
+mixin information_tabs( items ) 
+
+    ul.information-tabs#information_tabs
+
+        each item in items
+        
+            li(data-for= item.for, class= item.classes)= item.name
+
+
+mixin social_networks()
+    -
+        social_networks = [
+            'vk',
+            'ok',
+            'whatsapp',
+            'telegram'
+        ];
+    .social_networks.social_networks-colored
+        ul.social_networks-list
+
+            each item in social_networks
+
+                li
+                    a(href="#") 
+                        +icon( item )
+
+
+mixin post(img, title, date, classes, description, icon)
+    - classes = 'post ' + classes || 'post';
+
+    div(class= classes)
+        .post-thumbnail
+            a(href="#") 
+                +bg( img )
+
+            if icon
+                .post-icon
+                    +icon( icon ) 
+
+        .post-content
+            .post-title
+                a(href="#") 
+                    h3= title
+
+            if description && description != ''
+                .post-description
+                    p= description
+
+            .post-date
+                time= date
+
+mixin button(classes, text, is_link)
+    if is_link
+        a(class= classes, href="#")
+            div
+            span= text
+    else
+        button(class= classes)
+            div
+            span= text
+
 mixin icon(name, mod)
     - mod = mod || ''
     svg(class="icon icon-" + name + ' ' + mod)
@@ -8,21 +69,42 @@ mixin bg(src)
         picture
             img(src= src, alt="")
 
-mixin menu( nav ) 
+mixin menu( nav, show_span ) 
+    - show_span = show_span || false;
     nav
         ul 
             each item in nav
                 li 
-                    a(href="#")= item.title
+                    if item.has_child
+                        a(href="#", data-child-menu= item.has_child)
+                            div
+                                span= item.title
+                                +icon('angle-bottom')
+
+                    else
+                        if show_span
+                            a(href="#")
+                                span= item.title
+                        else
+                            a(href="#")= item.title
 
                     if item.child
-
+                        
                         ul 
 
                             each val in item.child
 
                                 li 
                                     a(href="#")= val.title
+
+                                    if val.child
+                                        
+                                        ul
+
+                                            each v in val.child
+                                            
+                                                li
+                                                    a(href="#")= v.title 
 
 mixin faq( questions ) 
     .faq
@@ -62,8 +144,9 @@ mixin select( name, items )
 
 mixin checkbox( name )
     .checkbox
-        label(for= name)= name
         input(type="checkbox" name= name, id= name, value= name)
+        label(for= name)= name
+        
 
 mixin radio( name, slug, namespace, checked )
     - checked = checked || false;

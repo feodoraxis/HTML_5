@@ -1,5 +1,334 @@
+-
+    menu_tournaments = [
+        {
+            "title": "Управление",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Регби в России",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Программы",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Официально",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        }
+    ];
+
+-
+    menu_media = [
+        {
+            "title": "Управление",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Регби в России",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Программы",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        },
+        {
+            "title": "Официально",
+            "child": [
+                {
+                    "title":"Структура"
+                },
+                {
+                    "title":"Высший совет"
+                },
+                {
+                    "title":"Попечительский совет"
+                },
+                {
+                    "title":"Правление"
+                },
+                {
+                    "title":"Национальный состав тренеров"
+                },
+            ],
+        }
+    ];
+
+- 
+    partners_1 = [
+        "img/partners-1/1.png",
+        "img/partners-1/2.png",
+        "img/partners-1/3.png",
+        "img/partners-1/4.png",
+    ];
+
+-
+    social_networks = [
+        'vk',
+        'telegram',
+        'whatsapp',
+        'youtube',
+        'tiktok',
+        'ok',
+        'instagram',
+        'facebook',
+    ];
+
+- 
+    partners_2 = [
+        "img/partners-2/1.png",
+        "img/partners-2/2.png",
+        "img/partners-2/3.png",
+        "img/partners-2/4.png",
+        "img/partners-2/5.png",
+        "img/partners-2/6.png",
+        "img/partners-2/7.png",
+        "img/partners-2/8.png",
+        "img/partners-2/9.png",
+        "img/partners-2/10.png",
+        "img/partners-2/11.png",
+        "img/partners-2/12.png",
+    ];
+
+- 
+    partners_3 = [
+        "img/partners-3/1.png",
+        "img/partners-3/2.png",
+        "img/partners-3/3.png",
+        "img/partners-3/4.png",
+        "img/partners-3/5.png",
+    ];
+
 footer.footer
-    .wrapper 
+    
+    .footer-widgets
+        .wrapper 
+            .footer-widget.footer-mobile 
+                .mobile_applications.mobile_applications-mobile
+                    .mobile_applications-item
+                        a(href="#")
+                            img(src="img/icons/android-app.svg", alt="") 
+
+                    .mobile_applications-item
+                        a(href="#")
+                            img(src="img/icons/ios-app.svg", alt="") 
+
+            .footer-widget.footer-mobile
+                .social_networks.social_networks-mobile.social_networks-left
+                    .social_networks-title
+                        .section_title.section_title-white
+                            h2 Мы в соцсетях
+
+                    ul.social_networks-list
+
+                        each item in social_networks
+
+                            li
+                                a(href="#") 
+                                    +icon( item )
+
+            .footer-widget
+                .row
+                    .col-md-6
+                        .partners
+                            .partners-title
+                                .section_title.section_title-white
+                                    h2 Официальные партнеры
+
+                            ul.partners-list
+
+                                each item in partners_1
+                                    li
+                                        a(href="#") 
+                                            img(src= item, alt="")
+
+                    .col-md-6.footer-desctop
+                        .social_networks
+                            .social_networks-title
+                                .section_title.section_title-white.section_title-right
+                                    h2 Мы в соцсетях
+
+                            ul.social_networks-list
+
+                                each item in social_networks
+
+                                    li
+                                        a(href="#") 
+                                            +icon( item )
+
+
+            .footer-widget
+                .partners.partners-spaces
+                    .partners-title
+                        .section_title.section_title-white
+                            h2 Партнеры и спонсоры
+
+                    ul.partners-list
+
+                        each item in partners_2
+                            li
+                                a(href="#") 
+                                    img(src= item, alt="")
+
+            .footer-widget
+                .row
+                    .col-md-9
+                        .partners.partners-spaces
+                            .partners-title
+                                .section_title.section_title-white
+                                    h2 Информационные партнеры
+
+                            ul.partners-list
+
+                                each item in partners_3
+                                    li
+                                        a(href="#") 
+                                            img(src= item, alt="")
+
+                    .col-md-3.footer-desctop
+                        .mobile_applications
+                            .mobile_applications-item
+                                a(href="#")
+                                    img(src="img/icons/android-app.svg", alt="") 
+
+                            .mobile_applications-item
+                                a(href="#")
+                                    img(src="img/icons/ios-app.svg", alt="") 
+    .footer-main
+        .wrapper 
+            .footer-main-flexbox
+                .footer-left
+                    .footer-logo
+                        a(href="#") 
+                            include ../../img/logo-white.svg
+
+                    .footer-copyright
+                        p &copy; 2000-2022   Федерация регби России, все права защищены.
+
+                        span Цитирование и копирование информации разрешено только с прямой ссылкой на источник.
+
+                .footer-developer
+                    p Разработка: <a href="#">Ruggerweb</a>
+
+.menu_main-submenu.js-menu_main-submenu#menu_tournaments
+    .wrapper.menu_main-wrapper
+        +menu( menu_tournaments )
+
+.menu_main-submenu.js-menu_main-submenu#menu_media
+    .wrapper.menu_main-wrapper
+        +menu( menu_media )
 
 include modal.pug
 

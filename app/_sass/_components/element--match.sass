@@ -1,0 +1,112 @@
+.match
+    background-color: #fff
+    width: 100%
+    border-radius: 1px
+    
+    &-row
+        display: flex
+        align-items: stretch
+        justify-content: center
+
+    &-time
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 58px
+        text-align: center
+        margin: 0 16px
+        position: relative
+        time
+            font-size: 1rem
+
+    &-team
+        display: flex
+        align-items: center
+        img, span
+            margin: 0 4px
+
+        img
+            width: 52px
+    // &-platform
+    //     margin-top: -1px
+
+    &-time
+        width: 80px
+        time
+            font-size: rem(27)
+    &-today
+        .match
+            &-time
+                // width: 80px
+                time
+                    font-weight: 600
+                    
+
+
+    &-now
+        .match
+            &-time
+                span
+                    position: relative
+                    &::before
+                        content: ''
+                        width: 5px
+                        height: 5px
+                        border-radius: 50%
+                        background: var(--color-red)
+                        left: 0
+                        top: -4px
+                        right: 0
+                        margin: auto
+
+    &-platform
+        margin-top: -6px
+        a
+            text-decoration: none
+        span
+            font-size: 1rem
+            color: #655E70
+            font-weight: 400
+
+    &-transfered
+        .match
+            &-time
+                time
+                    color: #C55E00
+                    font-size: 1rem
+                    font-weight: 400
+
+
+    &-mini
+        box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+        padding: 13px 13px 15px
+        transition: all .3s ease
+        position: relative
+        .match
+            &-team
+                img, span
+                    margin: 2px
+
+                img
+                    width: auto
+            &-time
+                width: auto
+                time
+                    font-size: rem(19)
+
+            &-platform
+                margin-top: -1px
+
+            &-link
+                position: absolute
+                z-index: 10
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                color: transparent
+                text-decoration: none
+
+        &:hover
+            box-shadow: 0 2px 20px rgba(#002A54, .15)

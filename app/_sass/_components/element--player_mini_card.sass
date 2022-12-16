@@ -1,0 +1,44 @@
+.player_mini_card
+    display: flex
+    align-items: center
+    &-action
+        width: 32px
+        height: 32px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 16px
+
+    &-avatar
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
+        overflow: hidden
+        margin-right: 20px
+
+    &-info
+        span
+            display: block
+            &:first-child
+                margin-bottom: 1px
+
+            &:last-child
+                color: #655E70
+                text-decoration: line-through
+
+        p
+            margin-bottom: 1px
+            font-weight: 500
+
+    &-reverse
+        .player_mini_card
+            &-action
+                margin-right: 0
+                margin-left: 16px
+                
+            &-avatar
+                margin-right: 0
+                margin-left: 20px
+
+            

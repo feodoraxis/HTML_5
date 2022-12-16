@@ -1,0 +1,41 @@
+.consists
+    &-flexbox
+        display: flex
+        justify-content: space-between
+
+    &-left,
+    &-right
+        flex: 0 0 calc(50% - (158px / 2))
+        max-width: calc(50% - (158px / 2))
+
+    &-left
+        display: flex
+        justify-content: flex-end
+
+    &-title
+        text-align: center
+        position: relative
+        margin-top: 27px
+        margin-bottom: 32px
+        p
+            font-size: rem(17)
+            color: #655E70
+            margin-bottom: 0
+            background-color: #fff
+            padding-left: 32px
+            padding-right: 32px
+            display: inline-block
+            position: relative
+            z-index: 20
+
+        &::before
+            content: ''
+            height: 1px
+            width: 100%
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            background-color: #E9E6EF
+            z-index: 10
