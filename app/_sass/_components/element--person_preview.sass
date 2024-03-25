@@ -1,5 +1,5 @@
 .person_preview
-    transition: all .3s ease
+    transition: all 0 ease
     box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
     height: 100%
     a
@@ -9,6 +9,14 @@
     &-thumbnail
         display: flex
         justify-content: center
+        position: relative
+        width: 302px
+        height: 302px
+        overflow: hidden
+        max-width: 100%
+        .bg
+            bottom: 0
+            margin: auto
 
     &-content
         padding: 16px 20px
@@ -17,7 +25,7 @@
         margin-bottom: 8px
         h3
             font-size: rem(18)
-            font-weight: 600
+            font-weight: 500
             margin-bottom: 0
         &:last-child
             margin-bottom: 0
@@ -29,3 +37,6 @@
 
     &:hover
         box-shadow: 0 2px 20px rgba(#002A54, .15)
+
+    &--hover-disable:hover
+        box-shadow: 0 2px 16px rgba(#1F3E5E, .07)

@@ -13,6 +13,7 @@
     height: 100vh
     overflow: hidden
     z-index: 1000
+    
     &.active
         opacity: 1
         pointer-events: all
@@ -31,6 +32,7 @@
         position: relative
         padding-left: 32px
         padding-right: 32px
+        
         &.is-submenu-open
             overflow: auto
             overflow-x: hidden
@@ -45,8 +47,9 @@
         width: calc(100% + 32px + 32px)
         padding-left: 32px   
         padding-right: 32px   
-        margin-left: -32px
-
+        margin-left: -32px         
+        padding-bottom: 85px 
+        
         li
             border-bottom: 1px solid #352457
         a
@@ -56,6 +59,9 @@
             padding: 22px 0
             display: block
             position: relative
+            &:not([href]):not([class]),
+            &:not([href]):not([class]):hover
+                color: #FFF
 
             svg
                 transform: rotate(-90deg)
@@ -103,6 +109,28 @@
         li
             border-bottom: 1px solid #352457
 
+            // &:not(.menu-item-has-children)
+            //     border-bottom: 0
+        //     &:last-child
+        //         border-bottom: 0
+
+        &>nav>.sub-menu > li
+            &:not(.menu-item-has-children)
+                border-bottom: 0
+                a
+                    margin-bottom: -22px
+                    border-bottom: 0
+
+                &:last-child
+                    a
+                        border-bottom: 1px solid #352457
+
+            &.menu-item-has-children
+                border-bottom: 0
+                li:last-child
+                    border-bottom: 0
+                    margin-bottom: -22px
+
         a
             font-size: rem(20)
             color: #FFF
@@ -116,3 +144,6 @@
             text-transform: uppercase
             opacity: .5
             padding-left: 0
+            border-top: 1px solid #352457
+            border-bottom: 1px solid #352457
+            margin-top: 22px

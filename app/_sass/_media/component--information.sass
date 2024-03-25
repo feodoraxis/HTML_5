@@ -18,14 +18,14 @@
             background-color: #fff
             border-radius: 1px
             position: relative
-            height: 47px
+            height: 41px
             width: 100%
             z-index: 100
             &::before
                 content: ''
                 top: 0
                 bottom: 0
-                right: 12px
+                right: 15px
                 margin: auto
                 width: 16px
                 height: 16px
@@ -33,9 +33,9 @@
                 z-index: 10
             li
                 display: none
-                padding: 11px 12px
+                padding: 8px 12px
                 background-color: #fff
-                font-weight: 500
+                font-weight: 400
                 flex: 0 0 100%
                 width: 100%
                 order: 20
@@ -46,14 +46,47 @@
                     &::before
                         display: none
 
+
+
             &.open
+                &::after
+                    content: ''
+                    background: #FFF
+                    width: 100%
+                    box-shadow: 0px 2px 30px 0px rgba(31, 62, 94, 0.20)
+                    top: 0
+                    bottom: -73px
+                    left: 0
+                    right: 0
                 li
                     display: block
                     z-index: 10
 
+            &--two.open::after
+                bottom: -43px
+            &--three.open::after
+                bottom: -73px
+            &--four.open::after
+                bottom: -103px
+            &--five.open::after
+                bottom: -133px
+            &--six.open::after
+                bottom: -163px
+            &--seven.open::after
+                bottom: -193px
+            &--eight.open::after
+                bottom: -193px
+            &--nine.open::after
+                bottom: -223px
+            &--ten.open::after
+                bottom: -253px
+
         &-translation
             &>div
                 max-width: 100%
+
+        &-archive
+            display: none
 
     +md
         padding-left: 0

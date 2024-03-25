@@ -1,12 +1,16 @@
 .news_single
     display: flex
+    .content > time
+        display: block
+        font-size: 14px
+        margin-bottom: 15px
     &-title
-        flex: 0 0 calc(100% - 490px)
-        max-width: calc(100% - 490px)
+        flex: 0 0 50% //calc(100% - 490px)
+        max-width: 50% //calc(100% - 490px)
         padding-left: 40px
     &-breadcrumps
-        flex: 0 0 490px
-        max-width: 490px
+        flex: 0 0 50% //490px - Хотя диз сказал, 681
+        // max-width: 50% //490px - Хотя диз сказал, 681
 
     &-content
         flex: 0 0 calc(100% - 490px)
@@ -22,5 +26,23 @@
             margin-bottom: 0
 
     &-social_networks
-        display: flex
-        justify-content: center
+        padding-top: 50px
+        // display: flex
+        // justify-content: center
+
+    &--date-on-thumbnail
+        position: absolute
+        height: 42px
+        padding: 11px 12px
+        background-color: rgba(#fff, .6)
+        left: 0
+        top: 0
+        z-index: 10
+        &::before
+            content: ''
+            width: 19px
+            height: 42px
+            background-image: url(../img/date-decore.svg)
+            top: 0
+            bottom: 0
+            right: -19px

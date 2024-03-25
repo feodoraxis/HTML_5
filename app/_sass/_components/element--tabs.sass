@@ -11,10 +11,21 @@
         display: block
         cursor: pointer
         text-align: center
-        &:hover,
+        &:hover
+            color: var(--color-red)
         &.active
             color: var(--color-red)
             border-color: var(--color-red)
+
+        a
+            text-decoration: none
+
+    &--links
+        li
+            padding: 0px
+            a
+                padding: 14px 18px
+                display: block
 
     &-block
         display: none

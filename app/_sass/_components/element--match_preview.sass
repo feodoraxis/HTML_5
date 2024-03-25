@@ -4,11 +4,27 @@
     padding: 23px 30px
     background-color: #fff
     box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
-    transition: all .3s ease
+    transition: all 0 ease
+    position: relative
+
+    &-link
+        text-decoration: none
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 10
 
     &>div
         display: flex
         align-items: center
+
+        &.match_preview
+            &-tournament
+                align-items: flex-start
+                justify-content: center
 
     &-arenas
         display: flex
@@ -34,6 +50,10 @@
                     display: none
 
     &-tournament
+        flex-direction: column
+        flex: 0 0 25%
+        max-width: 25%
+        // justify-content: center
         p 
             font-weight: 500
             margin-bottom: 6px
@@ -41,12 +61,21 @@
                 font-weight: 400
                 color: #B1ABBC
 
+        &>div>span
+            display: block
+            margin-bottom: 6px
 
-    &-link
-        text-decoration: none
+    &-match
+        flex: 0 0 50%
+        max-width: 50%
 
     &-button
-        min-width: 141px    
+        min-width: 141px 
+        justify-content: flex-end   
+        position: relative
+        z-index: 20
+        flex: 0 0 25%
+        max-width: 25%
 
     &:hover
         box-shadow: 0 2px 20px rgba(#002A54, .15)

@@ -1,4 +1,14 @@
 .front_page
+    +w1280
+        &-flexbox
+            margin-left: -50px
+            width: calc(100% + 50px)
+
+    +xl
+        &-flexbox
+            margin-left: -20px
+            width: calc(100% + 20px)
+
     +min_lg
         &-toggle
             display: none
@@ -10,3 +20,7 @@
             max-width: 100%
             padding-left: 0
             padding-right: 0
+
+        &-flexbox
+            width: 100%
+            margin-left: auto

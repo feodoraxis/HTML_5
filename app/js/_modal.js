@@ -1,4 +1,4 @@
-import { is_mobile, is_OSX, before_modal_open, after_modal_close } from './_functions.js' 
+import { modal_open, modal_close } from './_functions.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     $('[data-modal-selector]').on('click', function(e) {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     $('.modal .close').on('click', function() {
-        modal_close( '#' + $(this).closest('.modal').attr('id') );
+        modal_close(`#${$(this).closest('.modal').attr('id')}`);
     });
 
     $(".modal").on('click', function(e) {
@@ -17,14 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const id = $(this).closest('.modal').attr('id');
-
-        modal_close( '#' + id );
+        modal_close(`#${id}`);
     });
 
     $('.js-close-modal').on('click', function(e) {
         const id = $(this).closest('.modal').attr('id');
 
-        modal_close( '#' + id );
+        modal_close(`#${id}`);
     });
 
     $(document).keydown(function(e) {
@@ -32,16 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
     
-        modal_close( '#' + $('.modal.open').attr('id') );
+        modal_close(`#${$('.modal.open').attr('id')}`);
     });
-
-    function modal_open( selector ) {
-        before_modal_open();
-        $(selector).addClass('open');
-    }
-
-    function modal_close( selector ) {
-        $(selector).removeClass('open');
-        after_modal_close();
-    }
 });

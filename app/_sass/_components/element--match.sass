@@ -6,48 +6,63 @@
     &-row
         display: flex
         align-items: stretch
-        justify-content: center
+        &:nth-child(1)
+            justify-content: space-between
+        &:nth-child(2)
+            justify-content: center
+
 
     &-time
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        width: 58px
+        width: 80px
         text-align: center
         margin: 0 16px
         position: relative
+        white-space: nowrap
+        flex-wrap: nowrap
+        flex: 0 0 80px
         time
-            font-size: 1rem
+            font-size: rem(27)
+            
+            span.stage
+                font-size: 1rem
+                font-weight: 500
+                display: block
+                text-align: center
+                margin-bottom: 6px
 
     &-team
         display: flex
         align-items: center
+        flex: 0 0 calc(50% - 56px)
         img, span
             margin: 0 4px
 
         img
             width: 52px
-    // &-platform
-    //     margin-top: -1px
 
-    &-time
-        width: 80px
-        time
-            font-size: rem(27)
+        &:first-child
+            justify-content: flex-end
+            span
+                text-align: right
+                
     &-today
         .match
             &-time
-                // width: 80px
                 time
                     font-weight: 600
-                    
 
+            &-time
+                &--time time
+                    font-weight: 400
 
     &-now
         .match
             &-time
-                span
+                span:not(.stage)
                     position: relative
                     &::before
                         content: ''
@@ -69,6 +84,9 @@
             color: #655E70
             font-weight: 400
 
+        img
+            max-width: 64px
+
     &-transfered
         .match
             &-time
@@ -81,7 +99,7 @@
     &-mini
         box-shadow: 0 2px 16px rgba(#1F3E5E, .07)
         padding: 13px 13px 15px
-        transition: all .3s ease
+        transition: all 0 ease
         position: relative
         .match
             &-team
@@ -96,6 +114,7 @@
                     font-size: rem(19)
 
             &-platform
+                margin: auto
                 margin-top: -1px
 
             &-link
@@ -108,5 +127,41 @@
                 color: transparent
                 text-decoration: none
 
+            &-tournament-name
+                font-size: 13px
+                text-decoration: none
+
         &:hover
             box-shadow: 0 2px 20px rgba(#002A54, .15)
+
+    &-row
+        &--mini-second
+            justify-content: center
+            align-items: center
+            padding-top: 13px
+            &:nth-child(1),
+            &:nth-child(2)
+                justify-content: center
+
+            .match
+                &-platform
+                    margin: -1px 0 0 0
+
+
+            &>div
+                padding: 0 14px
+                position: relative
+                &::before
+                    content: ''
+                    width: 4px
+                    height: 4px
+                    border-radius: 50%
+                    background-color: #B1ABBC
+                    right: -2px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+
+                &:last-child
+                    &::before
+                        display: none

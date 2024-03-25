@@ -15,6 +15,7 @@
 	"devDependencies": {
 		"@babel/core": "^7.19.1",
 		"@babel/preset-env": "^7.19.1",
+		"add-to-calendar-button": "^2.2.10",
 		"autoprefixer": "^10.4.11",
 		"babel-loader": "^8.2.5",
 		"babel-plugin-module-resolver": "^4.1.0",
@@ -41,7 +42,10 @@
 		"gulp-stylus": "^2.7.1",
 		"gulp-svg-sprite": "^2.0.0",
 		"gulp-svgmin": "^4.1.0",
+		"jquery-validation": "^1.19.5",
+		"photoswipe": "^5.3.8",
 		"postcss": "^8.4.16",
+		"pulltorefreshjs": "^0.1.22",
 		"sass": "^1.54.9",
 		"terser-webpack-plugin": "^5.3.6",
 		"tiny-slider": "^2.9.4",
@@ -52,7 +56,6 @@
 	"dependencies": {
 		"@selectize/selectize": "^0.15.0",
 		"jquery": "^3.6.1",
-		"photoswipe": "^5.3.4",
 		"selectize": "^0.12.6"
 	}
 }

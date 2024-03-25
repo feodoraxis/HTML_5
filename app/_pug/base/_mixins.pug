@@ -33,7 +33,7 @@ mixin post(img, title, date, classes, description, icon)
             a(href="#") 
                 +bg( img )
 
-            if icon
+            if icon && classes != 'post post-big post-big--video-media'
                 .post-icon
                     +icon( icon ) 
 
@@ -47,6 +47,9 @@ mixin post(img, title, date, classes, description, icon)
                     p= description
 
             .post-date
+                if icon && classes == 'post post-big post-big--video-media'
+                    .post-icon
+                        +icon( icon ) 
                 time= date
 
 mixin button(classes, text, is_link)
@@ -142,10 +145,11 @@ mixin select( name, items )
             each item in items 
                 li(data-value= item.slug)= item.name
 
-mixin checkbox( name )
+mixin checkbox( name, labelClasses )
+    - labelClasses = labelClasses || '';
     .checkbox
         input(type="checkbox" name= name, id= name, value= name)
-        label(for= name)= name
+        label(for= name, class=labelClasses)= name
         
 
 mixin radio( name, slug, namespace, checked )

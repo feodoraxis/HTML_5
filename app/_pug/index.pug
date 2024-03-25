@@ -14,7 +14,7 @@ html(lang="ru")
 
                 .front_page-flexbox
                     .front_page-aside.front_toggle-section.js-front_toggle-section#aside
-                        aside.sidebar
+                        aside.sidebar#front_sidebar
                             .widget.widget-tournaments_choice
                                 .widget-content
                                     form(action="")
@@ -31,9 +31,23 @@ html(lang="ru")
                                     h3 Матчи
                                 .widget-content
                                     .w_matches-button_add
-                                        button.button.button-add_to_calendar 
+                                        .button.button-add_to_calendar(data-modal-selector="#add_to_calendar_modal")
                                             +icon('calendar')
                                             span Добавить матчи в календарь
+                                        
+                                    
+                                        //- add-to-calendar-button(
+                                        //-     name="Event Series",
+                                        //-     dates='[{"name":"Reminder 1/3 to test the Add to Calendar Button","description":"This is the first part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]","startDate":"today+3","startTime":"10:15","endTime":"23:30"},{"name":"Reminder 3/3 to test the Add to Calendar Button","description":"This is the third part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]","startDate":"today+8","startTime":"09:00","endTime":"19:00"},{"name":"Reminder 2/3 to test the Add to Calendar Button","description":"This is the second part to check the Add to Calendar Button script at [url]https://add-to-calendar-button.com/[/url]","startDate":"today+5","startTime":"11:30","endTime":"20:00"}]',
+                                        //-     timeZone="Europe/Moscow",
+                                        //-     location="World Wide Web",
+                                        //-     options="'Apple','Google','iCal','Outlook.com','Yahoo'",
+                                        //-     lightMode="bodyScheme",
+                                        //-     buttonStyle="custom",
+                                        //-     customCss="http://localhost:3000/css/add-to-calendar.css",
+                                        //-     language="ru",
+                                        //-     label="Добавить матчи в календарь"
+                                        //- )
 
                                     .w_matches-list
                                         ul
@@ -55,7 +69,8 @@ html(lang="ru")
                                                                 .match-team
                                                                     img(src="img/team.png", alt="")
                                                                     span МТЛ
-                                                            .match-row
+                                                            .match-row.match-row--mini-second
+                                                                .match-tournament-name Высшая лига
                                                                 .match-platform
                                                                     a(href="#")
                                                                         img(src="img/youtube-icon.svg", alt="") 
@@ -376,22 +391,22 @@ html(lang="ru")
                                                 +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', 'post-small_font', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.')
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', 'post-small_font', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.')
                                         .col-xl-6
                                             .posts-item
-                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', 'post-small_font', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', 'post-small_font', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', 'post-small_font', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'camera')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', '', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'play')
+                                                +post( 'img/news.jpg', '«ВВА-Подмосковье» подписала экс-игрока ЦСКА', '12 июля', 'post-small_font', 'Контракт с «военлетами» заключил южноафриканский форвард Стефан Грундлинг.', 'play')
                             
                                 .posts-button
                                     +button('button button-primary', 'Все новости', 'link')
@@ -408,10 +423,10 @@ html(lang="ru")
 
                                         .col-xl-6
                                             .posts-item
-                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', 'post-small_font', 'Контрольно-дисциплинарный комитет Федерации регби ', 'camera')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', 'post-small_font', '30-31 июля в Москве на стадионе Центра пляжных соревнований')
 
                             section.posts.js-posts-equal
                                 .posts-title
@@ -424,17 +439,17 @@ html(lang="ru")
                                                 +post( 'img/news.jpg', '30-31 июля пройдёт Чемпионат России по пляжному регби', '12 июля', 'post-big post-sm-default', '', 'play')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', 'post-small_font', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
 
                                         .col-xl-6
                                             .posts-item
-                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', '', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
+                                                +post( 'img/news.jpg', '“Слава-м” одержала техническую победу над ЦСКА-м', '12 июля', 'post-small_font', 'Контрольно-дисциплинарный комитет Федерации регби ', 'play')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', 'post-small_font', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
 
                                             .posts-item
-                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', '', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
+                                                +post( 'img/news.jpg', 'Аккредитация СМИ на Чемпионат России по регби-пляжное', '12 июля', 'post-small_font', '30-31 июля в Москве на стадионе Центра пляжных соревнований', 'play')
 
                                 .posts-button
                                     +button('button button-primary', 'Все видео', 'link')

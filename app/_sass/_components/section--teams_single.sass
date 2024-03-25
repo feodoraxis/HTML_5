@@ -27,7 +27,7 @@
                 &-stroke_second
                     color: #655E70
                 &-stroke_primary
-                    white-space: pre
+                    // white-space: pre-wrap
                     margin-top: -2px
                     span
                         color: #B1ABBC
@@ -49,6 +49,8 @@
     &-team
         display: flex
         align-items: center
+        &:first-child
+            justify-content: flex-end
         p
             margin-bottom: 0
             font-size: rem(21)
@@ -95,7 +97,8 @@
         span
             font-size: rem(38)
             font-weight: 700
-            &:first-child
+            // &:first-child
+            &.fail
                 color: #655E70
                 
 
@@ -135,3 +138,17 @@
 
         img
             margin-left: 4px
+            max-width: 70px
+
+    &--stadium-name
+        padding-left: 24px
+        &::after
+            content: ''
+            background-image: url(../img/icons/stadium.svg)
+            width: 20px
+            height: 20px
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+        

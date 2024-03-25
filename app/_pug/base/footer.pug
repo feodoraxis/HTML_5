@@ -179,6 +179,7 @@
         'vk',
         'telegram',
         'whatsapp',
+        'viber',
         'youtube',
         'tiktok',
         'ok',
@@ -211,7 +212,7 @@
         "img/partners-3/5.png",
     ];
 
-footer.footer
+footer.footer#footer
     
     .footer-widgets
         .wrapper 
@@ -332,4 +333,9 @@ footer.footer
 
 include modal.pug
 
+#pull-to-refresh.pull-to-refresh.start-pull.hidden-pull
+    #pull-to-refresh-loader.pull-to-refresh-loader
+    #pull-to-refresh-status.pull-to-refresh-status Pull down to refresh
+
+script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
 script(src="js/app.min.js", defer)

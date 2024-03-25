@@ -1,3 +1,19 @@
+- 
+    teams = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "0",
+        "10",
+        "11",
+    ];
+
 .modal#modal_recall
     .modal-flex
         .modal-window
@@ -46,3 +62,69 @@
                         .recall_form-button
                             +button('button button-primary', 'Отправить')
                         
+
+.modal#add_to_calendar_modal
+    .modal-flex
+        .modal-window
+            .modal-close
+                span.close
+            .modal-header
+                h1 Добавление матчей в календарь
+
+            .modal-body 
+                .add_to_calendar.js-add_to_calendar
+                    .js-add_to_calendar-block.add_to_calendar-block.add_to_calendar-block--active#add_to_calendar_start
+                        .add_to_calendar-head
+                            p Выберите категорию совернований
+
+                        .add_to_calendar-body
+                            ul.add_to_calendar-list
+                                li(data-for="#add_to_calendar_male" data-modal-title="Мужские") Мужские
+                                li(data-for="#add_to_calendar_female" data-modal-title="Женские") Женские
+                                li(data-for="#add_to_calendar_young" data-modal-title="Юношеские") Юношеские
+
+
+                    .js-add_to_calendar-block.add_to_calendar-block#add_to_calendar_male
+                        .add_to_calendar-head
+                            <button class="button button-back" type="button" data-add-to-calendar-go="#add_to_calendar_start">
+                                <svg class="icon icon-arrow-left ">
+                                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                                </svg>
+                                <span>Все категории</span>
+                            </button>
+
+                        .add_to_calendar-body
+                            ul.add_to_calendar-list
+                                li(data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="PARI Чемпионат России 2023-2024") PARI Чемпионат России 2023-2024
+                                li(data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="PARI Кубок России 2023") PARI Кубок России 2023
+                                li(data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="Всероссийские соревнования UI7 2023") Всероссийские соревнования UI7 2023
+                                li(data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="Чемпионат России по пляжному регби. Мужчины 2023") Чемпионат России по пляжному регби. Мужчины 2023
+
+
+                    .js-add_to_calendar-block.add_to_calendar-block#add_to_calendar_teams
+                        .add_to_calendar-head
+                            <button class="button button-back" type="button" data-add-to-calendar-go="#add_to_calendar_female">
+                                <svg class="icon icon-arrow-left ">
+                                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                                </svg>
+                                <span>Все турниры</span>
+                            </button>
+
+                        .add_to_calendar-body
+                            .row 
+
+                                each team in teams
+                                    .col-md-6 
+                                        .add_to_calendar-team_block
+                                            .add_to_calendar-team_block--checkbox
+                                                +checkbox(team, 'checkbox--hidden-label-title')
+
+                                            .add_to_calendar-team_block--team
+                                                .team_card 
+                                                    img(src="img/team.png", alt="")
+                                                    p Все матчи
+
+                        .add_to_calendar-foot
+                            button.button.button-primary#add_to_calendar_button 
+                                div
+                                span Добавить

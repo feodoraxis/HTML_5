@@ -9,9 +9,10 @@
     --color-gray-blue-lite: #F2EFF8
     --color-gray-blue-lite-hover: #E9E6EF
 
-// html
-//     overflow-x: hidden
-//     overflow-y: scroll
+html
+    +sm
+        overscroll-behavior-y: contain
+
 
 html,
 body
@@ -27,6 +28,7 @@ body
     // overflow-x: hidden
     color: var(--color-default)
     background: #fff
+    // padding-bottom: env(safe-area-inset-bottom) 
     input, textarea
         border: #666 1px solid
         outline: none
@@ -117,3 +119,54 @@ input
 
 .hidden
     display: none !important
+
+
+.aligncenter
+    align-items: center
+
+.aligncenter--td
+    text-align: center
+    // span
+    //     display: block
+    //     text-align: center
+    // align-items: center
+.selectize-input 
+    div
+        -webkit-box-orient: vertical
+        -webkit-line-clamp: 1
+        display: -webkit-box
+        margin: 0
+        overflow: hidden
+        -o-text-overflow: ellipsis
+        text-overflow: ellipsis
+        word-break: break-word
+        max-width: 90%
+
+    input[type="select-one"]
+        display: none !important
+
+.atcb-initialized
+    width: 100% !important
+
+.atcb-button 
+    box-shadow: 0 2px 16px rgba(31, 62, 94, .07)
+    background-color: #fff
+    transition: all 0s ease
+    padding: 10px 30px
+    border-radius: 1px
+    width: 100%
+    border: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 15px
+    font-family: EuclidSquare, sans-serif
+
+
+.atcb-icon
+    background-image: url(../img/icons/calendar.svg)
+    background-size: contain
+    height: 16px
+    display: block
+    width: 16px
+    margin-right: 8px

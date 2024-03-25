@@ -17,9 +17,14 @@
             margin-bottom: 0
 
     &-content
-        padding: 20px 24px
+        // padding: 20px 24px
         padding-left: 0
         background: linear-gradient(270deg, #F5F4F6 -0.07%, rgba(245, 244, 246, 0) 100%)
+
+        &--logo
+            margin-bottom: 20px
+            img
+                margin: 0
 
         &--description
             p
@@ -35,6 +40,9 @@
             border-top: 1px solid #E9E6EF
             padding-top: 20px
             padding-right: 24px
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
             &>b
                 display: block
                 font-weight: 600
@@ -51,6 +59,17 @@
 
                     &:last-child
                         margin-bottom: 0
+
+
+    &-tournament_table
+        &--table-name
+            padding-top: 15px
+            p
+                margin-bottom: 5px
+                font-weight: 600
+
+            &:first-child
+                padding-top: 0
         
 
     .w_matches

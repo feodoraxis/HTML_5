@@ -1,0 +1,59 @@
+.selectize
+    &-input
+        border: 2px solid var(--color-gray)
+        color: var(--color-default)
+        border-radius: 1px
+        box-shadow: none
+        padding: 9px
+        div
+            font-size: 1rem
+
+        &:active:not(.none),
+        &.focus:not(.none),
+        &.full:not(.none)
+            box-shadow: none
+            border-color: var(--color-default)
+            &:hover
+                border-color: var(--color-gray-dark)
+
+        &:hover
+            border-color: var(--color-gray-dark)
+
+        input
+            font-size: 1rem
+
+    &-control.single 
+        .selectize-input
+            &::after
+                width: 16px
+                height: 16px
+                background-image: url(../img/icons/angle-bottom.svg)
+                border: 0
+                padding: 0
+                top: 0
+                bottom: 0
+                margin: auto
+
+            &.dropdown-active::after
+                border: 0
+                margin-top: auto
+                // transform: rotate(180deg)
+
+    &-dropdown
+        border: 0
+        border-radius: 1px
+        box-shadow: 0 0 30px rgba(#222944, .25)
+        z-index: 100
+        &-content
+            padding: 12px
+        .option
+            font-size: 1rem
+            color: var(--color-default)
+            padding: 10px 12px
+            &:hover,
+            &.selected
+                color: var(--color-default)
+                background-color: var(--color-gray-blue-lite-hover)
+
+.selectize-control.single .selectize-input.input-active, .selectize-control.single .selectize-input.input-active input:not(:read-only)
+    cursor: pointer

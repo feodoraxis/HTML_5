@@ -15,8 +15,8 @@
     <body>
         <header class="header" id="header">
             <div class="wrapper wrapper-static">
-                <div class="header-default">
-                    <div class="header-left">
+                <div class="header-default" id="header_default">
+                    <div class="header-left" id="header_left">
                         <div class="logo"><a href="#">
                                  <svg width="232" height="97" viewBox="0 0 232 97" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1_21138)">
@@ -79,7 +79,7 @@
                                     <div> </div><span>EN</span></a></div>
                         </div>
                         <div class="header-bottom">
-                            <div class="menu_main">
+                            <div class="menu_main" id="menu_main">
                                         <nav>
                                             <ul> 
                                                 <li> <a href="#"><span>Новости</span></a>
@@ -106,8 +106,13 @@
                                                 </li>
                                                 <li> <a href="#"><span>Регионы</span></a>
                                                 </li>
+                                                <li> <a href="#"><span>Регионы</span></a>
+                                                </li>
                                             </ul>
                                         </nav>
+                                <nav class="menu_main--help-section">
+                                    <ul id="menu_main_child_items"></ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
@@ -153,7 +158,7 @@
 </a></div>
                                 </div>
                                 <div class="header_fixed-menu">
-                                    <div class="menu_main menu_main-fixed">
+                                    <div class="menu_main menu_main-fixed" id="main_menu_fixed">
                                                 <nav>
                                                     <ul> 
                                                         <li> <a href="#"><span>Новости</span></a>
@@ -184,8 +189,13 @@
                                                         </li>
                                                         <li> <a href="#"><span>Контакты</span></a>
                                                         </li>
+                                                        <li> <a href="#"><span>Контакты</span></a>
+                                                        </li>
                                                     </ul>
                                                 </nav>
+                                        <nav class="menu_main--help-section">
+                                            <ul id="menu_main_fixed_child_items"></ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
@@ -265,6 +275,8 @@
                                             </div></a>
                                     </li>
                                     <li> <a href="#"><span>Федерация</span></a>
+                                    </li>
+                                    <li> <a href="#"><span>Регионы</span></a>
                                     </li>
                                     <li> <a href="#"><span>Регионы</span></a>
                                     </li>
@@ -456,6 +468,12 @@
                                                 <li data-for="#matches_tab">Матчи</li>
                                             </ul>
                                 </div>
+                                <div class="information-archive">
+                                    <select class="js-links-select">
+                                        <option value="/">2023-24</option>
+                                        <option value="/matches/">2024</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="information-blocks">
@@ -491,7 +509,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -502,14 +520,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -523,7 +541,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -534,13 +552,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -554,7 +572,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -565,14 +583,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -586,7 +604,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -597,13 +615,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -617,7 +635,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -628,14 +646,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -649,7 +667,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -660,13 +678,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -680,7 +698,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -691,14 +709,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -712,7 +730,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -723,13 +741,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -743,7 +761,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -754,14 +772,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -775,7 +793,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -786,13 +804,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -806,7 +824,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -817,14 +835,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -838,7 +856,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -849,13 +867,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -869,7 +887,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -880,14 +898,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -901,7 +919,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -912,13 +930,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -932,7 +950,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -943,14 +961,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -964,7 +982,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -975,13 +993,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -995,7 +1013,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1006,14 +1024,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1027,7 +1045,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1038,13 +1056,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1058,7 +1076,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1069,14 +1087,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1090,7 +1108,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1101,13 +1119,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1121,7 +1139,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1132,14 +1150,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1153,7 +1171,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1164,13 +1182,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1184,7 +1202,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1195,14 +1213,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1216,7 +1234,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1227,13 +1245,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1247,7 +1265,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1258,14 +1276,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1279,7 +1297,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1290,13 +1308,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1310,7 +1328,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1321,14 +1339,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1342,7 +1360,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1353,13 +1371,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1373,7 +1391,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>ВВА-Подмосковье</p>
                                                             </div>
                                                         </td>
@@ -1384,14 +1402,14 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-black">П</li>
-                                                                <li class="uniforms-gray">Н</li>
-                                                                <li class="uniforms-red">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-black js-column_data-source" data-content="[{&quot;content&quot;:&quot;Проигрыш&quot;}]">П</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1405,7 +1423,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div class="team_card"><img src="img/team.png" alt="">
+                                                            <div class="team_card"><a href="#"> </a><img src="img/team.png" alt="">
                                                                 <p>Красный Яр</p>
                                                             </div>
                                                         </td>
@@ -1416,13 +1434,13 @@
                                                         <td>10</td>
                                                         <td>4</td>
                                                         <td>6</td>
-                                                        <td>3</td>
-                                                        <td>3</td>
+                                                        <td align="center">3</td>
+                                                        <td align="center">3</td>
                                                         <td> 
                                                             <ul class="uniforms">
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-red">В</li>
-                                                                <li class="uniforms-gray">Н</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-red js-column_data-source" data-content="[{&quot;content&quot;:&quot;Выиграно&quot;}]">В</li>
+                                                                <li class="uniforms-gray js-column_data-source" data-content="[{&quot;content&quot;:&quot;Ничья&quot;}]">Н</li>
                                                             </ul>
                                                         </td>
                                                         <td> <img src="img/team.png" alt=""></td>
@@ -1520,7 +1538,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="game_table">
-                                                        <div class="game_table-table">
+                                                        <div class="game_table-table statistics_players--table">
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
@@ -1656,8 +1674,10 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <div class="game_table-button"><a class="button button-primary" href="#">
-                                                                        <div></div><span>Все игроки</span></a>
+                                                        <div class="game_table-button">
+                                                                    <button class="button button-primary js-all-players">
+                                                                        <div></div><span>Все игроки</span>
+                                                                    </button>
                                                         </div>
                                                         <div class="game_table-reference">
                                                             <p>В - выиграно, Н - ничья, П - проигрыш, + - заработано очков, — - потеряно очков, РИО - разница игровых очков</p>
@@ -1871,52 +1891,52 @@
                                             <div class="statistics_general-content"> 
                                                 <div class="menu_vertical">
                                                     <ul>
-                                                        <li class="active"><img src="img/team.png" alt="">
+                                                        <li class="active" data-for-tabs-block="#all_teams_statistics"><img src="img/team.png" alt="">
                                                             <p>Все клубы</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
-                                                        <li> <img src="img/team.png" alt="">
+                                                        <li data-for-tabs-block="#all_teams_statistics_alt"><img src="img/team.png" alt="">
                                                             <p>Локомотив</p>
                                                         </li>
                                                     </ul>
@@ -1936,119 +1956,121 @@
                                                     </select>
                                                 </div>
                                                 <div class="tournament_teams_statistics">
-                                                    <div class="tournament_teams_statistics-item tournament_teams_statistics-item--text">
-                                                        <div class="tournament_teams_statistics-title">
-                                                            <h3>Общая статистика</h3>
-                                                        </div>
-                                                        <div class="tournament_teams_statistics-body">
-                                                            <div class="discipline discipline-right_only">
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Владение мячом</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>33%</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары по воротам</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>5</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары в створ</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>3</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары по воротам</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>5</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары в створ</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>3</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары по воротам</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>5</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары в створ</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>3</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары по воротам</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>5</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Удары в створ</p>
-                                                                    </div>
-                                                                    <div class="discipline-right"><b>3</b></div>
-                                                                </div>
+                                                    <div class="tabs-block js-tabs-block active" id="all_teams_statistics">
+                                                        <div class="tournament_teams_statistics-item tournament_teams_statistics-item--text">
+                                                            <div class="tournament_teams_statistics-title">
+                                                                <h3>Общая статистика</h3>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tournament_teams_statistics-item">
-                                                        <div class="tournament_teams_statistics-title tournament_teams_statistics-title--center">
-                                                            <h3>Захваты</h3>
-                                                        </div>
-                                                        <div class="tournament_teams_statistics-body">
-                                                            <div class="round_chart">
-                                                                <div class="round_chart-layer-under" style="transform: rotate(122deg)">
-                                                                    <svg class="round_chart-shape" viewBox="0 0 100 100">
-                                                                        <circle class="round_chart-layer" cx="50" cy="50" r="40" stroke="#D9D9D9" style="stroke-dashoffset: 150px;"></circle>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="round_chart-layer-above">
-                                                                    <svg class="round_chart-shape" viewBox="0 0 100 100">
-                                                                        <circle class="round_chart-layer" cx="50" cy="50" r="40" stroke="#1E0E47" style="stroke-dashoffset: 105px;"></circle>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="round_chart-data">
-                                                                    <div class="round_chart-data-left">
-                                                                        <p>121/146</p>
+                                                            <div class="tournament_teams_statistics-body">
+                                                                <div class="discipline discipline-right_only">
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Владение мячом</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>33%</b></div>
                                                                     </div>
-                                                                    <div class="round_chart-data-right">
-                                                                        <p>83%</p>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары по воротам</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>5</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары в створ</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>3</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары по воротам</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>5</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары в створ</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>3</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары по воротам</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>5</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары в створ</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>3</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары по воротам</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>5</b></div>
+                                                                    </div>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Удары в створ</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>3</b></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="tournament_teams_statistics-item tournament_teams_statistics-item--text">
-                                                        <div class="tournament_teams_statistics-title">
-                                                            <h3>Дисциплина</h3>
+                                                        <div class="tournament_teams_statistics-item">
+                                                            <div class="tournament_teams_statistics-title tournament_teams_statistics-title--center">
+                                                                <h3>Захваты</h3>
+                                                            </div>
+                                                            <div class="tournament_teams_statistics-body">
+                                                                <div class="round_chart">
+                                                                    <div class="round_chart-layer-under" style="transform: rotate(122deg)">
+                                                                        <svg class="round_chart-shape" viewBox="0 0 100 100">
+                                                                            <circle class="round_chart-layer" cx="50" cy="50" r="40" stroke="#D9D9D9" style="stroke-dashoffset: 150px;"></circle>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="round_chart-layer-above">
+                                                                        <svg class="round_chart-shape" viewBox="0 0 100 100">
+                                                                            <circle class="round_chart-layer" cx="50" cy="50" r="40" stroke="#1E0E47" style="stroke-dashoffset: 105px;"></circle>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="round_chart-data">
+                                                                        <div class="round_chart-data-left">
+                                                                            <p>121/146</p>
+                                                                        </div>
+                                                                        <div class="round_chart-data-right">
+                                                                            <p>83%</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="tournament_teams_statistics-body">
-                                                            <div class="discipline discipline-right_only">
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Красные карточки</p>
+                                                        <div class="tournament_teams_statistics-item tournament_teams_statistics-item--text">
+                                                            <div class="tournament_teams_statistics-title">
+                                                                <h3>Дисциплина</h3>
+                                                            </div>
+                                                            <div class="tournament_teams_statistics-body">
+                                                                <div class="discipline discipline-right_only">
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Красные карточки</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>0</b></div>
                                                                     </div>
-                                                                    <div class="discipline-right"><b>0</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Желтые карточки</p>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Желтые карточки</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>1</b></div>
                                                                     </div>
-                                                                    <div class="discipline-right"><b>1</b></div>
-                                                                </div>
-                                                                <div class="discipline-item">
-                                                                    <div class="discipline-option">
-                                                                        <p>Нарушений</p>
+                                                                    <div class="discipline-item">
+                                                                        <div class="discipline-option">
+                                                                            <p>Нарушений</p>
+                                                                        </div>
+                                                                        <div class="discipline-right"><b>2</b></div>
                                                                     </div>
-                                                                    <div class="discipline-right"><b>2</b></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2517,7 +2539,7 @@
             </div>
         </main>
         <div class="column_data-container" id="column_data_container"></div>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="footer-widgets">
                 <div class="wrapper"> 
                     <div class="footer-widget footer-mobile"> 
@@ -2545,6 +2567,10 @@
                                 <li><a href="#"> 
                                                 <svg class="icon icon-whatsapp ">
                                                     <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                                </svg></a></li>
+                                <li><a href="#"> 
+                                                <svg class="icon icon-viber ">
+                                                    <use xlink:href="img/sprite.svg#viber"></use>
                                                 </svg></a></li>
                                 <li><a href="#"> 
                                                 <svg class="icon icon-youtube ">
@@ -2605,6 +2631,10 @@
                                         <li><a href="#"> 
                                                         <svg class="icon icon-whatsapp ">
                                                             <use xlink:href="img/sprite.svg#whatsapp"></use>
+                                                        </svg></a></li>
+                                        <li><a href="#"> 
+                                                        <svg class="icon icon-viber ">
+                                                            <use xlink:href="img/sprite.svg#viber"></use>
                                                         </svg></a></li>
                                         <li><a href="#"> 
                                                         <svg class="icon icon-youtube ">
@@ -2922,6 +2952,252 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="add_to_calendar_modal">
+            <div class="modal-flex">
+                <div class="modal-window">
+                    <div class="modal-close"><span class="close"></span></div>
+                    <div class="modal-header">
+                        <h1>Добавление матчей в календарь</h1>
+                    </div>
+                    <div class="modal-body"> 
+                        <div class="add_to_calendar js-add_to_calendar">
+                            <div class="js-add_to_calendar-block add_to_calendar-block add_to_calendar-block--active" id="add_to_calendar_start">
+                                <div class="add_to_calendar-head">
+                                    <p>Выберите категорию совернований</p>
+                                </div>
+                                <div class="add_to_calendar-body">
+                                    <ul class="add_to_calendar-list">
+                                        <li data-for="#add_to_calendar_male" data-modal-title="Мужские">Мужские</li>
+                                        <li data-for="#add_to_calendar_female" data-modal-title="Женские">Женские</li>
+                                        <li data-for="#add_to_calendar_young" data-modal-title="Юношеские">Юношеские</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="js-add_to_calendar-block add_to_calendar-block" id="add_to_calendar_male">
+                                <div class="add_to_calendar-head"><button class="button button-back" type="button" data-add-to-calendar-go="#add_to_calendar_start">
+<svg class="icon icon-arrow-left ">
+<use xlink:href="img/sprite.svg#arrow-left"></use>
+</svg>
+<span>Все категории</span>
+</button>
+                                </div>
+                                <div class="add_to_calendar-body">
+                                    <ul class="add_to_calendar-list">
+                                        <li data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="PARI Чемпионат России 2023-2024">PARI Чемпионат России 2023-2024</li>
+                                        <li data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="PARI Кубок России 2023">PARI Кубок России 2023</li>
+                                        <li data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="Всероссийские соревнования UI7 2023">Всероссийские соревнования UI7 2023</li>
+                                        <li data-for="#add_to_calendar_teams" data-prev-block="#add_to_calendar_male" data-modal-title="Чемпионат России по пляжному регби. Мужчины 2023">Чемпионат России по пляжному регби. Мужчины 2023</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="js-add_to_calendar-block add_to_calendar-block" id="add_to_calendar_teams">
+                                <div class="add_to_calendar-head"><button class="button button-back" type="button" data-add-to-calendar-go="#add_to_calendar_female">
+<svg class="icon icon-arrow-left ">
+<use xlink:href="img/sprite.svg#arrow-left"></use>
+</svg>
+<span>Все турниры</span>
+</button>
+                                </div>
+                                <div class="add_to_calendar-body">
+                                    <div class="row"> 
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="1" id="1" value="1">
+                                                                <label class="checkbox--hidden-label-title" for="1">1</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="2" id="2" value="2">
+                                                                <label class="checkbox--hidden-label-title" for="2">2</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="3" id="3" value="3">
+                                                                <label class="checkbox--hidden-label-title" for="3">3</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="4" id="4" value="4">
+                                                                <label class="checkbox--hidden-label-title" for="4">4</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="5" id="5" value="5">
+                                                                <label class="checkbox--hidden-label-title" for="5">5</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="6" id="6" value="6">
+                                                                <label class="checkbox--hidden-label-title" for="6">6</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="7" id="7" value="7">
+                                                                <label class="checkbox--hidden-label-title" for="7">7</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="8" id="8" value="8">
+                                                                <label class="checkbox--hidden-label-title" for="8">8</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="9" id="9" value="9">
+                                                                <label class="checkbox--hidden-label-title" for="9">9</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="0" id="0" value="0">
+                                                                <label class="checkbox--hidden-label-title" for="0">0</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="10" id="10" value="10">
+                                                                <label class="checkbox--hidden-label-title" for="10">10</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6"> 
+                                            <div class="add_to_calendar-team_block">
+                                                <div class="add_to_calendar-team_block--checkbox">
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" name="11" id="11" value="11">
+                                                                <label class="checkbox--hidden-label-title" for="11">11</label>
+                                                            </div>
+                                                </div>
+                                                <div class="add_to_calendar-team_block--team">
+                                                    <div class="team_card"> <img src="img/team.png" alt="">
+                                                        <p>Все матчи</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add_to_calendar-foot">
+                                    <button class="button button-primary" id="add_to_calendar_button"> 
+                                        <div></div><span>Добавить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pull-to-refresh start-pull hidden-pull" id="pull-to-refresh">
+            <div class="pull-to-refresh-loader" id="pull-to-refresh-loader"></div>
+            <div class="pull-to-refresh-status" id="pull-to-refresh-status">Pull down to refresh</div>
+        </div>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
         <script src="js/app.min.js" defer></script>
     </body>
 </html>

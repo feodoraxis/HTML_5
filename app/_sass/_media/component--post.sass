@@ -1,24 +1,35 @@
 .post
     +min_sm
         &-thumbnail
-            min-height: 127px
+            min-height: 131.1px
     +sm
-        &-big:not(.post-sm-default)
-            padding-bottom: 62%
-            .post
-                &-content
-                    padding: 18px 20px
-                &-title
-                    h3
-                        font-size: 1rem
-                        font-weight: 500
-                &-icon
-                    .icon
-                        width: 20px
-                        height: 20px
-                        left: 20px
-                        bottom: 0
-                        top: auto
+        &-big
+            &:not(.post-sm-default)
+                padding-bottom: 62%
+                .post
+                    &-content
+                        padding: 18px 20px
+                    &-title
+                        h3
+                            font-size: 1rem
+                            font-weight: 500
+                    &-icon
+                        .icon
+                            width: 20px
+                            height: 20px
+                            left: 20px
+                            bottom: 0
+                            top: auto
+
+            &.post-big--video-media
+                .post
+                    &-icon
+                        .icon
+                            left: auto
+
+            &--date-pl
+                .post-date
+                    padding-left: 30px
 
 
         &-sm-default.post-big,

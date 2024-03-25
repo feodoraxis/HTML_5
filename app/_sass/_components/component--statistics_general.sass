@@ -9,7 +9,29 @@
         max-width: calc(100% - 190px)
         padding-left: 50px
         &--small
-            flex: 0 0 calc(414px + 50px)
-            max-width: calc(414px + 50px)
+            flex: 0 0 calc(480px + 50px) //calc(450px + 50px) //calc(414px + 50px)
+            max-width: calc(480px + 50px) //calc(450px + 50px) //calc(414px + 50px)
+
+        &--without-sidebar
+            flex: 0 0 100%
+            max-width: 100%
+            padding-left: 0
+
+        &--flexbox
+            display: flex
+            flex-wrap: wrap
+            width: calc(100% + 30px)
+            margin-left: -15px
+
+        &--rows-2
+            &>div
+                flex: 0 0 50%
+                max-width: 50%
+                padding: 15px
+
+        h2
+            margin-bottom: 30px
     &-header
         height: 85px
+        &--players
+            height: 8px

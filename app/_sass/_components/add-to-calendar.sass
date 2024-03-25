@@ -1,0 +1,77 @@
+.add_to_calendar
+    &-not_found_matches
+        color: #655E70
+    &-block
+        display: none
+        &--active
+            display: block
+
+    &-head
+        padding-bottom: 30px
+        p
+            margin-bottom: 0
+
+        .button-back:hover
+            color: var(--color-red)
+            span
+                color: var(--color-red)
+
+    &-list
+        list-style: none
+        li
+            width: 100%
+            padding: 10px 12px
+            font-weight: 500
+            font-size: 16px
+            background-color: #E9E6EF
+            cursor: pointer
+            margin-bottom: 12px
+            &:hover
+                background-color: #d5d0dc
+
+    &-foot
+        padding-top: 40px
+        display: flex
+        justify-content: flex-end
+
+    &-team_block
+        display: flex
+        align-items: center
+        margin-bottom: 24px
+        &--checkbox
+            flex: 0 0 23px
+            max-width: 23px
+            
+        &--team
+            flex: 0 0 calc(100% - 23px)
+            max-width: calc(100% - 23px)
+            padding-left: 8px
+            cursor: pointer
+            .team_card
+                // align-items: flex-start
+                img
+                    width: 52px
+                p
+                    white-space: wrap
+                div
+                    padding-top: 5px
+                    // -webkit-box-orient: vertical
+                    // -webkit-line-clamp: 1
+                    // display: block
+                    // overflow: hidden
+                    // -o-text-overflow: ellipsis
+                    // text-overflow: ellipsis
+                    // word-break: break-word
+                    
+
+    &-alert
+        display: none
+        margin-top: 10px
+        padding: 15px
+        border-radius: 1px
+        background-color: var(--color-gray-lite)
+        p
+            margin-bottom: 0
+
+        &.show
+            display: block

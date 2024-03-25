@@ -1,5 +1,18 @@
 .match
     +sm
+        &-team
+            flex-direction: column
+            &:first-child
+                align-items: flex-end
+                justify-content: flex-start
+            &:last-child
+                align-items: flex-start
+            span
+                order: 30
+
+            img
+                order: 20
+                margin-bottom: 5px
         &-time
             time
                 font-size: rem(19)

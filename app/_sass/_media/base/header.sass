@@ -29,6 +29,14 @@
             display: none
 
     +lg
+        box-shadow: 0 4px 10px rgba(#000, .05)
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        right: 0
+        z-index: 1010
+        background-color: #fff
         &-fixed,
         &-right
             display: none
@@ -41,16 +49,11 @@
             justify-content: space-between
             padding-top: 0
             
+        &-menu_mobile_is_open
+            background-color: rgba(#fff, 0)
 
     +sm
-        box-shadow: 0 4px 10px rgba(#000, .05)
-        position: fixed
-        width: 100%
-        top: 0
-        left: 0
-        right: 0
-        z-index: 1010
-        background-color: #fff
+        
         &-left
             flex: 0 0 120px
             max-width: 120px
@@ -69,6 +72,4 @@
         &-hamburger
             flex: 0 0 30px
             max-width: 30px
-
-        &-menu_mobile_is_open
-            background-color: rgba(#fff, 0)
+            margin-right: 16px

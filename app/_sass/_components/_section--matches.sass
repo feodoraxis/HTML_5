@@ -1,0 +1,306 @@
+.matches
+    display: block
+    
+    &-filter
+        background-color: var(--color-gray-lite)
+        padding: 20px
+        position: relative
+        form
+            opacity: 0
+        &-flexbox
+            display: flex
+            width: 100%
+
+        &--visible form
+            opacity: 1
+
+    &-tournaments
+        flex: 0 0 25.4%
+        max-width: 320px
+        margin-right: 20px
+
+    &-calendar
+        margin-right: 30px
+
+    &-sort
+        min-width: 160px
+        &--container
+            position: absolute
+            top: 113px
+            left: 0
+            .single.selectize-dropdown
+                min-width: 190px
+
+            .selectize-input div
+                max-width: 100%
+
+            .selectize-control.single 
+                .selectize-input
+                    &::after
+                        background-image: url(../img/icons/arrow-bottom.svg)
+
+                    &.selectize-input--desc::after
+                        transform: rotate(180deg)
+                
+
+
+        .full.selectize-input
+            padding-right: 40px
+
+    &-dates
+        flex: 0 0 49.1%
+        max-width: 49.1%
+        margin-right: 30px
+        &--full-width
+            flex: 0 0 74.6%
+            max-width: 74.6%
+
+    &-days
+        display: none
+
+        &--no-slider
+            .tns-ovh
+                &::before,
+                &::after
+                    display: none
+
+            .tns-slider
+                margin: auto
+
+        &.active
+            display: block
+
+        &:not(.matches-days--stages)
+            .tns
+                &-ovh
+                    // overflow-y: visible
+                    // width: calc(100% - 32px - 32px)
+                    // margin-left: 32px
+                    // position: relative
+                    // padding-top: 20px
+                    // margin-top: -23px
+                    &::before,
+                    &::after
+                        // content: ''
+                        top: 20px
+                        // bottom: 0
+                        // height: 100%
+                        // width: 1px
+                        // background-color: #D9D6DE
+                        // z-index: 10
+                        
+                    &::before
+                        left: 0
+                        // box-shadow: 1px 2px 0px rgba(#000000, .25)
+
+                    &::after
+                        right: 0
+                        // box-shadow: -1px 2px 0px rgba(#000000, .25)
+
+
+        li
+            .day,
+            .week,
+            .stage,
+            .week-start,
+            .week-end
+                border-radius: 2px
+                display: none //flex
+                flex-direction: column
+                align-items: center
+                padding: 3px
+                background-color: #fff
+                border: 2px solid rgba(#C6C2CD, 0)
+                justify-content: center
+                width: 42px
+                cursor: pointer
+
+            &.tns-item
+                .day,
+                .week,
+                .stage,
+                .week-start,
+                .week-end
+                    display: flex
+
+
+            .day,
+            .week,
+            .stage
+
+                &:hover
+                    border-color: #C6C2CD
+
+                &:active,
+                &.active
+                    border-color: var(--color-red)
+
+                &-first
+                    position: relative
+                    &::before
+                        content: ''
+                        left: -9px
+                        top: 0
+                        bottom: 0
+                        margin: auto
+                        border-left: 1px solid #dadada
+
+            //ВЫВОД МЕСЯЦА НАД ЭЛЕМЕНТОМ
+            .day[data-month-day-name]
+                position: relative
+                &::after
+                    content: attr(data-month-day-name)
+                    position: absolute
+                    font-size: 15px
+                    color: #9C97A4
+                    font-weight: 400
+                    text-align: center
+                    left: 0
+                    right: 0
+                    top: -20px
+
+
+            .week
+                flex-direction: row
+                width: auto
+                padding: 0
+                &>div
+                    text-align: center
+
+                &-start
+                    position: relative
+                    &::before
+                        content: ''
+                        height: 26px
+                        width: 1px
+                        background: #E9E6EF
+                        top: 0
+                        bottom: 0
+                        right: -1px
+                        margin: auto
+
+                &-start,
+                &-end
+                    padding: 1px
+
+            .stage
+                // flex-direction: row
+                // width: auto
+                width: 90px
+                padding: 0
+                min-height: 45px
+                &>div
+                    text-align: center
+
+            b, span
+                display: inline-block
+
+            b
+                font-weight: 500
+
+            span
+                margin-top: -4px
+                color: #9C97A4
+
+        .tns
+            &-outer
+                position: relative
+            &-controls
+                position: absolute
+                top: 20px
+                bottom: 0
+                left: 0
+                right: 0
+                pointer-events: none
+                button
+                    border: 0
+                    background-color: transparent
+                    padding: 0
+                    width: 20px
+                    height: 20px
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    pointer-events: all
+                    cursor: pointer
+                    &[data-controls="prev"]
+                        transform: rotate(90deg)
+                        left: 0
+                    &[data-controls="next"]
+                        transform: rotate(-90deg)
+                        right: 0
+
+                    .icon   
+                        width: 20px
+                        height: 20px
+
+                    &:hover
+                        .icon
+                            color: var(--color-red)
+
+                        &[disabled]
+                            cursor: default
+                            .icon
+                                color: rgba(16, 16, 16, 0.3)
+
+            &-ovh
+                width: calc(100% - 32px - 32px)
+                margin-left: 32px
+                position: relative
+                padding-top: 20px
+                margin-top: -23px
+                &::before,
+                &::after
+                    content: ''
+                    top: 20px
+                    bottom: 0
+                    height: 100%
+                    width: 1px
+                    background-color: #D9D6DE
+                    z-index: 10
+                &::before
+                    left: 0
+                    box-shadow: 1px 2px 0px rgba(#000000, .25)
+
+                &::after
+                    right: 0
+                    box-shadow: -1px 2px 0px rgba(#000000, .25)
+
+            &-controls[style="display: none;"] + .tns-liveregion + .tns
+                &-ovh
+                    margin-left: 0
+                    width: 100%
+                    &::before,
+                    &::after
+                        display: none
+        // &.matches-days--stages
+        //     .tns-controls
+        //         top: 2px
+                    
+
+    &-switcher_dates
+        flex: 1
+
+    &-list
+        margin-top: 28px
+        &--show-all
+            margin-top: 97px
+
+    &-item
+        margin-bottom: 12px 
+
+        &--title
+            margin-top: 50px
+            margin-bottom: 40px
+
+    &-reset-filter
+        display: flex
+        justify-content: center
+        padding-top: 30px
+
+    .calendar-container
+        display: none
+        position: absolute   
+        &.active
+            display: block

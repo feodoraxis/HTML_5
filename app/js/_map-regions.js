@@ -3,7 +3,7 @@ import { MapRegions } from './_functions.js';
 
 document.addEventListener('DOMContentLoaded', function(){
    
-    if ( typeof $('#regions_map') == 'undefined' ) {
+    if ( typeof $('#regions_map') == 'undefined' || !$('#regions_map').length ) {
         return;
     }
 

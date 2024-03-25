@@ -11,14 +11,19 @@
     &-title
         margin-bottom: 12px
         a
-            color: var(--color-dark)
+            color: var(--color-blue)
             text-decoration: none
+            &:hover
+                color: var(--color-red)
         p
             font-weight: 500
             margin-bottom: 0
 
     &-text
         margin-bottom: 12px
+        p 
+            b
+                font-weight: 400
 
     &-footer
         display: flex
@@ -35,3 +40,18 @@
         &-img
             margin-top: 100px
             margin-bottom: 40px
+
+    &-bc
+        
+        .breadcrumps
+            li:last-child
+                max-width: 250px
+                span
+                    display: -webkit-box
+                    -webkit-box-orient: vertical
+                    text-overflow: ellipsis
+                    -webkit-line-clamp: 1
+                    overflow: hidden
+                    word-break: break-word
+                    max-width: 240px
+                    display: block

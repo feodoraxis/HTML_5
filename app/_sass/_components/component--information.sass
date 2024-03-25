@@ -36,11 +36,27 @@
                 opacity: 0
                 pointer-events: none
 
+            ul
+                display: none
+                position: absolute
+                top: 48px
+                left: 0
+                background-color: #fff
+                box-shadow: 0 4px 25px rgba(0,0,0,.1)
+                li
+                    color: var(--color-default)
+                    &::before
+                        display: none
+
+
             &:hover
                 color: var(--color-red)
+                ul
+                    display: block
 
             &.active
                 color: var(--color-red)
+
                 &::before
                     opacity: 1
 
@@ -55,3 +71,17 @@
         padding-bottom: 60px
         &.active
             display: block
+
+        &--game-table
+            .tabs
+                margin-bottom: 20px
+
+    &-archive
+        position: absolute
+        right: 50px
+        top: -30px
+        background-color: #fff
+        border-radius: 10px
+        padding: 10px
+        min-width: 148px
+        z-index: 10

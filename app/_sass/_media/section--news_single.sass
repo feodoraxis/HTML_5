@@ -1,4 +1,15 @@
 .news_single
+
+    +xl
+        &-content,
+        &-aside
+            margin-left: 8.333333%
+            flex: 0 0 83.333333%
+            max-width: 83.333333%
+
+        &-content
+            margin-bottom: 90px
+
     +min_lg
         &-mobile
             display: none
@@ -9,11 +20,12 @@
             flex: 0 0 100%
             max-width: 100%
             padding-right: 0px
-            margin-bottom: 60px
+            margin-left: 0
+            // margin-bottom: 60px
         &-aside
             flex: 0 0 100%
             max-width: 100%
-
+            margin-left: 0
 
         &-desctop
             display: none
@@ -40,6 +52,8 @@
             time
                 font-size: rem(13)
                 color: #98959D
+        .content > time
+            display: none
         &-header
             margin-bottom: 20px
         &-title

@@ -1,31 +1,42 @@
-import { is_mobile } from './_functions.js';
+import { is_mobile } from "./_functions.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    $('#information_tabs li[data-for]').on('click', function() {
-        const classActive = 'active';
-        const selector = $(this).attr('data-for');
+document.addEventListener("DOMContentLoaded", () => {
+    $("#information_tabs li[data-for]").on("click", function ({target}) {
+        const classActive = "active";
+        const currentSelector = target.getAttribute('data-for');
 
-        if ( ! is_mobile() ) {
-            $('#information_tabs li[data-for]').removeClass( classActive );
-            $(`#information_tabs li[data-for="${selector}"]`).addClass( classActive );
+        if ($(`li[data-for="${currentSelector}"] ul`).length) {
+            return;
+        }
 
-            $('.js-information-block').removeClass( classActive );
-            $(selector).addClass( classActive );
+        if (
+            !is_mobile() ||
+            typeof $(".match_single") == "undefined" ||
+            $(".match_single") === null
+        ) {
+            $("#information_tabs li[data-for]").removeClass(classActive);
+            $(`#information_tabs li[data-for="${currentSelector}"]`).addClass(
+                classActive
+            );
+
+            $(".js-information-block").removeClass(classActive);
+            $(currentSelector).addClass(classActive);
         } else {
+            const classOpen = "open";
+            const select = $(this).closest("ul");
 
-            const classOpen = 'open';
-            const select = $(this).closest('ul');
-        
-            if ( select.hasClass( classOpen ) ) {
-                $('#information_tabs li[data-for]').removeClass( classActive );
-                $(`#information_tabs li[data-for="${selector}"]`).addClass( classActive );
+            if (select.hasClass(classOpen)) {
+                $("#information_tabs li[data-for]").removeClass(classActive);
+                $(`#information_tabs li[data-for="${currentSelector}"]`).addClass(
+                    classActive
+                );
 
-                $('.js-information-block').removeClass( classActive );
-                $(selector).addClass( classActive );
+                $(".js-information-block").removeClass(classActive);
+                $(currentSelector).addClass(classActive);
 
-                select.removeClass( classOpen );
+                select.removeClass(classOpen);
             } else {
-                select.addClass( classOpen );
+                select.addClass(classOpen);
             }
         }
     });

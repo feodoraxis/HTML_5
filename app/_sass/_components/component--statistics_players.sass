@@ -25,3 +25,24 @@
         p
             color: #655E70
             font-size: rem(13)
+
+    &--table
+        // .game_table-table
+        overflow: hidden
+        max-height: 495px
+        position: relative
+        &::before
+            content: ''
+            width: 100%
+            left: 0
+            right: 0
+            bottom: 0
+            height: 10px
+            pointer-events: none
+            background-image: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0))
+
+.js-statistics_players--table
+    .table 
+        td
+            a
+                color: var(--color-default)

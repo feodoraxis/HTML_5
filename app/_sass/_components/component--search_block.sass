@@ -94,3 +94,33 @@
                 height: 40px
                 input
                     height: 40px
+
+    &-big.search_block-static
+        // .search_block
+        button
+            bottom: 4px
+            top: 4px
+            right: 4px
+            transition: all 0s ease
+            div
+                background-color: var(--color-blue)
+            &:hover
+                div
+                    background-color: var(--color-red)
+
+        // input:focus 
+        //     & ~ 
+        //     border-color: var(--color-blue)
+        //     & ~ button
+        //         bottom: 0px
+        //         top: 0px
+        //         right: 0px
+
+    &--on-search-page--active.search_block-big.search_block-static
+        button
+            bottom: 0
+            top: 0
+            right: 0
+
+        .search_block-input::before
+            border-color: var(--color-blue)

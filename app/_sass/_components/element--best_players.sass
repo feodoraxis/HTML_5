@@ -8,6 +8,7 @@
 
         &:first-child
             padding-top: 0
+        
 
         // &:last-child
         //     padding-bottom: 0
@@ -18,23 +19,25 @@
         display: flex
         width: 100%
 
+        &:hover
+            a
+                color: var(--color-red)
+
     &-content
         display: flex
         flex-direction: column
         position: relative
         justify-content: center
         p
-            font-weight: 500
+            font-weight: 400
             margin-bottom: 16px
-            &:hover
-                a
-                    color: var(--color-red)
 
         b
             display: block
+            font-weight: 600
             span
                 font-size: rem(20)
-                font-weight: 600
+                font-weight: 500
 
     &-club
         position: absolute
@@ -51,3 +54,5 @@
 
     a
         text-decoration: none
+
+    

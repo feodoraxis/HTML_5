@@ -2,6 +2,9 @@
     width: 100%
     border-collapse: separate
     border-spacing: 0 8px
+    &--thead-pointer
+        th
+            cursor: pointer
     thead
         tr
             background-color: #EDEAF3
@@ -21,6 +24,8 @@
         a
             text-decoration: none
             color: #1946B9
+            &:hover
+                color: var(--color-red)
 
         .sn
             margin-right: 32px

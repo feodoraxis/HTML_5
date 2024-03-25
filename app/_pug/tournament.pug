@@ -273,6 +273,11 @@ html(lang="ru")
                                         },                                    
                                     ])
 
+                                .information-archive
+                                    select.js-links-select
+                                        option(value="/") 2023-24
+                                        option(value="/matches/") 2024
+
                         .information-blocks
 
                             .information-block.js-information-block.active#game_table
@@ -320,6 +325,7 @@ html(lang="ru")
                                                                     +icon('up')
                                                             td
                                                                 .team_card
+                                                                    a(href="#") 
                                                                     img(src="img/team.png", alt="")
                                                                     p ВВА-Подмосковье
                                                             td 3
@@ -329,15 +335,15 @@ html(lang="ru")
                                                             td 10
                                                             td 4
                                                             td 6
-                                                            td 3
-                                                            td 3
+                                                            td(align="center") 3
+                                                            td(align="center") 3
                                                             //- Форма
                                                             td 
                                                                 ul.uniforms
-                                                                    li.uniforms-red В
-                                                                    li.uniforms-black П
-                                                                    li.uniforms-gray Н
-                                                                    li.uniforms-red В
+                                                                    li.uniforms-red.js-column_data-source(data-content='[{"content":"Выиграно"}]') В
+                                                                    li.uniforms-black.js-column_data-source(data-content='[{"content":"Проигрыш"}]') П
+                                                                    li.uniforms-gray.js-column_data-source(data-content='[{"content":"Ничья"}]') Н
+                                                                    li.uniforms-red.js-column_data-source(data-content='[{"content":"Выиграно"}]') В
                                                             td 
                                                                 img(src="img/team.png", alt="")
                                                         tr 
@@ -347,6 +353,7 @@ html(lang="ru")
                                                                     +icon('down')
                                                             td
                                                                 .team_card
+                                                                    a(href="#") 
                                                                     img(src="img/team.png", alt="")
                                                                     p Красный Яр
                                                             td 3
@@ -356,14 +363,14 @@ html(lang="ru")
                                                             td 10
                                                             td 4
                                                             td 6
-                                                            td 3
-                                                            td 3
+                                                            td(align="center") 3
+                                                            td(align="center") 3
                                                             //- Форма
                                                             td 
                                                                 ul.uniforms
-                                                                    li.uniforms-red В
-                                                                    li.uniforms-red В
-                                                                    li.uniforms-gray Н
+                                                                    li.uniforms-red.js-column_data-source(data-content='[{"content":"Выиграно"}]') В
+                                                                    li.uniforms-red.js-column_data-source(data-content='[{"content":"Выиграно"}]') В
+                                                                    li.uniforms-gray.js-column_data-source(data-content='[{"content":"Ничья"}]') Н
                                                             td 
                                                                 img(src="img/team.png", alt="") 
 
@@ -412,7 +419,7 @@ html(lang="ru")
                                                             option Локомотив 5
                                                                 
                                                     .game_table
-                                                        .game_table-table
+                                                        .game_table-table.statistics_players--table
                                                             table.table
                                                                 thead
                                                                     tr
@@ -441,7 +448,7 @@ html(lang="ru")
                                                                             td.table-lite 0
 
                                                         .game_table-button
-                                                            +button('button button-primary', "Все игроки", 'link')
+                                                            +button('button button-primary js-all-players', "Все игроки")
                                                         .game_table-reference
                                                             p В - выиграно, Н - ничья, П - проигрыш, + - заработано очков, — - потеряно очков, РИО - разница игровых очков
 
@@ -484,13 +491,13 @@ html(lang="ru")
                                                 .menu_vertical
                                                     ul
                                                         
-                                                        li.active
+                                                        li(data-for-tabs-block="#all_teams_statistics").active
                                                             img(src="img/team.png", alt="")
                                                             p Все клубы
                                                             
                                                         each item in table
 
-                                                            li 
+                                                            li(data-for-tabs-block="#all_teams_statistics_alt")
                                                                 img(src="img/team.png", alt="")
                                                                 p Локомотив
 
@@ -509,113 +516,115 @@ html(lang="ru")
 
                                                 .tournament_teams_statistics
 
-                                                    .tournament_teams_statistics-item.tournament_teams_statistics-item--text
-                                                        .tournament_teams_statistics-title
-                                                            h3 Общая статистика
+                                                    .tabs-block.js-tabs-block.active#all_teams_statistics
 
-                                                        .tournament_teams_statistics-body
+                                                        .tournament_teams_statistics-item.tournament_teams_statistics-item--text
+                                                            .tournament_teams_statistics-title
+                                                                h3 Общая статистика
 
-                                                            .discipline.discipline-right_only
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Владение мячом
-                                                                    .discipline-right
-                                                                        b 33%
+                                                            .tournament_teams_statistics-body
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары по воротам
-                                                                    .discipline-right
-                                                                        b 5
+                                                                .discipline.discipline-right_only
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Владение мячом
+                                                                        .discipline-right
+                                                                            b 33%
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары в створ
-                                                                    .discipline-right
-                                                                        b 3
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары по воротам
+                                                                        .discipline-right
+                                                                            b 5
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары по воротам
-                                                                    .discipline-right
-                                                                        b 5
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары в створ
+                                                                        .discipline-right
+                                                                            b 3
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары в створ
-                                                                    .discipline-right
-                                                                        b 3
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары по воротам
+                                                                        .discipline-right
+                                                                            b 5
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары по воротам
-                                                                    .discipline-right
-                                                                        b 5
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары в створ
+                                                                        .discipline-right
+                                                                            b 3
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары в створ
-                                                                    .discipline-right
-                                                                        b 3
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары по воротам
+                                                                        .discipline-right
+                                                                            b 5
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары по воротам
-                                                                    .discipline-right
-                                                                        b 5
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары в створ
+                                                                        .discipline-right
+                                                                            b 3
 
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Удары в створ
-                                                                    .discipline-right
-                                                                        b 3
-                                            
-                                                    .tournament_teams_statistics-item
-                                                        .tournament_teams_statistics-title.tournament_teams_statistics-title--center
-                                                            h3 Захваты
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары по воротам
+                                                                        .discipline-right
+                                                                            b 5
 
-                                                        .tournament_teams_statistics-body
-                                                            .round_chart
-                                                                .round_chart-layer-under(style="transform: rotate(122deg)")
-                                                                
-                                                                    svg(viewBox="0 0 100 100").round_chart-shape
-                                                                        circle(cx="50", cy="50", r="40", stroke="#D9D9D9", style="stroke-dashoffset: 150px;").round_chart-layer
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Удары в створ
+                                                                        .discipline-right
+                                                                            b 3
+                                                
+                                                        .tournament_teams_statistics-item
+                                                            .tournament_teams_statistics-title.tournament_teams_statistics-title--center
+                                                                h3 Захваты
 
-                                                                .round_chart-layer-above
-                                                                
-                                                                    svg(viewBox="0 0 100 100").round_chart-shape
-                                                                        circle(cx="50", cy="50", r="40", stroke="#1E0E47", style="stroke-dashoffset: 105px;").round_chart-layer
+                                                            .tournament_teams_statistics-body
+                                                                .round_chart
+                                                                    .round_chart-layer-under(style="transform: rotate(122deg)")
+                                                                    
+                                                                        svg(viewBox="0 0 100 100").round_chart-shape
+                                                                            circle(cx="50", cy="50", r="40", stroke="#D9D9D9", style="stroke-dashoffset: 150px;").round_chart-layer
 
-                                                                .round_chart-data
-                                                                    .round_chart-data-left
-                                                                        p 121/146
-                                                                    .round_chart-data-right
-                                                                        p 83%
+                                                                    .round_chart-layer-above
+                                                                    
+                                                                        svg(viewBox="0 0 100 100").round_chart-shape
+                                                                            circle(cx="50", cy="50", r="40", stroke="#1E0E47", style="stroke-dashoffset: 105px;").round_chart-layer
 
-                                                    .tournament_teams_statistics-item.tournament_teams_statistics-item--text
-                                                        .tournament_teams_statistics-title
-                                                            h3 Дисциплина
+                                                                    .round_chart-data
+                                                                        .round_chart-data-left
+                                                                            p 121/146
+                                                                        .round_chart-data-right
+                                                                            p 83%
 
-                                                        .tournament_teams_statistics-body
-                                                            .discipline.discipline-right_only
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Красные карточки
+                                                        .tournament_teams_statistics-item.tournament_teams_statistics-item--text
+                                                            .tournament_teams_statistics-title
+                                                                h3 Дисциплина
 
-                                                                    .discipline-right
-                                                                        b 0
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Желтые карточки
+                                                            .tournament_teams_statistics-body
+                                                                .discipline.discipline-right_only
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Красные карточки
 
-                                                                    .discipline-right
-                                                                        b 1
-                                                                .discipline-item
-                                                                    .discipline-option
-                                                                        p Нарушений
+                                                                        .discipline-right
+                                                                            b 0
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Желтые карточки
 
-                                                                    .discipline-right
-                                                                        b 2
+                                                                        .discipline-right
+                                                                            b 1
+                                                                    .discipline-item
+                                                                        .discipline-option
+                                                                            p Нарушений
+
+                                                                        .discipline-right
+                                                                            b 2
 
                             .information-block.js-information-block#matches_tab
 

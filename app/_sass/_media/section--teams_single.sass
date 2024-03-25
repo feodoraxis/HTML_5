@@ -18,7 +18,6 @@
                 content: ''
                 top: 0
                 height: 70px
-                // bottom: 41px
                 left: -20px
                 right: -20px
                 background-color: #F6F3F9
@@ -26,7 +25,7 @@
         &-team
             display: flex
             flex-direction: column
-
+            align-items: center
             img
                 margin: 0
                 order: 10
@@ -39,13 +38,13 @@
 
             &:first-child
                 align-items: flex-start
-                img
-                    margin-left: 18px
+                //img
+                //    margin-left: 18px
 
-            &:last-child
+            &:nth-child(3)
                 align-items: flex-end
-                img
-                    margin-right: 18px
+                //img
+                //    margin-right: 18px
 
         &-middle
             margin-top: 0
@@ -53,7 +52,6 @@
             margin-right: 0
             position: absolute
             top: 10px
-            // bottom: 41px
             left: 0
             right: 0
             margin: auto
@@ -62,6 +60,7 @@
 
         &-strokes
             flex-wrap: wrap
+            margin-bottom: 28px
 
         &-stroke
             &_primary
@@ -70,12 +69,17 @@
                 order: 10
                 margin-right: 0 !important
                 text-align: center
+                margin-bottom: 4px
                 &::before
                     display: none
                 
 
             &_second
                 order: 20
+
+                &--empty
+                    &::before
+                        display: none
 
             
         &-meta
@@ -94,3 +98,11 @@
 
         &-is_on
             justify-content: flex-end
+
+    +sm
+        &-is_on
+            flex-direction: column-reverse
+            align-items: flex-end
+            p
+                margin-bottom: 5px
+            // justify-content: flex-end

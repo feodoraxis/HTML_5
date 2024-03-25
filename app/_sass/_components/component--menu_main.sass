@@ -28,6 +28,7 @@
         padding-left: 35px
         &>ul
             display: flex
+            flex-wrap: wrap
             align-items: center
             &>li
                 &>a
@@ -36,8 +37,12 @@
                     text-transform: uppercase
                     display: block
                     padding: 17px 16px  
+                    &:not([href]):not([class])
+                        color: #FFF
                     &:hover
                         color: var(--color-red)
+                        &:not([href]):not([class])
+                            color: var(--color-red)
                     &>div
                         display: flex
                         align-items: center 
@@ -83,6 +88,28 @@
             position: fixed
             top: 70px
 
+        &--lite
+            left: auto
+            right: auto
+            nav
+                padding: 24px
+                &>ul
+                    flex-direction: column
+                    &>li
+                        margin-bottom: 20px
+                        &:last-child
+                            margin-bottom: 0
+                        &>a
+                            font-weight: 400
+
+        &--center
+            nav
+                &>ul
+                    justify-content: center
+                    &>li
+                        padding-left: 15px
+                        padding-right: 15px
+
     &-wrapper
         padding-left: 110px
         padding-right: 110px
@@ -94,3 +121,24 @@
                 &>li
                     &>a
                         padding: 25px 16px
+
+                    
+    &--help-section
+        opacity: 0
+        pointer-events: none
+        position: absolute !important
+        top: 0
+        bottom: 0
+        right: 140px
+        left: 0
+        background-color: var(--color-blue)
+        z-index: 100 !important
+        &.open
+            opacity: 1
+            pointer-events: all
+
+        ul
+            justify-content: flex-end
+
+    a.hover
+        color: var(--color-red)

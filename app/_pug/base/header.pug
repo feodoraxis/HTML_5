@@ -38,6 +38,9 @@ include _mixins.pug
         {
             "title": "Регионы",
         },
+        {
+            "title": "Регионы",
+        },
     ];
 
 -
@@ -73,6 +76,9 @@ include _mixins.pug
         },
         {
             "title": "Заявки",
+        },
+        {
+            "title": "Контакты",
         },
         {
             "title": "Контакты",
@@ -249,8 +255,8 @@ include _mixins.pug
 
 header.header#header
     .wrapper.wrapper-static
-        .header-default
-            .header-left
+        .header-default#header_default
+            .header-left#header_left
                 .logo
                     a(href="#") 
                         include ../../img/logo.svg
@@ -278,8 +284,10 @@ header.header#header
                             span EN
 
                 .header-bottom
-                    .menu_main
+                    .menu_main#menu_main
                         +menu( MainMenu, true )
+                        nav.menu_main--help-section
+                            ul#menu_main_child_items
 
             .header-translations
                 .translations_link
@@ -302,8 +310,10 @@ header.header#header
                                     include ../../img/logo-white.svg
 
                         .header_fixed-menu
-                            .menu_main.menu_main-fixed
+                            .menu_main.menu_main-fixed#main_menu_fixed
                                 +menu( FixedMenu, true )
+                                nav.menu_main--help-section
+                                    ul#menu_main_fixed_child_items
 
                     .header_fixed-right
                         .header_fixed-search
@@ -352,3 +362,4 @@ header.header#header
                 +icon('arrow-left')
                 span Медиа
             +menu( MenuMedia )
+

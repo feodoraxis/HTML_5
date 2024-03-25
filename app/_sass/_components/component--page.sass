@@ -2,11 +2,13 @@
     &-header
         display: flex
         align-items: center
+        flex-wrap: wrap
         justify-content: space-between
         margin-bottom: 52px
 
         &--has_tabs
             justify-content: space-between
+            margin-bottom: 20px
             .page
                 &-title,
                 &-tabs_header,
@@ -19,6 +21,9 @@
     &-tabs_header
         display: flex
         justify-content: center
+        // flex: 0 0 100%
+        // max-width: 100%
+        margin-bottom: 32px
 
 
     &-title
@@ -40,16 +45,20 @@
         h1
             margin: 0
             font-size: rem(33)
-            font-weight: 700
+            font-weight: 600
         &--medium
             h1
                 font-size: rem(25)
+            // &--has-triangle
+            //     &::before
+            //         display: block
 
     &-breadcrumps
         flex: 0 0 50%
-        max-width: 50%
+        max-width: 483px
         display: flex
         justify-content: flex-end
+        // padding-left: 30px
 
     &-footer
         margin-top: 60px    
@@ -64,12 +73,13 @@
                     color: #8C8A93
                     font-weight: 400
 
-    // &-match_single
-    //     .page
-    //         &-title
-    //             &::before
-    //                 background-image: url(../img/icons/page-title-gray-before.svg)
-    //             h1
-    //                 font-size: rem(20)
-    //                 color: #8C8A93
-    //                 font-weight: 400
+    &-news
+        .post
+            &-small_font
+                .post
+                    &-title
+                        h3
+                            font-size: rem(16)
+                    &-description
+                        p
+                            font-size: rem(15)
